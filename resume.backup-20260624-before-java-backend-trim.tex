@@ -1,0 +1,90 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[letterpaper,margin=0.47in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1em}
+\renewcommand{\baselinestretch}{0.96}
+\setlist[itemize]{label=-,leftmargin=12pt,itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+
+\newcommand{\ressection}[1]{%
+  \vspace{3pt}\par\textbf{#1}\par\vspace{1pt}\hrule\vspace{2pt}
+}
+
+\begin{document}
+\pagestyle{empty}
+\raggedright
+\fontsize{9.2}{9.85}\selectfont
+
+{\Large \textbf{Kunal Maheshwari}}\\
+Haldwani, Uttarakhand, India \textbar{} 9897446350 \textbar{} kunal.maheshwari.work@gmail.com\\
+LinkedIn: linkedin.com/in/kunalmaheshwari26 \textbar{} GitHub: github.com/preferablehuman \textbar{} Portfolio: portfolio.kunalmaheshwari26.workers.dev
+
+\ressection{Summary}
+Java Backend Developer with 4.6+ years of experience building Java 8/11, Spring, REST/SOAP API, microservices, SOA, cloud integration, and SQL-backed enterprise systems across healthcare and automotive domains. Strong record in production reliability, CI/CD, AWS/Azure, performance tuning, testing, security, and observability, including services handling 50K+ daily requests at 99.99\% SLA and production SQL optimization improving performance by approximately 90\%.
+
+\ressection{Work Experience}
+
+\textbf{NTT Data}, Bengaluru, India\\
+\textit{Software Developer}, Aug 2022 - Aug 2024
+\begin{itemize}
+  \item Engineered SOA-based healthcare insurance services using Java 8/11, Spring Framework, SOAP APIs, IBM WebSphere, CAQH v2/v4 standards, and API Gateway certificate-based authentication, sustaining 50K+ daily API requests and 99.99\% SLA availability.
+  \item Designed hybrid cloud integration using Azure Relay, Azure Service Bus, Azure Functions, and Java Message Service (JMS) queues to automate downstream database propagation across DEV, SIT, and PROD environments.
+  \item Led Maven, Jenkins, Azure DevOps, IBM UrbanCode Deploy, Git/SVN, JUnit, and CI/CD release delivery; migrated services to Log4j 2.x, reduced issue-resolution time 20\%, and accelerated EDX platform upgrade delivery 50\% through dependency modernization and production debugging.
+\end{itemize}
+
+\textbf{Capgemini}, Mumbai, India\\
+\textit{Senior Analyst / Analyst}, Jul 2020 - Aug 2022
+\begin{itemize}
+  \item Developed enterprise automotive applications using Java 8, Spring MVC, J2EE, Enterprise JavaBeans (EJB), JSF, RESTful APIs, JDBC, Oracle SQL, and microservices patterns for high-volume transactional workflows with greater than 99\% uptime.
+  \item Implemented a vehicle-configuration module integrating a Python decision-tree service through REST APIs to validate option availability, pricing, and business rules; improved production performance approximately 90\% through SQL optimization, Oracle database tuning, query refactoring, and legacy Java modernization.
+  \item Improved delivery consistency with Jenkins, GitLab CI/CD, Maven, Git/SVN, JUnit4, automated testing, and quality gates while mentoring junior Java developers through onboarding, pair programming, code reviews, debugging, documentation, and object-oriented design guidance.
+\end{itemize}
+
+\textbf{Capgemini}, Mumbai, India\\
+\textit{Analyst Trainee}, Jan 2020 - Jun 2020
+\begin{itemize}
+  \item Delivered two object-oriented full-stack fitness-club and digital-wallet applications in a 30-member Agile program using Java Spring Framework, Spring MVC, Angular, PostgreSQL, and MVC architecture; implemented authentication, email/OTP login, CRUD operations, account balances, transactions, and UI enhancements.
+\end{itemize}
+
+\ressection{Projects}
+
+\textbf{NYU Taxi Data Analysis Platform}\\
+Technologies: Apache Spark, PySpark, AWS, Terraform, Docker, PostgreSQL, Flask
+\begin{itemize}
+  \item Architected event-driven ETL for 8GB+ NYC taxi data using S3 ObjectCreated events, Lambda-to-EFS atomic staging, Spark Structured Streaming on ECS, EFS checkpoints, and JDBC writes to RDS PostgreSQL; reduced processing time 40\% through partitioning, memory tuning, micro-batches, and checkpointing.
+  \item Automated Terraform infrastructure for VPC networking, NAT, IAM, S3 notifications, Lambda, EFS access points, ECS task/service, RDS, and CloudWatch; containerized a local Spark, PostgreSQL, Flask, and Plotly analytics stack with Docker Compose.
+\end{itemize}
+
+\textbf{Privacy-Preserving AI Email Client (Capstone)}\\
+Technologies: Python, FastAPI, PyTorch, Hugging Face, PEFT/LoRA, Docker, React
+\begin{itemize}
+  \item Built a FastAPI model service with per-user adapter isolation, dynamic model loading/offloading, LRU and idle eviction, local/S3 compatible object storage, Docker/MinIO deployment, Prometheus metrics, and React mail-detail controls for summarize, categorize, apply-label, and suggest actions.
+  \item Engineered the model layer using t5-base, Hugging Face Transformers, PyTorch, PEFT/LoRA adapters, EmailSum-style training, checkpoint recovery, structured evaluation, and ROUGE metrics for privacy-preserving email intelligence.
+\end{itemize}
+
+\ressection{Technical Skills}
+Languages: Core Java, Java 8/11, Python, SQL, TypeScript.\\
+Java Backend: Spring Boot, Spring MVC, Spring Framework, J2EE, EJB, JSF, Hibernate, JPA, JDBC, REST APIs, SOAP APIs, Microservices, Service-Oriented Architecture (SOA), MVC Architecture, API Gateway, JMS, OAuth/JWT, JSON, XML, YAML.\\
+Cloud and DevOps: AWS (ECS, EC2, Lambda, RDS, S3, EFS, EventBridge, QuickSight), Azure (Functions, Service Bus, Azure Relay, DevOps), Docker, Kubernetes, Terraform, Jenkins, GitLab CI/CD, Maven, IBM UrbanCode Deploy, Git, SVN.\\
+Databases and Data: PostgreSQL, Oracle DB, IBM DB2, Apache Spark, PySpark, ETL Pipelines, RDBMS, SQL Optimization, Performance Tuning.\\
+Testing and Practices: JUnit, JUnit4, SoapUI, Postman, Prometheus, Log4j 2.x, IBM WebSphere, JIRA, Confluence, Agile/Scrum, CI/CD, Test-Driven Development, Object-Oriented Programming, System Design, Code Reviews, Observability, Scalability.
+
+\ressection{Education}
+\textbf{Central Michigan University}, Mount Pleasant, MI, USA\\
+Master of Science in Computer Science, Aug 2024 - Dec 2025, GPA: 3.87 / 4.0\\
+Relevant Coursework: Modern Databases, Pattern Recognition and Data Mining, Software and Data Modeling, Applied Data Engineering, Big Data Analytics, Cloud Computing, Analysis and Design of Algorithms.\\
+\textbf{Lovely Professional University}, Punjab, India\\
+Bachelor of Technology in Computer Science and Engineering, Aug 2016 - May 2020, CGPA: 8.02 / 10
+
+\ressection{Certifications}
+Microsoft Certified: Azure Fundamentals \textbar{} Microsoft Certified: Azure Developer Associate \textbar{} Microsoft Certified: Azure Data Engineer Associate
+
+\end{document}

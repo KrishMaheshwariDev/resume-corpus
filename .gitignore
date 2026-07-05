@@ -1,0 +1,5 @@
+tmp/*
+aditi/*
+*.log
+.codex/
+.agents/

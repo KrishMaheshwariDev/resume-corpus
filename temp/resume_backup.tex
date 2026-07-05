@@ -1,0 +1,190 @@
+\documentclass[letterpaper,11pt]{article}
+
+% Basic packages
+\usepackage[margin=0.5in]{geometry}
+\usepackage{latexsym}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome5}
+
+% Fonts (uncomment for xelatex/lualatex)
+% \usepackage{fontspec}
+% \setmainfont{Latin Modern Roman}
+
+% Section formatting
+\titleformat{\section}{
+  \large\bfseries
+}{}
+{0pt}{}
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+
+% Lists
+\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=1.5em}
+
+% Convenience commands
+\newcommand{\resumeItem}[1]{\item #1}
+
+\newcommand{\resumeSubheading}[4]{%
+  \vspace{1pt}
+  \noindent\textbf{#1} \hfill {\small #2}\\%
+  \noindent{\small #3} \hfill {\small #4}\\[-3pt]
+}
+
+\newcommand{\resumeProject}[3]{%
+  \vspace{1pt}
+  \noindent\textbf{#1} \hfill {\small #2}\\%
+  \noindent{\small #3}\\[-3pt]
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-1pt}}
+
+\newcommand{\sectionline}{\vspace{2pt}\hrule\vspace{4pt}}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+%========================= HEADER =============================================
+\begin{flushright}
+    {\LARGE \textbf{Kunal Maheshwari}}\\[3pt]
+    Mount Pleasant, MI, USA \,|\, (989) 906-2108 \,|\, \href{mailto:kunal.maheshwari.work@gmail.com}{kunal.maheshwari.work@gmail.com}\\
+    \href{https://www.linkedin.com/in/kunalmaheshwari26}{linkedin.com/in/kunalmaheshwari26}
+    \,|\, \href{https://github.com/preferablehuman}{github.com/preferablehuman}
+\end{flushright}
+
+%========================= SUMMARY ============================================
+% \section*{Professional Summary}
+% \sectionline
+% Versatile Software Developer holding \textbf{OPT EAD} with 4+ years of experience building scalable JAVA microservices, cloud platforms, and data pipelines across healthcare, automotive, and research domains. Proficient in Java, Python, and SQL with strong command of over Spring framework applications and there deployment and coursework on ETL, data warehousing, and performance optimization. Currently pursuing an M.S. in Computer Science at Central Michigan University with a focus on big data, cloud computing, and data engineering. Microsoft Azure certified (Fundamentals, Developer, Data Engineer). Combines backend rigor, data fluency, and reliability at scale.
+Software Developer with \textbf{OPT EAD} and 4+ years building scalable JAVA microservices, cloud platforms, and data pipelines across healthcare, automotive, and research domains. Skilled in Java, Python, SQL, and Spring framework applications. Recently graduated with an M.S. in Computer Science from Central Michigan University, focused on big data, cloud computing, and data engineering. Supports Azure, AWS, GCP cloud to delivers backend rigor, data fluency, and reliability at scale.
+%========================= EDUCATION ==========================================
+\vspace{10pt}
+\section*{Education}
+\sectionline
+
+\resumeSubheading
+  {Central Michigan University}{Mount Pleasant, MI, USA}
+  {Master of Science in Computer Science \,---\, GPA: 3.87/4.00}{Aug 2024 -- Dec 2025}
+\begin{itemize}
+  \resumeSubItem{Relevant Coursework: Modern Databases, Pattern Recognition and Data Mining, Software and Data Modeling, Applied Data Engineering, Big Data Analytics, Cloud Computing, Analysis \& Design of Algorithms.}
+\end{itemize}
+
+\vspace{5pt}
+\resumeSubheading
+  {Lovely Professional University}{Jalandhar, Punjab, India}
+  {Bachelor of Technology in Computer Science \& Engineering \,---\, CGPA: 8.02/10}{Aug 2016 -- May 2020}
+\begin{itemize}
+  \resumeSubItem{Graduated with strong foundations in algorithms, database systems, and object-oriented software design.}
+\end{itemize}
+
+%========================= EXPERIENCE =========================================
+\vspace{10pt}
+\section*{Experience}
+\sectionline
+
+\resumeSubheading
+  {NTT DATA}{Bengaluru, India (Remote)}
+  {Software Developer}{Aug 2022 -- Aug 2024}
+\begin{itemize}
+  \resumeItem{Designed and optimized high-performance REST and SOAP microservices with Java 8/11, Spring Boot, and Azure Functions, handling 50K+ daily API requests at 99.99\% SLA uptime.}
+  \resumeItem{Built and automated CI/CD pipelines using Jenkins, Maven, and Azure DevOps, cutting deployment time and improving release consistency across Azure Cloud and Oracle WebLogic.}
+  \resumeItem{Modernized legacy systems by migrating to log4j 2.x and strengthening error handling, monitoring, and debugging, reducing issue resolution time by 20\% and improving production stability.}
+  \resumeItem{Led a critical EDX platform upgrade, streamlining application architecture and dependency management, resulting in 50\% faster delivery cycles and reduced maintenance overhead.}
+  \resumeItem{Collaborated across Agile/Scrum teams to deliver FHIR-compliant healthcare solutions using Git/SVN and JUnit, ensuring code quality and regulatory adherence.}
+\end{itemize}
+
+\vspace{5pt}
+\resumeSubheading
+  {Capgemini}{Mumbai, India (Remote)}
+  {Senior Analyst}{Oct 2021 -- Aug 2022}
+\begin{itemize}
+  \resumeItem{Engineered Java/EJB enterprise applications and RESTful services for automotive clients, modernizing vehicle configuration prediction systems and improving data consistency.}
+  \resumeItem{Boosted application performance by 90\% through SQL optimization, database tuning, and refactoring legacy modules using Java 8 features and design patterns.}
+  \resumeItem{Implemented CI/CD pipelines with Jenkins and GitLab, integrating automated testing and quality gates to accelerate deployment cycles and improve release reliability.}
+  \resumeItem{Advanced Agile development practices through code reviews, pair programming, and technical documentation, strengthening collaboration across distributed teams.}
+\end{itemize}
+
+% \vspace{5pt}
+\newpage
+\resumeSubheading
+  {Capgemini}{Mumbai, India (Remote)}
+  {Analyst}{Jul 2020 -- Oct 2021}
+\begin{itemize}
+  \resumeItem{Maintained high-availability enterprise systems with 99\%+ uptime through proactive monitoring, debugging, and performance optimization.}
+  \resumeItem{Enhanced SQL data pipelines and database operations, achieving 10\% faster query performance and reinforcing data integrity via code reviews and validation.}
+  \resumeItem{Implemented comprehensive unit testing with JUnit4, driving 99\% code coverage and improving regression safety and maintainability.}
+\end{itemize}
+
+%========================= PROJECTS ===========================================
+
+\vspace{10pt}
+\section*{Selected Projects}
+\sectionline
+
+\resumeProject
+  {Privacy-Preserving AI Email Client (Capstone)}{Jan 2025 -- Dec 2025}
+  {Hugging Face, PyTorch, PEFT, LoRA, T5, Python}
+\begin{itemize}
+  \resumeItem{Engineered a fine-tuning pipeline for T5-based transformer models to perform email summarization and classification using Enron-style EmailSum-inspired datasets.}
+  \resumeItem{Applied parameter-efficient fine-tuning (LoRA) under strict compute and privacy constraints, achieving benchmark-level performance with minimal resource overhead.}
+  \resumeItem{Developed end-to-end workflows from dataset preprocessing to model tuning and evaluation using Hugging Face Transformers and PEFT, assessed with ROUGE metrics.}
+  \resumeItem{Implemented model quantization and checkpointing for lightweight, secure local deployment, integrating the model into an email client supporting summarization, tagging, and smart replies.}
+\end{itemize}
+
+\vspace{5pt}
+\resumeProject
+  {NYU Taxi Data Analysis \& Cloud Pipeline}{Jan 2025 -- May 2025}
+  {Apache Spark, PySpark, Flask, Docker, AWS (EC2, S3, RDS, ECS, QuickSight), Terraform}
+\begin{itemize}
+  \resumeItem{Engineered a distributed data pipeline to process and analyze 8GB+ NYC taxi trip data in near real time using Spark and PySpark.}
+  \resumeItem{Developed an interactive Flask-based web application with dynamic filters and visualizations for real-time data exploration and insight discovery.}
+  \resumeItem{Containerized ingestion, processing, and visualization components using Docker for portable, reproducible deployment.}
+  \resumeItem{Optimized Spark jobs and memory management, reducing processing time by 40\% and improving scalability for large datasets.}
+  \resumeItem{Automated AWS deployment with Terraform, provisioning S3, RDS, container services, and QuickSight dashboards for end-to-end analytics delivery.}
+\end{itemize}
+
+\vspace{5pt}
+\resumeProject
+  {Lamprey Movement Detection Data Pipeline}{Jan 2025 -- May 2025}
+  {Azure, Google Cloud, PostgreSQL, Python, Data Warehousing}
+\begin{itemize}
+  \resumeItem{Developed a multi-source ETL pipeline to ingest and normalize video logs and detection metadata for ecological research on Lamprey fish movement.}
+  \resumeItem{Designed structured relational schemas in PostgreSQL, transforming raw detection data into analysis-ready tables.}
+  \resumeItem{Leveraged Azure Blob Storage and Google Cloud for scalable data storage and processing, with robust logging and error handling for long-term maintainability.}
+\end{itemize}
+
+% \resumeProject
+%   {U.S. Election Data Analysis Platform}{Aug 2024 -- Dec 2024}
+%   {Python, Pandas, NumPy, Matplotlib, Seaborn}
+% \begin{itemize}
+%   \resumeItem{Built an end-to-end workflow to clean, model, and analyze U.S. election data, uncovering trends in voter demographics, turnout, and results.}
+%   \resumeItem{Produced reproducible analytical notebooks and visualizations focused on data quality, interpretability, and storytelling with statistical graphics.}
+% \end{itemize}
+
+% %========================= SKILLS & CERTS =====================================
+% \section*{Technical Skills}
+% \sectionline
+
+% \begin{tabularx}{\textwidth}{@{} l X @{}}
+% \textbf{Programming} & Core Java 8/11, Python, SQL \\[2pt]
+% \textbf{Frameworks \& Libraries} & Spring Boot, Spring Framework, Angular, FastAPI, Pandas, NumPy, Matplotlib, REST API, SOAP API \\[2pt]
+% \textbf{Cloud Platforms} & AWS (EC2, RDS, S3, Lambda), Azure (Functions, DevOps, ServiceBus), Google Cloud Platform (GCP) \\[2pt]
+% \textbf{Data \& Databases} & PostgreSQL, Oracle Database, IBM DB2, ETL pipelines, Data Warehousing, Data Analytics \\[2pt]
+% \textbf{DevOps \& Tools} & Docker, Kubernetes, Jenkins, Git, SVN, Maven, JIRA, Confluence, Tableau, DBeaver \\[2pt]
+% \textbf{Practices} & Agile/Scrum, Test-Driven Development (TDD), Object-Oriented Programming (OOP), Code Review, CI/CD
+% \end{tabularx}
+
+\vspace{10pt}
+\section*{Core Skills}
+\sectionline
+\small
+Core Java 8/11, Python, SQL, Spring Boot, Spring Framework, Angular, FastAPI, Pandas, NumPy, REST API, SOAP API, AWS (EC2, RDS, S3, Lambda), Azure (Functions, DevOps, ServiceBus), Google Cloud Platform (GCP), PostgreSQL, Oracle Database, IBM DB2, ETL pipelines, Data Warehousing, Data Analytics, Docker, Jenkins, Git, SVN, Maven, JIRA, Tableau, DBeaver, Agile/Scrum, Test-Driven Development (TDD), Object-Oriented Programming (OOP), CI/CD.
+
+
+% \vspace{4pt}
+% \section*{Certifications}
+% \sectionline
+% Microsoft Certified: Azure Fundamentals \,|\, Microsoft Certified: Azure Developer Associate \,|\, Microsoft Certified: Azure Data Engineer Associate
+
+%-------------------------------------------------------------------------------
+\end{document}
