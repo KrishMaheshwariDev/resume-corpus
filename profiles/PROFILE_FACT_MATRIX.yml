@@ -1,0 +1,457 @@
+version: 1
+last_updated: 2026-07-05
+purpose: Machine-readable master profile facts for resume generation and optimization.
+
+confidence_levels:
+  high: Directly supported by current resume, parsed repo source, or repeatedly confirmed context.
+  medium: Supported by prior context or indirect evidence but has conflicts or needs confirmation.
+  low: Mentioned or inferred but not directly verified from accessible source.
+
+identity:
+  name:
+    value: Kunal Maheshwari
+    confidence: high
+  primary_roles:
+    values:
+      - Java Backend Developer
+      - Backend Software Engineer
+      - Software Developer
+      - Java Developer
+    confidence: high
+  linkedin_headline:
+    value: Java Developer | Spring Boot | REST APIs | SQL | Backend Engineering
+    confidence: medium
+  github_handle:
+    value: preferablehuman
+    confidence: high
+  leetcode_handle:
+    value: preferablehuman
+    confidence: low
+    note: User supplied URL, but live stats were not accessible.
+
+contacts:
+  current_resume:
+    location: Haldwani, Uttarakhand, India
+    phone: 9258446350
+    email: work.kunal.maheshwari@gmail.com
+    linkedin: https://www.linkedin.com/in/kunalmaheshwari26
+    github: https://github.com/preferablehuman
+    portfolio: https://preferablehuman.github.io/portfolio/
+    confidence: high
+  historical_or_alternate:
+    locations:
+      - Mount Pleasant, MI, USA
+      - New Delhi, India
+    phones:
+      - +1 (989) 906-2108
+      - +91 92584 46350
+    emails:
+      - kunal.maheshwari.work@gmail.com
+      - kunalmaheshwari26@gmail.com
+    confidence: medium
+    note: Confirm target market before using.
+
+education:
+  central_michigan_university:
+    degree: Master of Science in Computer Science
+    location: Mount Pleasant, MI, USA
+    period_current_resume: Aug 2024 - Dec 2025
+    gpa_current_resume: 3.87 / 4.0
+    gpa_prior_context: 3.76 / 4.0
+    confidence: medium
+    verify:
+      - final GPA
+      - completion status
+      - graduation date
+    coursework:
+      - Modern Databases
+      - Pattern Recognition and Data Mining
+      - Software and Data Modeling
+      - Applied Data Engineering
+      - Big Data Analytics
+      - Cloud Computing
+      - Analysis and Design of Algorithms
+  lovely_professional_university:
+    degree: Bachelor of Technology in Computer Science and Engineering
+    specialization_prior_context: Data Science
+    location: Punjab, India
+    period: Aug 2016 - May 2020
+    cgpa: 8.02 / 10
+    confidence: high
+  school:
+    name: St. Paul's Senior Secondary School
+    board: CBSE
+    period: 2014 - 2016
+    score: 77%
+    confidence: medium
+
+certifications:
+  high_confidence:
+    - Microsoft Certified: Azure Fundamentals
+    - Microsoft Certified: Azure Developer Associate
+    - Microsoft Certified: Azure Data Engineer Associate
+  medium_confidence:
+    - Workshop on Ethical Hacking
+    - Introduction to Linux
+    - Agile Software Development
+
+experience:
+  ntt_data:
+    company: NTT DATA
+    location: Bengaluru, India
+    role_current_resume: Software Developer
+    role_prior_context: Software Development Analyst
+    period_current_resume: Aug 2022 - Aug 2024
+    period_prior_context: Aug 2022 - Jul 2024
+    domain: Healthcare insurance
+    work_mode_prior_context: Remote
+    confidence: high
+    technologies:
+      - Java 8
+      - Java 11
+      - Spring Framework
+      - Spring Boot
+      - REST APIs
+      - SOAP APIs
+      - SOA
+      - IBM WebSphere
+      - JMS
+      - Azure Relay
+      - Azure Service Bus
+      - Azure Functions
+      - Azure DevOps
+      - API Gateway
+      - certificate-based authentication
+      - CAQH v2/v4
+      - Maven
+      - Jenkins
+      - IBM UrbanCode Deploy
+      - Git
+      - SVN
+      - JUnit
+      - Log4j 2.x
+    metrics:
+      - 50K+ daily requests
+      - 99.99% SLA availability
+      - 20% issue-resolution time reduction
+      - 50% EDX platform upgrade/delivery acceleration
+    evidence:
+      - SOA-based healthcare Java services
+      - REST/SOAP APIs
+      - hybrid Azure Relay, Service Bus, JMS integration
+      - CI/CD release delivery
+      - production support and root-cause debugging
+    verify:
+      - exact title
+      - exact end month
+      - whether to use Led vs Supported for delivery ownership
+  capgemini_senior_analyst_analyst:
+    company: Capgemini
+    location: Mumbai, India
+    role_current_resume: Senior Analyst / Analyst
+    role_split_prior_context:
+      analyst: Jul 2020 - Oct 2021
+      senior_analyst: Oct 2021 - Aug 2022
+    period_current_resume: Jul 2020 - Aug 2022
+    domain: Automotive
+    work_mode_prior_context: Remote
+    confidence: high
+    technologies:
+      - Java 8
+      - Spring MVC
+      - J2EE
+      - EJB
+      - JSF
+      - RESTful APIs
+      - JDBC
+      - Oracle SQL
+      - SQL optimization
+      - Python decision-tree service integration
+      - Jenkins
+      - GitLab CI/CD
+      - Maven
+      - Git
+      - SVN
+      - JUnit4
+      - automated testing
+      - quality gates
+    metrics:
+      - approximately 90% production performance improvement
+      - greater than 99% uptime
+    evidence:
+      - automotive enterprise applications
+      - vehicle configuration module
+      - Python decision-tree REST integration
+      - option availability, pricing, and business rules validation
+      - SQL and Oracle tuning
+      - legacy Java modernization
+      - mentoring junior Java developers
+    verify:
+      - whether to group or split Analyst/Senior Analyst in resumes
+  capgemini_analyst_trainee:
+    company: Capgemini
+    location: Mumbai, India
+    role: Analyst Trainee
+    period_current_resume: Jan 2020 - Jun 2020
+    confidence: high
+    technologies:
+      - Java
+      - Spring Framework
+      - Spring MVC
+      - Angular
+      - PostgreSQL
+      - MVC
+    evidence:
+      - fitness-club application
+      - digital-wallet application
+      - 30-member Agile program
+      - authentication
+      - email/OTP login
+      - CRUD
+      - account balances
+      - transactions
+      - profile-image upload
+
+projects:
+  privacy_preserving_ai_email_client:
+    type: Graduate capstone / NLP / model serving
+    confidence: high
+    safe_positioning: Project-based; privacy-oriented; not formal-compliance or production-user claim.
+    technologies:
+      - Python
+      - FastAPI
+      - PyTorch
+      - Hugging Face Transformers
+      - T5
+      - PEFT
+      - LoRA
+      - ROUGE
+      - Docker
+      - MinIO
+      - Prometheus
+      - React
+      - TypeScript
+    metrics:
+      - ROUGE-1 F 53.04
+      - ROUGE-2 F 44.90
+      - ROUGE-L F 45.90
+  nyu_taxi_aws_spark_pipeline:
+    type: AWS / Spark / data engineering
+    repo: https://github.com/preferablehuman/AWS-automated-spark-pipeline
+    confidence: high
+    technologies:
+      - Apache Spark
+      - PySpark
+      - Spark Structured Streaming
+      - AWS S3
+      - AWS Lambda
+      - AWS EFS
+      - AWS ECS
+      - AWS RDS
+      - PostgreSQL
+      - CloudWatch
+      - Terraform
+      - Docker
+      - Flask
+      - Plotly
+    metrics:
+      - 8GB+ dataset
+      - 40% runtime/processing improvement
+      - Terraform IaC
+  interactive_portfolio:
+    type: React / TypeScript portfolio product
+    repo: https://github.com/preferablehuman/portfolio
+    confidence: high
+    technologies:
+      - React
+      - Vite
+      - TypeScript
+      - Tailwind CSS
+      - Motion for React
+      - Lucide React
+      - GitHub Pages
+      - GitHub Actions
+    metrics:
+      - 7 pages
+      - 7 case studies
+      - build + lint checks
+  lamprey_ecological_tracking_pipeline:
+    type: Computer vision / GCP data pipeline
+    repo: https://github.com/preferablehuman/lamprey-locator
+    confidence: medium
+    technologies:
+      - Python
+      - Flask
+      - OpenCV
+      - Pandas
+      - Google Cloud Storage
+      - Cloud SQL
+      - PostgreSQL
+      - SQLAlchemy
+      - Docker
+  election_outcomes_eda:
+    type: Academic EDA
+    confidence: medium
+    technologies:
+      - Python
+      - Pandas
+      - Jupyter
+      - Matplotlib
+      - Kaggle datasets
+      - National Archives data
+  online_wallet:
+    type: Java + Angular training project
+    repo: https://github.com/preferablehuman/OnlineWallet-repo
+    confidence: medium
+    technologies:
+      - Java
+      - Spring MVC
+      - Angular
+      - PostgreSQL
+      - MVC
+      - CRUD
+      - Authentication
+  bookstore:
+    type: Java + Angular practice project
+    repo: https://github.com/preferablehuman/BookStore
+    confidence: high
+    technologies:
+      - Java
+      - Angular
+      - REST-style APIs
+      - OOP
+  local_resume_optimizer:
+    type: Local project / in-progress
+    confidence: medium
+    technologies:
+      - React
+      - Vite
+      - FastAPI
+      - local LLM
+      - LaTeX
+      - PDF generation
+      - keyword scoring
+  local_programming_assistant:
+    type: Local project / planned or in-progress
+    confidence: medium
+    technologies:
+      - React
+      - Python backend
+      - RAG
+      - local transformer hosting
+      - Docker
+      - database container
+
+skills:
+  languages:
+    - Java 8
+    - Java 11
+    - Core Java
+    - Python
+    - SQL
+    - TypeScript
+  backend:
+    - Spring Boot
+    - Spring Framework
+    - Spring MVC
+    - Spring Data JPA
+    - Hibernate
+    - JPA
+    - J2EE
+    - EJB
+    - JSF
+    - JDBC
+    - REST APIs
+    - SOAP APIs
+    - Microservices
+    - SOA
+    - JMS
+    - API Gateway
+    - OAuth 2.0
+  cloud:
+    azure:
+      - Azure Functions
+      - Azure Service Bus
+      - Azure Relay
+      - Azure DevOps
+    aws:
+      - ECS
+      - EC2
+      - Lambda
+      - RDS
+      - S3
+      - EFS
+      - EventBridge
+      - CloudWatch
+      - QuickSight
+      - VPC
+      - IAM
+    gcp:
+      - Google Cloud Storage
+      - Cloud SQL
+  devops:
+    - Jenkins
+    - GitLab CI/CD
+    - Maven
+    - IBM UrbanCode Deploy
+    - Git
+    - SVN
+    - Docker
+    - Docker Compose
+    - Kubernetes
+    - Terraform
+    - GitHub Actions
+    - Linux
+  databases:
+    - Oracle Database
+    - Oracle SQL
+    - PostgreSQL
+    - IBM DB2
+    - RDBMS
+    - SQL optimization
+    - JDBC
+    - JPA
+    - Hibernate
+    - SQLAlchemy
+  testing_quality:
+    - JUnit
+    - JUnit4
+    - Unit testing
+    - Integration testing
+    - Automated testing
+    - Quality gates
+    - SoapUI
+    - Code reviews
+    - Debugging
+    - Troubleshooting
+    - Production support
+  ai_data:
+    - Apache Spark
+    - PySpark
+    - Spark Structured Streaming
+    - Pandas
+    - Jupyter
+    - Matplotlib
+    - Plotly
+    - PyTorch
+    - Hugging Face Transformers
+    - T5
+    - PEFT
+    - LoRA
+    - ROUGE
+    - FastAPI
+    - MinIO
+    - Prometheus
+
+verification_needed:
+  - Uploaded ZIP/archive not accessible; user must upload again or provide path.
+  - LinkedIn exact profile text/PDF export.
+  - LeetCode stats.
+  - Current location for resume use.
+  - Final CMU GPA and graduation/completion date.
+  - Current U.S. work authorization status and expiry year.
+  - Exact NTT DATA title and end month.
+  - Whether Capgemini should be grouped or split.
+  - Kafka depth.
+  - Kubernetes depth.
+  - Spring Boot production depth vs Spring Framework/Spring MVC evidence.
