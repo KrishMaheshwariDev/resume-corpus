@@ -1,0 +1,115 @@
+version: 1
+last_updated: 2026-07-05
+purpose: Default scoring weights for local resume-to-job-description optimization.
+
+scoring_philosophy:
+  note: >
+    Do not present this as a proprietary ATS replica. Use it as an explainable
+    hybrid scorecard combining hard requirements, lexical match, semantic match,
+    evidence strength, and parse safety.
+  final_score_scale: 0_to_100
+  truthfulness_required: true
+  keyword_stuffing_penalty: true
+
+final_score_weights:
+  required_skill_coverage: 0.25
+  preferred_skill_coverage: 0.15
+  role_title_and_seniority_match: 0.15
+  responsibility_semantic_match: 0.15
+  domain_and_project_match: 0.10
+  experience_depth_match: 0.10
+  education_and_certification_match: 0.05
+  parse_quality_and_format_safety: 0.05
+
+hard_requirement_status:
+  pass:
+    description: Requirement is clearly satisfied and supported by resume evidence.
+    score: 1.0
+  weak:
+    description: Requirement is partially satisfied, only implied, or only listed without evidence.
+    score: 0.5
+  fail:
+    description: Requirement is missing, contradicted, or unsupported.
+    score: 0.0
+
+skill_match_status:
+  exact:
+    score: 1.0
+    description: Exact JD term appears truthfully in resume.
+  alias:
+    score: 0.85
+    description: Canonical alias or equivalent term appears.
+  semantic:
+    score: 0.70
+    description: Similar responsibility appears but exact term is absent.
+  weak:
+    score: 0.40
+    description: Skill appears only in skills list or weak context.
+  missing:
+    score: 0.0
+    description: No truthful support found.
+
+evidence_strength:
+  level_0_missing:
+    score: 0.0
+    description: Skill or requirement missing.
+  level_1_keyword_only:
+    score: 0.35
+    description: Appears only in skills list.
+  level_2_generic_bullet:
+    score: 0.55
+    description: Appears in a generic bullet without project, ownership, or impact.
+  level_3_contextual_evidence:
+    score: 0.78
+    description: Appears with project, responsibility, or domain context.
+  level_4_impact_evidence:
+    score: 1.0
+    description: Appears with production, scale, metric, reliability, security, cost, latency, SLA, or business impact.
+
+parse_quality:
+  preferred:
+    - single_column_layout
+    - standard_section_headers
+    - text_based_pdf
+    - consistent_dates
+    - no_icons_for_required_contact_details
+    - no_images_of_text
+  penalties:
+    multi_column_layout: -0.10
+    tables_for_experience: -0.12
+    icons_only_contact_info: -0.10
+    text_boxes: -0.08
+    skill_bars: -0.08
+    hidden_text_or_keyword_stuffing: -0.30
+    missing_standard_headings: -0.08
+    broken_pdf_text_extraction: -0.30
+
+keyword_frequency_rules:
+  exact_high_value_skill_minimum: 1
+  exact_high_value_skill_recommended_maximum: 3
+  repeated_term_saturation: true
+  stuffing_warning_threshold_same_term: 5
+  stuffing_penalty_same_term: -0.10
+
+fit_bands:
+  high:
+    min_score: 80
+    interpretation: Strong fit; resume should be tailored but core alignment is present.
+  medium:
+    min_score: 60
+    max_score: 79
+    interpretation: Plausible fit; important gaps or weak evidence exist.
+  low:
+    max_score: 59
+    interpretation: Weak fit; missing must-have skills or seniority/domain mismatch likely.
+
+report_sections:
+  - overall_fit
+  - hard_requirements
+  - required_skill_coverage
+  - preferred_skill_coverage
+  - semantic_alignment
+  - evidence_strength
+  - parse_quality
+  - recommended_edits
+  - truthfulness_risks
