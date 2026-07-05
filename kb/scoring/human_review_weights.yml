@@ -1,0 +1,181 @@
+version: 1
+last_updated: 2026-07-05
+purpose: Scoring weights for human resume perception and recruiter/hiring-manager review.
+
+scoring_philosophy:
+  note: >
+    This score estimates how easy the resume is for a human reviewer to scan,
+    understand, trust, and connect to the target role. It complements ATS and
+    keyword scoring; it does not replace skill coverage or truthfulness checks.
+  score_scale: 0_to_100
+  use_with:
+    - kb/resume_optimization_knowledge_base.md
+    - kb/human_review/resume_perception_knowledge_base.md
+    - kb/writing/bullet_semantics.yml
+    - kb/writing/action_verbs_java_backend.yml
+
+human_review_score_weights:
+  first_pass_role_clarity: 0.18
+  top_half_signal_strength: 0.17
+  evidence_density: 0.17
+  skimmability_and_visual_hierarchy: 0.14
+  action_language_strength: 0.10
+  relevance_ordering: 0.09
+  credibility_and_restraint: 0.08
+  grammar_consistency_and_polish: 0.04
+  memorability_of_metrics: 0.03
+
+first_pass_role_clarity:
+  high:
+    score: 1.0
+    description: Target role and backend identity are clear within a rapid scan.
+  medium:
+    score: 0.6
+    description: Role is inferable but not immediately sharp.
+  low:
+    score: 0.2
+    description: Resume looks generic or points in too many directions.
+
+first_pass_reader_questions:
+  - What role is this person?
+  - Is this person relevant to the job?
+  - Is there proof beyond keywords?
+  - Is this person worth interviewing?
+
+top_half_signal_strength:
+  strong_signals:
+    - Java/Spring Boot/backend identity appears near the top.
+    - Skills are clustered by role relevance.
+    - Most recent role includes a strong first bullet.
+    - High-value metrics are visible early.
+  penalties:
+    generic_summary: -0.10
+    no_skills_cluster: -0.08
+    weak_first_experience_bullet: -0.12
+    strongest_metric_buried: -0.08
+
+evidence_density:
+  level_0:
+    score: 0.0
+    description: Mostly duties, no evidence.
+  level_1:
+    score: 0.35
+    description: Technologies listed but weak context.
+  level_2:
+    score: 0.60
+    description: Some context, limited metrics or outcomes.
+  level_3:
+    score: 0.80
+    description: Technology plus system/domain context.
+  level_4:
+    score: 1.0
+    description: Technology plus system/domain context plus scale, metric, SLA, performance, or reliability outcome.
+
+skimmability_and_visual_hierarchy:
+  preferred:
+    - one_column_layout
+    - standard_section_headings
+    - consistent_dates
+    - consistent_bullet_style
+    - bullets_one_to_two_lines_where_possible
+    - information_carrying_words_at_bullet_start
+    - metrics_visible_as_numerals
+  penalties:
+    dense_paragraphs: -0.12
+    bullets_over_three_lines: -0.10
+    inconsistent_formatting: -0.10
+    decorative_headings: -0.08
+    excessive_bold_or_italics: -0.06
+    crowded_top_half: -0.10
+
+action_language_strength:
+  preferred_verbs:
+    - Developed
+    - Designed
+    - Implemented
+    - Built
+    - Refactored
+    - Optimized
+    - Integrated
+    - Automated
+    - Deployed
+    - Migrated
+    - Secured
+    - Tuned
+    - Validated
+    - Streamlined
+  weak_openers:
+    - Responsible for
+    - Worked on
+    - Helped with
+    - Involved in
+    - Participated in
+    - Assisted with
+    - Used
+  penalties:
+    weak_opener_per_bullet: -0.04
+    repeated_same_verb_three_or_more_times: -0.05
+    passive_voice_pattern: -0.05
+
+relevance_ordering:
+  strong:
+    - Most relevant experience appears first.
+    - First bullet under each role is the strongest matching bullet.
+    - Skills are ordered by JD relevance.
+    - Projects support missing or weaker production skill signals.
+  penalties:
+    irrelevant_skill_cluster_first: -0.06
+    weak_first_bullet: -0.10
+    low_relevance_project_before_high_relevance_project: -0.06
+
+credibility_and_restraint:
+  preferred:
+    - specific_metrics
+    - named_technologies
+    - truthful_scope
+    - restrained_tone
+    - evidence_over_adjectives
+  penalties:
+    unsupported_expert_claims: -0.12
+    inflated_leadership_claims: -0.10
+    generic_self_praise: -0.08
+    buzzword_stacking: -0.08
+    unverified_metrics: -0.15
+
+grammar_consistency_and_polish:
+  checks:
+    - consistent_past_tense_for_past_roles
+    - present_tense_only_for_current_role
+    - no_personal_pronouns
+    - no_spelling_errors
+    - consistent_punctuation
+    - consistent capitalization of technologies
+  penalties:
+    typo_or_spelling_error: -0.08
+    inconsistent_tense: -0.05
+    inconsistent_punctuation: -0.03
+    first_person_pronouns: -0.05
+
+memorability_of_metrics:
+  preferred_metric_types:
+    - 50K_daily_requests
+    - 99.99_percent_SLA
+    - 20_percent_resolution_time_reduction
+    - 40_percent_runtime_reduction
+    - 50_percent_delivery_cycle_improvement
+    - 90_percent_response_time_or_performance_improvement
+  note: >
+    Metrics should be used only when already known, supported, or truthfully derivable.
+    Do not invent numbers for memorability.
+
+fit_bands:
+  high:
+    min_score: 82
+    interpretation: Strong human-review presentation; likely easy to scan and credible.
+  medium:
+    min_score: 65
+    max_score: 81
+    interpretation: Usable but some signal, ordering, or evidence weaknesses remain.
+  low:
+    max_score: 64
+    interpretation: Human reader may miss the fit or distrust the claims.
