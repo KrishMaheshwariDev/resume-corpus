@@ -1,0 +1,57 @@
+% !TeX program = pdflatex
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.52in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\ifdefined\pdfglyphtounicode\input{glyphtounicode}\pdfgentounicode=1\fi
+\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}\setlength{\emergencystretch}{1em}
+\renewcommand{\baselinestretch}{0.97}
+\setlist[itemize]{label=-,leftmargin=11pt,itemsep=0.1pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+\newcommand{\ressection}[1]{\vspace{3pt}\par\textbf{#1}\par\vspace{1pt}\hrule\vspace{2pt}}
+\begin{document}
+\pagestyle{empty}\raggedright\fontsize{10.05}{10.95}\selectfont
+
+{\Large \textbf{Kunal Maheshwari}}\\
+Haldwani, Uttarakhand, India \textbar{} 9258446350 \textbar{} \href{mailto:work.kunal.maheshwari@gmail.com}{work.kunal.maheshwari@gmail.com}\\
+LinkedIn: \href{https://www.linkedin.com/in/kunalmaheshwari26}{linkedin.com/in/kunalmaheshwari26} \textbar{} GitHub: \href{https://github.com/preferablehuman}{github.com/preferablehuman} \textbar{} Portfolio: \href{https://preferablehuman.github.io/portfolio/}{preferablehuman.github.io/portfolio/}
+
+\ressection{Summary}
+Data Engineering and Backend Developer with 4.6+ years of Java, SQL, cloud integration, CI/CD, and production-system experience, plus graduate AWS/Spark data-platform projects. Built event-driven pipelines using S3, Lambda, EFS, ECS, Spark Structured Streaming, RDS PostgreSQL, Terraform, and Docker; improved Spark processing 40\%, optimized Oracle workflows 90\%, and supported 50K+ daily API transactions at 99.99\% SLA.
+
+\ressection{Work Experience}
+\textbf{NTT Data}, Bengaluru, India \hfill \textit{Software Developer, Aug 2022 - Aug 2024}
+\begin{itemize}
+  \item Built healthcare integration services using Java 8/11, Spring Boot/Spring Framework, REST/SOAP APIs, SOA, IBM WebSphere, CAQH workflows, and API Gateway authentication for 50K+ daily requests at 99.99\% SLA.
+  \item Designed event-driven data propagation using Azure Relay, Azure Service Bus Topics, Azure Functions, and JMS queues across DEV, SIT, and PROD, improving reliability of downstream enterprise database workflows.
+  \item Delivered Maven, Jenkins, Azure DevOps, UrbanCode, Git/SVN, JUnit, Log4j 2.x, and CI/CD release support, reducing issue-resolution time 20\% and accelerating EDX platform delivery 50\%.
+\end{itemize}
+\textbf{Capgemini}, Mumbai, India \hfill \textit{Senior Analyst, Jul 2020 - Aug 2022}
+\begin{itemize}
+  \item Developed automotive Java/Spring backend services with REST APIs, JDBC, Oracle SQL, EJB, JSF, and high-availability transactional workflows, sustaining 99\%+ uptime.
+  \item Tuned Oracle SQL queries, database access paths, and legacy Java/J2EE components, improving production performance approximately 90\% and strengthening data-backed service reliability.
+  \item Integrated a Python decision-tree service through REST APIs for option availability, pricing, and business-rule validation while supporting Jenkins, GitLab CI/CD, Maven, JUnit4, and quality gates.
+\end{itemize}
+
+\ressection{Selected Data Projects}
+\textbf{NYU Taxi Data Analysis Platform} \hfill \textit{AWS, Spark, Terraform, PostgreSQL}
+\begin{itemize}
+  \item Built event-driven data pipeline where S3 uploads trigger Lambda, stage files into EFS, process micro-batches with Spark Structured Streaming on ECS, and write analytics to RDS PostgreSQL with checkpoints.
+  \item Defined AWS infrastructure with Terraform across VPC, IAM, S3 notifications, Lambda, EFS access points, ECS services, RDS, and CloudWatch; processed 8GB+ taxi data with 40\% runtime improvement.
+\end{itemize}
+\textbf{Lamprey Ecological Tracking Pipeline} \hfill \textit{Python, Flask, OpenCV, Cloud SQL}
+\begin{itemize}
+  \item Processed video and tag-detection data using OpenCV, Pandas, Google Cloud Storage, Cloud SQL, PostgreSQL, SQLAlchemy, and Docker for academic ecological tracking workflows.
+\end{itemize}
+
+\ressection{Technical Skills}
+Languages/Data: Python, SQL, Java 8/11, Pandas, NumPy, Jupyter.\\
+Data Engineering: Apache Spark, PySpark, Spark Structured Streaming, ETL, Micro-batches, EFS Checkpoints, JDBC, PostgreSQL, Oracle SQL, RDS, Cloud SQL.\\
+Cloud/DevOps: AWS S3, Lambda, EFS, ECS, RDS, CloudWatch, IAM, VPC, Terraform, Docker, Azure Service Bus, Azure Relay, Azure Functions, Jenkins, GitLab CI/CD, Maven, Git.\\
+Backend/Quality: Spring Boot, REST/SOAP APIs, JMS, FastAPI, Flask, JUnit, Log4j 2.x, Agile/Scrum, Production Support, Performance Tuning.
+
+\ressection{Education and Certifications}
+\textbf{Central Michigan University}, MS Computer Science, Aug 2024 - Dec 2025, GPA: 3.87/4.0 \textbar{} \textbf{Lovely Professional University}, B.Tech CSE, 2016 - 2020, CGPA: 8.02/10\\
+Microsoft Certified: Azure Fundamentals \textbar{} Azure Developer Associate \textbar{} Azure Data Engineer Associate
+\end{document}
