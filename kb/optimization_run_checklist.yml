@@ -1,0 +1,117 @@
+version: 1
+last_updated: 2026-07-05
+purpose: Machine-readable checklist for every resume optimization run.
+
+mandatory: true
+non_negotiable_rule: Do not edit resume files directly from memory alone. Reload the knowledge base first.
+
+preflight_required_files:
+  - kb/resume_optimization_knowledge_base.md
+  - kb/human_review/resume_perception_knowledge_base.md
+  - kb/scoring/weights.yml
+  - kb/scoring/human_review_weights.yml
+  - kb/skills/java_backend_taxonomy.yml
+  - kb/roles/java_backend_engineer.yml
+  - kb/writing/bullet_semantics.yml
+  - kb/writing/action_verbs_java_backend.yml
+  - kb/optimization_run_protocol.md
+
+run_types:
+  general_optimization:
+    requires_job_description: false
+    focus:
+      - baseline_java_backend_fit
+      - parse_safety
+      - evidence_density
+      - human_review_clarity
+  jd_specific_tailoring:
+    requires_job_description: true
+    focus:
+      - hard_requirement_gate
+      - exact_jd_keyword_coverage
+      - semantic_responsibility_alignment
+      - truthfulness_guard
+  one_page_compression:
+    requires_job_description: false
+    focus:
+      - preserve_high_signal_metrics
+      - remove_low_signal_filler
+      - retain_required_keywords
+      - maintain_readability
+  human_review_pass:
+    requires_job_description: false
+    focus:
+      - first_pass_role_clarity
+      - top_half_signal_strength
+      - action_language
+      - skimmability
+  ats_pass:
+    requires_job_description: true
+    focus:
+      - parse_quality
+      - exact_keyword_match
+      - alias_normalization
+      - required_skill_coverage
+
+required_phases:
+  - intake
+  - mandatory_kb_reload
+  - parse_and_baseline_review
+  - ats_or_role_fit_analysis
+  - human_review_analysis
+  - truthfulness_gate
+  - edit_strategy
+  - source_edit
+  - post_edit_validation
+  - change_summary
+
+truthfulness_gate:
+  reject_if_introduces:
+    - invented_technology_experience
+    - unsupported_metrics
+    - inflated_years_of_experience
+    - exaggerated_leadership
+    - fake_production_exposure
+    - project_only_skill_presented_as_professional_production_experience
+    - unsupported_cloud_kafka_kubernetes_claims
+  allowed_labels:
+    - production experience
+    - project experience
+    - academic experience
+    - local project experience
+    - exposure
+    - familiar with
+    - currently learning
+
+post_edit_validation:
+  must_verify:
+    - no_unsupported_claims_added
+    - no_critical_keywords_removed
+    - high_signal_metrics_preserved
+    - standard_section_headings_preserved
+    - parse_safe_format_preserved
+    - bullets_readable_not_overcompressed
+    - target_role_alignment_preserved
+
+required_report_fields:
+  - run_type
+  - knowledge_base_files_loaded
+  - resume_source_path
+  - target_role
+  - overall_fit
+  - ats_fit
+  - human_review_fit
+  - hard_requirements
+  - required_skill_coverage
+  - preferred_skill_coverage
+  - top_matched_evidence
+  - weak_or_missing_areas
+  - recommended_edits
+  - truthfulness_risks
+  - parse_risks
+  - files_changed
+  - commit_sha
+
+consistency_instruction: >
+  Future resume optimization runs must begin by reading the preflight_required_files.
+  If chat context is lost, reload this checklist and optimization_run_protocol.md first.
