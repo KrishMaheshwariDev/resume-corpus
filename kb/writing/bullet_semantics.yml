@@ -1,0 +1,159 @@
+version: 1
+last_updated: 2026-07-05
+purpose: Bullet structure, sentence semantics, and rewrite patterns for resume human perception.
+
+principles:
+  - Put the strongest signal early in the bullet.
+  - Use action-first fragments, not full first-person sentences.
+  - Combine technology, context, and result whenever truthful.
+  - Prefer evidence over adjectives.
+  - Keep one dominant idea per bullet.
+  - Make metrics visible as numerals.
+  - Avoid vague responsibility language.
+
+preferred_bullet_models:
+  default_engineering:
+    pattern: "Action verb + technology/method + system/domain context + scale/constraint + outcome"
+    use_when: General backend engineering bullet.
+    example: "Developed Java 8/Spring Boot REST APIs for healthcare payer integrations, supporting 50K daily requests and 99.99% SLA availability."
+
+  impact_first:
+    pattern: "Metric/result + by + action + technology/method + context"
+    use_when: The metric is the most attention-grabbing part.
+    example: "Reduced issue resolution time by 20% by improving Log4j 2.x logging, exception handling, and backend traceability across production services."
+
+  scale_first:
+    pattern: "Scale/volume + system + action + technology + outcome"
+    use_when: Scale or reliability is the strongest proof.
+    example: "Supported 50K daily API requests across Java/Spring Boot healthcare integrations while maintaining 99.99% SLA availability."
+
+  modernization:
+    pattern: "Modernized/refactored + legacy component + target architecture/technology + quality/performance result"
+    use_when: Showing legacy modernization, refactoring, or migration.
+    example: "Modernized legacy Java/J2EE components and optimized SQL access paths, improving automotive configuration response time by 90%."
+
+  integration:
+    pattern: "Integrated + source system + target system + protocol/platform + reliability/business result"
+    use_when: Showing enterprise integration or hybrid-cloud work.
+    example: "Integrated Azure Relay, Azure Service Bus Topics, and WebSphere JMS queues to support hybrid-cloud healthcare data exchange."
+
+  ci_cd_release:
+    pattern: "Automated/deployed/coordinated + release/build process + toolchain + delivery/reliability outcome"
+    use_when: Showing DevOps, build, release, or deployment maturity.
+    example: "Coordinated Jenkins, Azure DevOps, and UrbanCode Deploy releases across DEV/SIT environments, improving delivery predictability."
+
+  testing_quality:
+    pattern: "Validated/tested + component + framework/method + quality outcome"
+    use_when: Showing testing, coverage, or defect prevention.
+    example: "Validated backend service behavior with JUnit tests and API regression checks, reducing release risk."
+
+  collaboration:
+    pattern: "Coordinated with + team/stakeholder + technical deliverable + operational result"
+    use_when: Collaboration is important but must stay technical.
+    example: "Coordinated with PL/SQL teams to verify Oracle-backed API changes across SIT releases, reducing deployment defects."
+
+bad_to_better_rewrites:
+  - bad: "Responsible for developing APIs."
+    better: "Developed Java/Spring Boot REST APIs for healthcare payer integrations, supporting production request traffic."
+    reason: Replaces passive duty language with action, technology, domain, and production context.
+
+  - bad: "Worked on database queries."
+    better: "Optimized Oracle SQL queries and coordinated PL/SQL validation to improve backend API reliability."
+    reason: Adds action, database technology, collaboration, and outcome.
+
+  - bad: "Used Azure Service Bus and JMS."
+    better: "Integrated Azure Service Bus Topics with WebSphere JMS queues to enable hybrid-cloud message delivery."
+    reason: Converts tool usage into architecture evidence.
+
+  - bad: "Helped improve application performance."
+    better: "Refactored legacy Java/J2EE components and tuned SQL queries, improving response time by 90%."
+    reason: Adds ownership, methods, technology, and metric.
+
+  - bad: "Participated in CI/CD activities."
+    better: "Supported Jenkins and Azure DevOps CI/CD releases with Maven builds and environment validation across DEV/SIT."
+    reason: Makes release work concrete and scannable.
+
+semantic_checks:
+  action_verb_present:
+    description: Bullet should begin with or quickly include a strong action verb.
+    fail_patterns:
+      - "Responsible for"
+      - "Worked on"
+      - "Involved in"
+      - "Helped with"
+      - "Participated in"
+
+  technology_context_present:
+    description: Backend bullets should include named technologies where truthful.
+    examples:
+      - Java
+      - Spring Boot
+      - REST API
+      - SOAP API
+      - SQL
+      - Oracle
+      - Azure Service Bus
+      - JMS
+      - Jenkins
+
+  outcome_present:
+    description: At least some bullets per role should include measurable or operational outcomes.
+    outcome_markers:
+      - "%"
+      - "requests/day"
+      - "SLA"
+      - "availability"
+      - "latency"
+      - "runtime"
+      - "delivery cycle"
+      - "defects"
+      - "resolution time"
+      - "reliability"
+
+  credibility_guard:
+    description: Do not use verbs or metrics that overstate actual scope.
+    caution_verbs:
+      - Architected
+      - Led
+      - Owned
+      - Directed
+      - Spearheaded
+    rule: Use these only when scope is confirmed.
+
+sentence_length_guidance:
+  ideal_words_per_bullet: 18_to_32
+  max_words_before_review: 38
+  max_lines_recommended: 2
+  allow_three_lines_when: Metric-rich senior bullet with strong evidence.
+
+word_removal_list:
+  empty_intensifiers:
+    - successfully
+    - effectively
+    - various
+    - multiple
+    - several
+    - very
+    - robust
+    - dynamic
+    - excellent
+    - strong
+    - highly
+  generic_phrases:
+    - responsible for
+    - worked on
+    - played a key role in
+    - involved in
+    - helped with
+    - participated in
+    - handled various tasks
+
+metric_formatting:
+  prefer_numerals: true
+  examples:
+    - "50K daily requests"
+    - "99.99% SLA"
+    - "20% reduction"
+    - "8 GB dataset"
+    - "40% runtime reduction"
+  caution: Never invent or round metrics without support.
