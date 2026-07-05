@@ -1,0 +1,302 @@
+version: 1
+last_updated: 2026-07-05
+purpose: Canonical skill taxonomy and aliases for Java backend resume optimization.
+
+categories:
+  core_java:
+    description: Java language, JVM, object-oriented design, and core APIs.
+    skills:
+      Java:
+        aliases: [Java 8, Java 11, Core Java, JDK]
+        exact_match_priority: true
+        related: [OOP, Collections, Streams, Lambdas, Exception Handling, Concurrency]
+        strong_context_terms: [developed, implemented, refactored, optimized, designed, maintained]
+        weak_context_terms: [familiar, exposure, basic]
+      OOP:
+        aliases: [Object-Oriented Programming, Object Oriented Design, Object-Oriented Design]
+        exact_match_priority: true
+        related: [SOLID, design patterns, clean code]
+      Collections:
+        aliases: [Collections Framework, Java Collections]
+        exact_match_priority: false
+        related: [List, Set, Map, HashMap, ArrayList]
+      Streams:
+        aliases: [Java Streams, Stream API]
+        exact_match_priority: false
+        related: [Lambdas, functional programming]
+      Lambdas:
+        aliases: [Lambda expressions, Java Lambda]
+        exact_match_priority: false
+        related: [Streams, functional interfaces]
+      Exception Handling:
+        aliases: [exceptions, error handling]
+        exact_match_priority: false
+        related: [logging, resilience]
+      Concurrency:
+        aliases: [Multithreading, Threads, ExecutorService, concurrent programming]
+        exact_match_priority: true
+        related: [synchronization, thread safety, async processing]
+      JVM:
+        aliases: [Java Virtual Machine, memory management, garbage collection]
+        exact_match_priority: false
+        related: [performance tuning, profiling]
+
+  spring_backend:
+    description: Spring ecosystem and enterprise backend API development.
+    skills:
+      Spring Boot:
+        aliases: [SpringBoot, Spring Framework Boot]
+        exact_match_priority: true
+        related: [Spring MVC, REST API, microservices, JPA, Hibernate]
+        evidence_patterns:
+          - Spring Boot REST API
+          - Spring Boot microservice
+          - Spring Boot application
+      Spring Framework:
+        aliases: [Spring]
+        exact_match_priority: true
+        related: [Dependency Injection, Beans, Configuration]
+      Spring MVC:
+        aliases: [MVC, Spring Web MVC]
+        exact_match_priority: true
+        related: [REST Controller, Controller, RequestMapping]
+      Spring Security:
+        aliases: [Security, JWT security, OAuth2 security]
+        exact_match_priority: true
+        related: [authentication, authorization, API security]
+      Spring Data JPA:
+        aliases: [Spring JPA, Data JPA]
+        exact_match_priority: true
+        related: [JPA, Hibernate, repositories]
+      REST API:
+        aliases: [RESTful API, RESTful services, REST services, REST endpoints]
+        exact_match_priority: true
+        related: [JSON, HTTP, API Gateway, OpenAPI]
+      SOAP API:
+        aliases: [SOAP, SOA service, web service]
+        exact_match_priority: true
+        related: [XML, WSDL, SOA]
+      OpenAPI:
+        aliases: [Swagger, OpenAPI Specification]
+        exact_match_priority: false
+        related: [API documentation, REST API]
+      Transaction Management:
+        aliases: [transactions, transactional, ACID]
+        exact_match_priority: false
+        related: [JPA, Hibernate, database]
+
+  microservices_distributed:
+    description: Service design, distributed systems, resilience, and integration.
+    skills:
+      Microservices:
+        aliases: [microservice architecture, microservices architecture, distributed services]
+        exact_match_priority: true
+        related: [Spring Boot, REST API, API Gateway, service boundaries]
+      API Gateway:
+        aliases: [gateway, API management]
+        exact_match_priority: true
+        related: [authentication, routing, rate limiting, certificate authentication]
+      Service Boundaries:
+        aliases: [bounded context, domain boundaries]
+        exact_match_priority: false
+        related: [DDD, microservices]
+      Inter-service Communication:
+        aliases: [service communication, API integration]
+        exact_match_priority: false
+        related: [REST, messaging, queues]
+      Data Consistency:
+        aliases: [eventual consistency, distributed transactions]
+        exact_match_priority: false
+        related: [saga, idempotency, retry]
+      Resilience:
+        aliases: [fault tolerance, retry, circuit breaker]
+        exact_match_priority: false
+        related: [timeouts, fallback, dead-letter queue]
+
+  database_persistence:
+    description: SQL, persistence frameworks, relational databases, and performance.
+    skills:
+      SQL:
+        aliases: [Structured Query Language]
+        exact_match_priority: true
+        related: [query optimization, indexes, joins]
+      Oracle Database:
+        aliases: [Oracle, Oracle DB]
+        exact_match_priority: true
+        related: [PL/SQL, JDBC]
+      PostgreSQL:
+        aliases: [Postgres]
+        exact_match_priority: true
+        related: [SQL, RDS]
+      IBM DB2:
+        aliases: [DB2]
+        exact_match_priority: true
+        related: [SQL, enterprise database]
+      JDBC:
+        aliases: [Java Database Connectivity]
+        exact_match_priority: true
+        related: [SQL, Oracle, PostgreSQL]
+      JPA:
+        aliases: [Java Persistence API]
+        exact_match_priority: true
+        related: [Hibernate, Spring Data JPA]
+      Hibernate:
+        aliases: [Hibernate ORM, ORM]
+        exact_match_priority: true
+        related: [JPA, entity mapping]
+      Query Optimization:
+        aliases: [SQL tuning, performance tuning, database tuning]
+        exact_match_priority: true
+        related: [indexes, execution plan]
+
+  cloud_integration:
+    description: Cloud services, integration, and deployment-relevant platforms.
+    skills:
+      AWS:
+        aliases: [Amazon Web Services]
+        exact_match_priority: true
+        related: [EC2, S3, RDS, Lambda, ECS]
+      Azure:
+        aliases: [Microsoft Azure]
+        exact_match_priority: true
+        related: [Azure Functions, Azure Service Bus, Azure DevOps, Azure Relay]
+      Azure Functions:
+        aliases: [Functions]
+        exact_match_priority: true
+        related: [serverless, Azure]
+      Azure Service Bus:
+        aliases: [Service Bus, ASB]
+        exact_match_priority: true
+        related: [topics, queues, messaging]
+      Azure Relay:
+        aliases: [Relay]
+        exact_match_priority: true
+        related: [hybrid cloud, secure tunnel]
+      AWS Lambda:
+        aliases: [Lambda]
+        exact_match_priority: true
+        related: [serverless]
+      AWS ECS:
+        aliases: [ECS, Elastic Container Service]
+        exact_match_priority: true
+        related: [containers, Docker]
+      AWS RDS:
+        aliases: [RDS, Relational Database Service]
+        exact_match_priority: true
+        related: [PostgreSQL, database]
+
+  messaging_async:
+    description: Messaging, queues, topics, event-driven systems, and async processing.
+    skills:
+      JMS:
+        aliases: [Java Message Service, WebSphere JMS]
+        exact_match_priority: true
+        related: [queues, topics, IBM WebSphere]
+      IBM WebSphere:
+        aliases: [WebSphere, IBM WebSphere Application Server]
+        exact_match_priority: true
+        related: [JMS, application server]
+      Kafka:
+        aliases: [Apache Kafka, event streaming]
+        exact_match_priority: true
+        related: [topics, producers, consumers, streaming]
+      Message Queue:
+        aliases: [queue, messaging queue, MQ]
+        exact_match_priority: false
+        related: [JMS, Kafka, Service Bus]
+      Dead-letter Queue:
+        aliases: [DLQ, dead letter queue]
+        exact_match_priority: false
+        related: [retry, resilience]
+
+  devops_release:
+    description: Build, deployment, source control, and release engineering.
+    skills:
+      Jenkins:
+        aliases: [Jenkins pipeline]
+        exact_match_priority: true
+        related: [CI/CD, Maven, Git]
+      CI/CD:
+        aliases: [CICD, CI CD, continuous integration, continuous delivery, continuous deployment]
+        exact_match_priority: true
+        related: [Jenkins, Azure DevOps, GitLab]
+      Maven:
+        aliases: [Apache Maven, mvn]
+        exact_match_priority: true
+        related: [Java build, dependencies]
+      Git:
+        aliases: [GitHub, GitLab]
+        exact_match_priority: true
+        related: [version control, branching]
+      SVN:
+        aliases: [Subversion]
+        exact_match_priority: false
+        related: [version control]
+      Docker:
+        aliases: [containers, containerization]
+        exact_match_priority: true
+        related: [ECS, Kubernetes]
+      Kubernetes:
+        aliases: [K8s]
+        exact_match_priority: true
+        related: [containers, orchestration]
+      IBM UrbanCode Deploy:
+        aliases: [UrbanCode, UCD]
+        exact_match_priority: true
+        related: [deployment, release]
+      Azure DevOps:
+        aliases: [ADO, Azure Pipelines]
+        exact_match_priority: true
+        related: [CI/CD, release]
+
+  testing_quality:
+    description: Testing, code quality, and maintainability.
+    skills:
+      JUnit:
+        aliases: [JUnit4, JUnit 4, JUnit5, JUnit 5]
+        exact_match_priority: true
+        related: [unit testing]
+      Mockito:
+        aliases: [mocking]
+        exact_match_priority: false
+        related: [unit testing]
+      Unit Testing:
+        aliases: [unit tests]
+        exact_match_priority: true
+        related: [JUnit, Mockito]
+      Integration Testing:
+        aliases: [integration tests]
+        exact_match_priority: true
+        related: [Spring Boot Test]
+      Code Coverage:
+        aliases: [test coverage, coverage]
+        exact_match_priority: false
+        related: [quality gates]
+      Clean Code:
+        aliases: [maintainable code, refactoring]
+        exact_match_priority: true
+        related: [OOP, SOLID]
+
+  enterprise_healthcare:
+    description: Enterprise integration and healthcare-specific backend context.
+    skills:
+      CAQH:
+        aliases: [CAQH v2, CAQH v4]
+        exact_match_priority: true
+        related: [healthcare, payer]
+      FHIR:
+        aliases: [HL7 FHIR]
+        exact_match_priority: true
+        related: [healthcare interoperability]
+      Certificate Authentication:
+        aliases: [certificate-based authentication, mutual TLS, mTLS]
+        exact_match_priority: true
+        related: [API Gateway, security]
+      SLA:
+        aliases: [availability, uptime, service level agreement]
+        exact_match_priority: false
+        related: [production support, reliability]
+      Production Support:
+        aliases: [prod support, incident support]
+        exact_match_priority: false
+        related: [monitoring, troubleshooting]
