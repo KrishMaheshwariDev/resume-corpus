@@ -1,0 +1,276 @@
+version: 1
+last_updated: 2026-07-05
+role: Java Backend Engineer
+role_family: Backend Software Engineering
+seniority_targets:
+  - Software Engineer II
+  - Java Developer
+  - Backend Developer
+  - Senior Analyst / Software Development Analyst equivalent
+  - Senior Java Developer
+
+summary:
+  description: >
+    Baseline role profile for Java backend and enterprise integration roles.
+    Use this as the default comparison profile before applying a specific job description.
+
+primary_goal:
+  - Demonstrate production Java backend delivery.
+  - Show Spring Boot and API development evidence.
+  - Prove database, CI/CD, cloud, and enterprise integration depth.
+  - Preserve truthful metrics and production ownership.
+
+required_clusters:
+  core_java:
+    weight: 0.18
+    required_any:
+      - Java
+      - Java 8
+      - Java 11
+    supporting:
+      - OOP
+      - Collections
+      - Streams
+      - Lambdas
+      - Exception Handling
+      - Concurrency
+      - Multithreading
+    strong_evidence_examples:
+      - Developed or maintained Java backend services.
+      - Refactored Java code for maintainability or performance.
+      - Used Java 8 language features in production code.
+
+  spring_backend_api:
+    weight: 0.22
+    required_any:
+      - Spring Boot
+      - Spring Framework
+    supporting:
+      - REST API
+      - Spring MVC
+      - Spring Security
+      - Spring Data JPA
+      - Dependency Injection
+      - Transaction Management
+      - OpenAPI
+    strong_evidence_examples:
+      - Built Spring Boot REST APIs.
+      - Implemented controller-service-repository structure.
+      - Secured APIs with authentication or gateway controls.
+
+  microservices_integration:
+    weight: 0.15
+    required_any:
+      - Microservices
+      - REST API
+      - SOAP API
+      - SOA
+    supporting:
+      - API Gateway
+      - Inter-service Communication
+      - Service Boundaries
+      - Data Consistency
+      - Resilience
+    strong_evidence_examples:
+      - Designed or maintained service boundaries.
+      - Integrated REST/SOAP services across enterprise systems.
+      - Managed async or hybrid-cloud integration flows.
+
+  database_persistence:
+    weight: 0.15
+    required_any:
+      - SQL
+      - Oracle Database
+      - PostgreSQL
+      - DB2
+    supporting:
+      - JDBC
+      - JPA
+      - Hibernate
+      - Query Optimization
+      - Transactions
+      - Indexes
+    strong_evidence_examples:
+      - Optimized SQL queries.
+      - Worked with Oracle/PostgreSQL/DB2 persistence.
+      - Coordinated schema or PL/SQL verification.
+
+  devops_release:
+    weight: 0.10
+    required_any:
+      - CI/CD
+      - Jenkins
+      - Azure DevOps
+    supporting:
+      - Maven
+      - Git
+      - SVN
+      - Docker
+      - IBM UrbanCode Deploy
+    strong_evidence_examples:
+      - Supported build and release pipelines.
+      - Deployed or supported applications across environments.
+      - Improved delivery cycle or deployment reliability.
+
+  cloud_messaging:
+    weight: 0.10
+    required_any:
+      - Azure
+      - AWS
+      - JMS
+      - Azure Service Bus
+      - Kafka
+    supporting:
+      - Azure Functions
+      - Azure Relay
+      - IBM WebSphere
+      - queues
+      - topics
+      - event-driven architecture
+    strong_evidence_examples:
+      - Integrated Azure Relay with Azure Service Bus and JMS queues.
+      - Built cloud-triggered or async integration workflows.
+      - Used messaging to decouple enterprise services.
+
+  testing_quality:
+    weight: 0.05
+    required_any:
+      - JUnit
+      - Unit Testing
+    supporting:
+      - Mockito
+      - Integration Testing
+      - Code Coverage
+      - Clean Code
+      - Refactoring
+    strong_evidence_examples:
+      - Wrote unit tests for backend services.
+      - Improved reliability through automated tests.
+      - Refactored legacy code toward maintainable design.
+
+  domain_enterprise:
+    weight: 0.05
+    required_any:
+      - Healthcare
+      - Automotive
+      - Enterprise Integration
+      - Production Support
+    supporting:
+      - CAQH
+      - FHIR
+      - SLA
+      - certificate authentication
+      - production deployment
+    strong_evidence_examples:
+      - Supported healthcare payer integrations.
+      - Maintained high-availability enterprise systems.
+      - Worked under SLA, release, or compliance constraints.
+
+preferred_signals:
+  metrics:
+    - daily request volume
+    - SLA or uptime
+    - performance improvement percentage
+    - delivery cycle improvement
+    - query runtime reduction
+    - defect reduction
+  ownership:
+    - designed
+    - developed
+    - implemented
+    - optimized
+    - refactored
+    - deployed
+    - supported production
+  seniority:
+    - led module
+    - mentored junior developers
+    - reviewed code
+    - coordinated release
+    - justified design trade-offs
+    - handled production issue
+
+resume_section_guidance:
+  summary:
+    purpose: State backend identity, years of experience, Java/Spring/API/cloud/integration strengths.
+    preferred_terms:
+      - Java
+      - Spring Boot
+      - REST API
+      - microservices
+      - SQL
+      - cloud
+      - CI/CD
+  skills:
+    purpose: Ensure parser and recruiter search coverage.
+    order:
+      - Languages
+      - Backend
+      - APIs and Integration
+      - Cloud
+      - Databases
+      - DevOps
+      - Testing
+  experience:
+    purpose: Prove depth with quantified production evidence.
+    preferred_bullet_pattern: Action + technology/method + system/domain context + measurable result.
+  projects:
+    purpose: Add modern skills not strongly present in employment, clearly labeled as project work.
+    caution: Do not make project-only skills look like production experience.
+
+common_jd_terms_to_preserve_when_truthful:
+  - Java 8
+  - Java 11
+  - Spring Boot
+  - microservices
+  - REST API
+  - SOAP API
+  - SQL
+  - JDBC
+  - JPA
+  - Hibernate
+  - AWS
+  - Azure
+  - Kafka
+  - JMS
+  - Jenkins
+  - CI/CD
+  - Maven
+  - Docker
+  - Agile
+  - JUnit
+  - production support
+
+truthfulness_constraints:
+  do_not_invent:
+    - technologies
+    - years_of_experience
+    - certifications
+    - leadership_scope
+    - production_Kafka_if_only_project_experience
+    - Kubernetes_production_experience_if_not_confirmed
+    - metrics_not_already_known_or_not_derivable
+  label_experience_type_when_needed:
+    - production experience
+    - project experience
+    - academic experience
+    - local project experience
+    - exposure
+    - familiar with
+
+analysis_output_template:
+  overall_fit: High / Medium / Low
+  hard_requirements: PASS / WEAK / FAIL
+  required_skill_coverage: matched_count / total_count
+  preferred_skill_coverage: matched_count / total_count
+  top_matched_evidence:
+    - evidence bullet or section reference
+  weak_or_missing_areas:
+    - gap with truthful recommendation
+  recommended_edits:
+    - target section and specific change
+  risks:
+    - parse risk
+    - truthfulness risk
+    - seniority mismatch
+    - missing hard requirement
