@@ -1,0 +1,39 @@
+version: 1
+last_updated: 2026-07-06
+priority: mandatory
+
+resume_length:
+  default: one_page
+  max_pages: 1
+  applies_to:
+    - optimized_resumes
+    - newly_created_resumes
+    - jd_tailored_resumes
+    - general_backend_resumes
+
+rules:
+  - Every resume optimized or created from this corpus must target exactly one page unless the user explicitly overrides this in the same request.
+  - Preserve high-signal keywords, metrics, and truthful evidence while compressing content.
+  - Prefer concise, achievement-oriented bullets over removing core experience.
+  - Do not remove critical Java backend, Spring Boot, REST API, SQL, cloud, CI/CD, testing, and production-support signals unless the target JD makes them irrelevant.
+  - If space is constrained, reduce repetition first, then compress wording, then remove lower-priority sections.
+
+compression_priority:
+  preserve_first:
+    - name_and_contact
+    - Java_backend_identity
+    - high_signal_skills
+    - NTT_DATA_production_metrics
+    - Capgemini_performance_metrics
+    - education
+    - certifications_when_space_allows
+  compress_first:
+    - summary
+    - repeated_skill_mentions
+    - lower_relevance_project_details
+    - older_training_details
+  remove_first_if_needed:
+    - low_relevance_certifications
+    - extra_project_explanations
+    - non_target_role_tools
+    - duplicate cloud/data/AI wording
