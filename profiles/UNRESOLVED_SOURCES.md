@@ -2,99 +2,65 @@
 
 Last updated: 2026-07-05
 
-This file tracks sources that were requested or useful for the master profile but could not be fully accessed or verified in the current environment.
+This file tracks profile sources and facts that remain unresolved after parsing the repo, uploaded ZIP archive, LinkedIn PDF export, academic history, degree plan, portfolio, and GitHub-accessible repositories.
 
 ## 1. Uploaded ZIP/archive
 
-Status: Not accessible.
+Status: Resolved.
 
-What happened:
+What changed:
 
-- User asked to unzip and parse an archive.
-- `/mnt/data` contained no uploaded file at the time of checking.
-- Recent File Library search did not surface a resume archive.
+- `temp.zip` was located in the active runtime.
+- The archive was unzipped and parsed.
+- Total files found: 55.
+- Profile/resume-relevant files parsed: 42.
+- Parsed archive audit file: `profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md`.
+- Archive-refreshed master profile: `profiles/MASTER_PROFILE_V2.md`.
+- Archive-refreshed fact matrix: `profiles/PROFILE_FACT_MATRIX_V2.yml`.
 
-Needed from user:
+## 2. GitHub directory listing limitation
 
-- Upload the ZIP/archive again in the chat, or
-- provide the exact GitHub repository path, or
-- create a repo manifest listing all resume corpus files.
+Status: Mostly superseded by uploaded ZIP, but still relevant for future repo-only runs.
 
-Suggested manifest path:
+The available GitHub connector can fetch known file paths and search text. It does not currently expose a direct directory-tree listing action. If future resume files are added to the repo under unknown filenames, provide exact paths or maintain a manifest.
+
+Recommended manifest path:
 
 ```text
 RESUME_FILES.md
 ```
 
-Suggested manifest content:
-
-```text
-resume.tex
-resume.pdf
-temp/<exact-file-name>.tex
-temp/<exact-file-name>.pdf
-archive/<exact-file-name>.zip
-```
-
-## 2. GitHub directory listing limitation
-
-Status: Partially blocked.
-
-The available GitHub connector can fetch known file paths and search text. It does not currently expose a direct directory-tree listing action. Because of that, common known paths were checked manually, but unknown filenames under root or `temp/` could not be discovered exhaustively.
-
-Checked and not found:
-
-- `temp/resume.tex`
-- `resume.pdf`
-- `temp/resume.pdf`
-- `Kunal_Maheshwari_Resume.tex`
-- `Kunal_Maheshwari_Resume.pdf`
-- `temp/main.tex`
-
-Found and parsed:
-
-- `resume.tex`
-
-Needed from user:
-
-- exact filenames, or
-- a file manifest, or
-- a repo tree/ZIP upload.
-
 ## 3. LinkedIn
 
-Status: Not directly accessible.
+Status: Partially resolved.
 
-URL:
+Direct public LinkedIn access was not reliable, but `Profile_linkedin.pdf` from the uploaded archive was parsed.
 
-```text
-https://www.linkedin.com/in/kunalmaheshwari26/
-```
+Resolved from LinkedIn PDF export:
 
-Known from indirect evidence:
+- Headline: `Java Developer | Spring Boot | REST APIs | SQL | Backend Engineering`.
+- LinkedIn location signal: Mount Pleasant, Michigan, United States.
+- Top skills shown: PEFT, Local LLMs, LoRA.
+- Languages shown: Hindi (Native or Bilingual), English (Limited Working).
+- Certifications shown: workshop on ethical hacking, Microsoft Certified: Azure Fundamentals, introduction to Linux, Agile Software Development.
+- Experience timeline for NTT DATA and Capgemini.
+- Education timeline for CMU, LPU, and St. Paul's Senior Secondary School.
 
-- Root resume links this URL.
-- Portfolio links this URL.
-- Personal/job-search context indicates the headline: `Java Developer | Spring Boot | REST APIs | SQL | Backend Engineering`.
-- Portfolio README says a LinkedIn PDF export was one source used to curate content.
+Still needed from user if exact live LinkedIn is required:
 
-Needed from user:
-
-- LinkedIn PDF export, or
-- copied LinkedIn profile text, or
-- screenshots of About, Experience, Education, Skills, Licenses & Certifications, Projects.
+- Updated LinkedIn PDF export, or copied profile text, if the live profile has changed after the archived export.
 
 ## 4. LeetCode
 
-Status: Not directly accessible.
+Status: Not resolved.
 
-URL:
+URL provided by user:
 
 ```text
 https://leetcode.com/u/preferablehuman/
 ```
 
-Needed from user:
+Accessible search did not return usable profile stats. Needed from user:
 
 - total solved,
 - easy/medium/hard solved,
@@ -106,15 +72,14 @@ Needed from user:
 
 ## 5. Work authorization
 
-Status: Conflicting/stale.
+Status: Needs confirmation.
 
-Prior context says:
+Evidence:
 
-- F-1 OPT-EAD was in hand.
-- OPT-EAD valid through January 31, but the year is not confirmed in the current profile evidence.
-- U.S. full-time work eligibility was used in earlier application contexts.
+- Multiple U.S.-market resume variants mention OPT-EAD and full-time work authorization.
+- Prior context also says OPT-EAD was in hand.
 
-Needed from user:
+Still needed from user:
 
 - current authorization status,
 - expiry year,
@@ -123,29 +88,23 @@ Needed from user:
 
 ## 6. Current location and contact details
 
-Status: Conflicting by market/context.
+Status: Needs confirmation before final resume use.
 
-Current root resume says:
+Conflict summary:
 
-- Haldwani, Uttarakhand, India
-- 9258446350
-- `work.kunal.maheshwari@gmail.com`
-
-Prior U.S. context says:
-
-- Mount Pleasant, MI, USA
-- `+1 (989) 906-2108`
-- `kunal.maheshwari.work@gmail.com`
-
-Job-board context also suggests:
-
-- New Delhi, India
+- Current root resume uses India-market contact/location details.
+- Archive U.S. resumes use Mount Pleasant, MI positioning.
+- Archive India-tailored resumes and current root resume do not fully agree on the India phone/contact set.
+- Job-board context also includes New Delhi and multiple India target locations.
 
 Needed from user:
 
-- which location/contact set to use for India resumes,
-- which location/contact set to use for U.S. resumes,
-- whether portfolio URL should appear, given prior Gmail flagging concern.
+- preferred India resume location,
+- preferred U.S. resume location, if applicable,
+- preferred email for resumes,
+- correct phone for India resumes,
+- correct phone for U.S. resumes, if applicable,
+- whether the portfolio URL should be included given prior Gmail flagging concerns.
 
 ## 7. Education conflicts
 
@@ -153,9 +112,9 @@ Status: Needs confirmation.
 
 Conflicts:
 
-- CMU GPA: 3.87 vs 3.76
-- CMU date/status: Dec 2025 vs May 2026 vs completed
-- LPU degree: `B.Tech CSE` vs `B.Tech CSE with specialization in Data Science`
+- CMU GPA: 3.76 from academic history and older resumes, 3.85 from `Resume.docx`, 3.87 from current root resume and later resume variants.
+- CMU completion/date: Dec 2025 vs May 2026 vs completed.
+- LPU degree wording: B.Tech CSE vs B.Tech CSE with specialization in Data Science.
 
 Needed from user:
 
@@ -169,17 +128,14 @@ Status: Needs confirmation.
 
 NTT DATA:
 
-- Current resume title: Software Developer
-- Prior context: Software Development Analyst
-- Current resume period: Aug 2022 - Aug 2024
-- Prior context: Aug 2022 - Jul 2024
+- Current/root/later resume title: Software Developer.
+- LinkedIn/older resume title: Software Development Analyst.
+- Date variants: Aug 2022 - Jul 2024 vs Aug 2022 - Aug 2024.
 
 Capgemini:
 
-- Current resume groups: Senior Analyst / Analyst, Jul 2020 - Aug 2022
-- Prior context splits:
-  - Analyst, Jul 2020 - Oct 2021
-  - Senior Analyst, Oct 2021 - Aug 2022
+- Some resumes group Senior Analyst / Analyst.
+- LinkedIn and older resumes split Senior Analyst, Analyst, and Trainee.
 
 Needed from user:
 
@@ -188,28 +144,46 @@ Needed from user:
 
 ## 9. Skill-depth conflicts
 
-Status: Needs confirmation before strong resume claims.
+Status: Needs confirmation before strong claims.
 
 Skills to label carefully:
 
-- Kafka: small project/exposure unless confirmed otherwise.
-- Kubernetes: listed in skills, but production experience not confirmed.
-- Spring Boot: strong target skill and listed in summary/skills; current professional bullets emphasize Spring Framework/Spring MVC. Need confirm production Spring Boot depth.
-- GCP Pub/Sub: prior context only; verify before listing.
-- OpenAPI/Swagger: prior context only; verify before listing prominently.
-- Redis/Celery: portfolio skill/context may mention; verify project evidence before using in resume.
+- Kafka: appears in some targeted variants and prior context, but production depth is not confirmed.
+- Kubernetes: appears in many variants, but production depth is not confirmed.
+- Scala: appears in some tailored summaries but lacks independent evidence.
+- Spring Boot: strong target skill and repeatedly listed; confirm whether production work used Spring Boot directly or broader Spring/Spring MVC/Spring Framework.
+- GCP Pub/Sub: prior-context only; verify before listing prominently.
+- OpenAPI/Swagger: prior-context only; verify before listing prominently.
+- Redis/Celery: verify project evidence before using in a final resume.
 
-## 10. Salary/job-board details
+## 10. Metric confidence checks
+
+Status: Some require confirmation.
+
+High-confidence/repeated:
+
+- 50K+ daily API requests.
+- 99.99% SLA uptime/availability.
+- 20% issue-resolution time reduction.
+- 50% faster delivery cycles / EDX delivery improvement.
+- 90% performance improvement.
+- 99%+ uptime.
+- 8GB+ taxi dataset.
+- 40% Spark/runtime improvement.
+
+Needs verification before prominent use:
+
+- 10% query performance improvement.
+- 99% code coverage.
+- Lamprey 99.9% uptime.
+- Lamprey 10GB video data daily.
+- 30-member Agile training program.
+
+## 11. Salary/job-board details
 
 Status: Private planning data, not resume content.
-
-Observed from job-search context:
-
-- Current salary around INR 12.5 LPA
-- Preferred salary around INR 15 LPA
-- Current location New Delhi in Naukri context
 
 Usage rule:
 
 - Do not include salary data in resumes.
-- Use only for job-search strategy if user explicitly asks.
+- Use only for job-search strategy if the user explicitly asks.
