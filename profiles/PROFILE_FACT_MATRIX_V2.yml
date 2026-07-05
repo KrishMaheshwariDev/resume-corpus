@@ -1,0 +1,380 @@
+version: 2
+last_updated: 2026-07-05
+purpose: Archive-refreshed machine-readable profile facts for resume generation and optimization.
+privacy_note: Contact identifiers are intentionally not duplicated here. Use the selected resume source/contact block after market confirmation.
+
+source_corpus:
+  uploaded_archive:
+    parsed: true
+    total_files: 55
+    profile_resume_relevant_files: 42
+    job_tailored_resume_pdfs: 30
+    general_resume_source_files: 9
+    special_sources:
+      - Profile_linkedin.pdf
+      - AcademicHistory.pdf
+      - DegreePlanmahes1k_21001160.pdf
+    audit_file: profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md
+  current_repo_resume:
+    file: resume.tex
+    confidence: high
+  profile_sources:
+    - profiles/MASTER_PROFILE_V2.md
+    - profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md
+    - profiles/UNRESOLVED_SOURCES.md
+
+identity:
+  name: Kunal Maheshwari
+  primary_roles:
+    - Java Backend Developer
+    - Backend Software Engineer
+    - Java Developer
+    - Software Developer
+    - Java/Spring Backend Engineer
+  linkedin_headline_from_archive: Java Developer | Spring Boot | REST APIs | SQL | Backend Engineering
+  github_handle: preferablehuman
+  leetcode_handle: preferablehuman
+  leetcode_status: stats_not_accessible
+
+location_strategy:
+  india_market_locations_observed:
+    - Haldwani, Uttarakhand, India
+    - Bengaluru/Bangalore, India
+    - Mumbai, India
+    - Jalandhar/Punjab, India
+    - New Delhi, India
+  us_market_locations_observed:
+    - Mount Pleasant, MI, USA
+    - Mount Pleasant, Michigan, United States
+  verify_before_use:
+    - current_location
+    - selected_resume_market
+    - correct_contact_set
+    - work_authorization_status
+
+education:
+  central_michigan_university:
+    degree: Master of Science in Computer Science
+    date_variants:
+      - Aug 2024 - Dec 2025
+      - Aug 2024 - May 2026
+    gpa_variants:
+      - 3.76
+      - 3.85
+      - 3.87
+    academic_history_gpa_at_print_time: 3.76
+    degree_plan_minimum_credits: 30
+    degree_plan_completed_credits_at_print_time: 9
+    coursework_completed_with_grades:
+      - CPS 541 Modern Databases: A
+      - CPS 685 Pattern Recognition and Data Mining: A
+      - ITC 510 Software and Data Modeling: B+
+    coursework_planned_or_registered:
+      - BIS 582 Data Visualization: Theory and Practice
+      - CPS 585 Applied Data Engineering
+      - CPS 691 Research Design and Professional Practice
+      - ITC 686 Big Data Analytics
+      - CPS 542 Analysis & Design of Algorithms
+      - CPS 698 Capstone Project
+      - ITC 630 Cloud Computing
+  lovely_professional_university:
+    degree: Bachelor of Technology in Computer Science and Engineering
+    specialization_prior_context: Data Science
+    cgpa: 8.02 / 10
+    period: 2016 - 2020
+  school:
+    name: St. Paul's Senior Secondary School
+    program: 10+2 science with maths
+    score_prior_context: 77%
+
+certifications:
+  high_confidence:
+    - Microsoft Certified: Azure Fundamentals
+    - Microsoft Certified: Azure Developer Associate
+    - Microsoft Certified: Azure Data Engineer Associate
+  additional_linkedin_or_portfolio:
+    - Workshop on Ethical Hacking
+    - Introduction to Linux
+    - Agile Software Development
+
+languages:
+  from_linkedin_pdf:
+    Hindi: Native or Bilingual
+    English: Limited Working
+
+experience:
+  ntt_data:
+    domain: Healthcare insurance
+    title_variants:
+      - Software Developer
+      - Software Development Analyst
+    date_variants:
+      - Aug 2022 - Jul 2024
+      - Aug 2022 - Aug 2024
+    location_variants:
+      - Bengaluru/Bangalore Urban, India
+      - Remote variant in archive
+    technologies:
+      - Java 8/11
+      - Spring Boot
+      - Spring Framework
+      - REST APIs
+      - SOAP APIs
+      - SOA
+      - Azure Functions
+      - Azure Relay
+      - Azure Service Bus
+      - Azure DevOps
+      - JMS
+      - IBM WebSphere
+      - Oracle WebLogic
+      - API Gateway
+      - certificate-based authentication
+      - CAQH v2/v4
+      - FHIR
+      - Maven
+      - Jenkins
+      - IBM UrbanCode Deploy
+      - Git
+      - SVN
+      - JUnit
+      - Log4j 2.x
+    high_confidence_metrics:
+      - 50,000+ daily API requests
+      - 99.99% SLA uptime/availability
+      - 20% issue-resolution time reduction
+      - 50% faster delivery cycles / EDX delivery improvement
+    evidence:
+      - high-performance SOAP and REST microservices
+      - hybrid Azure Relay / Service Bus / JMS integration
+      - CI/CD pipelines and release delivery
+      - Log4j 2.x migration
+      - production support and debugging
+      - FHIR/regulatory healthcare context
+  capgemini:
+    domain: Automotive
+    title_variants:
+      - Senior Analyst / Analyst
+      - Senior Analyst
+      - Analyst
+      - Trainee / Analyst Trainee
+    date_variants:
+      - Jul 2020 - Aug 2022 grouped
+      - Oct 2021 - Jul/Aug 2022 Senior Analyst
+      - Jul 2020 - Oct 2021 Analyst
+      - Jan 2020 - May/Jun 2020 Trainee
+    technologies:
+      - Java 8
+      - Spring MVC
+      - Spring Framework
+      - J2EE
+      - EJB
+      - JSF
+      - RESTful APIs
+      - JDBC
+      - Oracle SQL
+      - Python decision-tree service integration
+      - Jenkins
+      - GitLab CI/CD
+      - Maven
+      - Git
+      - SVN
+      - JUnit4
+      - JIRA
+    metrics:
+      high_confidence:
+        - 90% performance improvement
+        - 99%+ uptime
+      medium_confidence:
+        - 10% query performance improvement
+        - 99% code coverage
+    evidence:
+      - automotive enterprise applications
+      - vehicle configuration module
+      - Python decision-tree REST integration
+      - SQL optimization and database tuning
+      - legacy Java modernization
+      - junior developer mentoring
+  trainee_projects:
+    technologies:
+      - Java
+      - Spring Framework
+      - Spring MVC
+      - Angular
+      - PostgreSQL
+      - MVC
+    evidence:
+      - fitness-club application
+      - digital-wallet / OnlineWallet application
+      - authentication
+      - email/OTP login
+      - CRUD
+      - account balances
+      - transactions
+      - profile-image upload
+
+projects:
+  ai_email_client:
+    type: Graduate capstone / NLP / model serving
+    positioning: project-based; privacy-oriented; not formal-compliance or production-user claim
+    technologies:
+      - Python
+      - FastAPI
+      - PyTorch
+      - Hugging Face Transformers
+      - T5
+      - PEFT
+      - LoRA
+      - ROUGE
+      - Docker
+      - MinIO
+      - Prometheus
+      - React
+      - TypeScript
+    metrics:
+      - ROUGE-1 F 53.04
+      - ROUGE-2 F 44.90
+      - ROUGE-L F 45.90
+  nyu_taxi_aws_spark_pipeline:
+    type: AWS / Spark / data engineering
+    technologies:
+      - Apache Spark
+      - PySpark
+      - Spark Structured Streaming
+      - AWS S3
+      - AWS Lambda
+      - AWS EFS
+      - AWS ECS/Fargate
+      - AWS RDS PostgreSQL
+      - CloudWatch
+      - Terraform
+      - Docker
+      - Flask
+      - Plotly
+      - PostgreSQL
+    metrics:
+      - 8GB+ dataset
+      - 40% runtime/processing improvement
+  portfolio:
+    type: React / TypeScript recruiter-facing portfolio
+    technologies:
+      - React
+      - Vite
+      - TypeScript
+      - Tailwind CSS
+      - GitHub Pages
+      - GitHub Actions
+    metrics:
+      - 7 pages
+      - 7 case studies
+      - build + lint checks
+  lamprey_pipeline:
+    type: academic/cloud data/computer vision project
+    technologies:
+      - Python
+      - Flask
+      - OpenCV
+      - Pandas
+      - Google Cloud Storage
+      - Cloud SQL
+      - PostgreSQL
+      - SQLAlchemy
+      - Docker
+    caution_metrics_low_confidence:
+      - 99.9% uptime
+      - 10GB video data daily
+  election_eda:
+    type: academic exploratory data analysis
+    technologies:
+      - Python
+      - Pandas
+      - NumPy
+      - Jupyter
+      - Matplotlib
+      - Seaborn
+  online_wallet:
+    type: Java + Angular training project
+    technologies:
+      - Java
+      - Spring MVC
+      - Angular
+      - PostgreSQL
+      - MVC
+      - CRUD
+  bookstore:
+    type: Java + Angular practice project
+    technologies:
+      - Java
+      - Angular
+      - REST-style APIs
+      - OOP
+
+skills:
+  high_confidence:
+    - Java 8/11
+    - Core Java
+    - Python
+    - SQL
+    - Spring Boot
+    - Spring Framework
+    - Spring MVC
+    - REST APIs
+    - SOAP APIs
+    - SOA
+    - Microservices
+    - JDBC
+    - Oracle SQL
+    - PostgreSQL
+    - IBM DB2
+    - Azure Functions
+    - Azure Service Bus
+    - Azure Relay
+    - Azure DevOps
+    - Jenkins
+    - GitLab CI/CD
+    - Maven
+    - Git
+    - SVN
+    - JUnit
+    - JUnit4
+    - Log4j 2.x
+    - Docker
+    - Terraform
+    - Apache Spark
+    - PySpark
+    - FastAPI
+    - React
+    - Angular
+    - PyTorch
+    - Hugging Face Transformers
+    - T5
+    - PEFT
+    - LoRA
+    - ROUGE
+  verify_depth:
+    - Kubernetes
+    - Kafka
+    - Scala
+    - GCP Pub/Sub
+    - OpenAPI/Swagger
+    - Redis
+    - Celery
+    - production Spring Boot depth vs Spring Framework/Spring MVC
+
+verification_needed:
+  - correct_current_contact_set_for_india
+  - correct_current_contact_set_for_us
+  - current_email_preference
+  - current_location
+  - work_authorization_status
+  - final_cmu_gpa
+  - official_cmu_graduation_date
+  - exact_ntt_data_title
+  - exact_ntt_data_end_date
+  - capgemini_grouped_vs_split
+  - kafka_depth
+  - kubernetes_depth
+  - spring_boot_depth
+  - 99_percent_code_coverage_claim
+  - lamprey_99_9_uptime_and_10gb_claim
+  - leetcode_stats
