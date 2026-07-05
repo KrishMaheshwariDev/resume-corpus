@@ -1,7 +1,16 @@
-version: 2
-last_updated: 2026-07-05
-purpose: Archive-refreshed machine-readable profile facts for resume generation and optimization.
-privacy_note: Contact identifiers are intentionally not duplicated here. Use the selected resume source/contact block after market confirmation.
+version: 2.1
+last_updated: 2026-07-06
+purpose: Archive-refreshed and user-confirmed machine-readable profile facts for resume generation and optimization.
+privacy_note: Contact identifiers are intentionally not duplicated here. Use the latest resume contact block by default, or ask the user if the latest block is unavailable.
+source_priority:
+  - user_confirmed_current_conversation
+  - current_repo_resume_tex
+  - uploaded_archive_temp_zip
+  - linkedin_pdf_export_from_archive
+  - academic_history_and_degree_plan
+  - portfolio_repo
+  - project_repositories
+  - older_resume_variants
 
 source_corpus:
   uploaded_archive:
@@ -23,6 +32,26 @@ source_corpus:
     - profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md
     - profiles/UNRESOLVED_SOURCES.md
 
+current_user_confirmations:
+  target_market: India
+  leetcode_stats_required: false
+  contact_rule: Use the most recent resume contact set by default; ask user only if needed.
+  work_authorization_for_current_resume: not_required
+  central_michigan_university:
+    gpa: 3.87 / 4.0
+    period: Aug 2024 - Dec 2025
+  ntt_data:
+    title: Software Developer
+    period: Aug 2022 - Aug 2024
+  capgemini:
+    display_role: Senior Analyst
+    grouped_period: Jul 2020 - Aug 2022
+    grouping_rule: Use Senior Analyst as simplified role for resume clarity.
+  skill_depth:
+    kafka: hands-on
+    kubernetes: hands-on
+    spring_boot: professional experience at Capgemini and NTT DATA
+
 identity:
   name: Kunal Maheshwari
   primary_roles:
@@ -34,9 +63,10 @@ identity:
   linkedin_headline_from_archive: Java Developer | Spring Boot | REST APIs | SQL | Backend Engineering
   github_handle: preferablehuman
   leetcode_handle: preferablehuman
-  leetcode_status: stats_not_accessible
+  leetcode_status: intentionally_not_required_for_current_resume_work
 
 location_strategy:
+  current_target_market: India
   india_market_locations_observed:
     - Haldwani, Uttarakhand, India
     - Bengaluru/Bangalore, India
@@ -46,19 +76,14 @@ location_strategy:
   us_market_locations_observed:
     - Mount Pleasant, MI, USA
     - Mount Pleasant, Michigan, United States
-  verify_before_use:
-    - current_location
-    - selected_resume_market
-    - correct_contact_set
-    - work_authorization_status
+  resume_rule: Use the latest resume contact/location block by default for India-focused resumes.
 
 education:
   central_michigan_university:
     degree: Master of Science in Computer Science
-    date_variants:
-      - Aug 2024 - Dec 2025
-      - Aug 2024 - May 2026
-    gpa_variants:
+    period_for_resume: Aug 2024 - Dec 2025
+    gpa_for_resume: 3.87 / 4.0
+    historical_gpa_variants:
       - 3.76
       - 3.85
       - 3.87
@@ -105,12 +130,10 @@ languages:
 experience:
   ntt_data:
     domain: Healthcare insurance
-    title_variants:
-      - Software Developer
-      - Software Development Analyst
-    date_variants:
-      - Aug 2022 - Jul 2024
-      - Aug 2022 - Aug 2024
+    title_for_resume: Software Developer
+    period_for_resume: Aug 2022 - Aug 2024
+    older_archive_title_variant: Software Development Analyst
+    older_archive_period_variant: Aug 2022 - Jul 2024
     location_variants:
       - Bengaluru/Bangalore Urban, India
       - Remote variant in archive
@@ -146,6 +169,7 @@ experience:
       - 50% faster delivery cycles / EDX delivery improvement
     evidence:
       - high-performance SOAP and REST microservices
+      - professional Spring Boot / Spring Framework backend development
       - hybrid Azure Relay / Service Bus / JMS integration
       - CI/CD pipelines and release delivery
       - Log4j 2.x migration
@@ -153,18 +177,22 @@ experience:
       - FHIR/regulatory healthcare context
   capgemini:
     domain: Automotive
-    title_variants:
+    title_for_resume: Senior Analyst
+    grouped_period_for_resume: Jul 2020 - Aug 2022
+    display_rule: Use Senior Analyst as simplified display role unless background-check precision is required.
+    historical_title_variants:
       - Senior Analyst / Analyst
       - Senior Analyst
       - Analyst
       - Trainee / Analyst Trainee
-    date_variants:
+    historical_date_variants:
       - Jul 2020 - Aug 2022 grouped
       - Oct 2021 - Jul/Aug 2022 Senior Analyst
       - Jul 2020 - Oct 2021 Analyst
       - Jan 2020 - May/Jun 2020 Trainee
     technologies:
       - Java 8
+      - Spring Boot
       - Spring MVC
       - Spring Framework
       - J2EE
@@ -192,6 +220,7 @@ experience:
       - automotive enterprise applications
       - vehicle configuration module
       - Python decision-tree REST integration
+      - professional Spring Boot / Spring MVC / Spring Framework backend development
       - SQL optimization and database tuning
       - legacy Java modernization
       - junior developer mentoring
@@ -339,6 +368,8 @@ skills:
     - JUnit4
     - Log4j 2.x
     - Docker
+    - Kubernetes
+    - Kafka
     - Terraform
     - Apache Spark
     - PySpark
@@ -351,30 +382,18 @@ skills:
     - PEFT
     - LoRA
     - ROUGE
+  confirmed_depth:
+    Spring Boot: professional experience at Capgemini and NTT DATA
+    Kafka: hands-on
+    Kubernetes: hands-on
   verify_depth:
-    - Kubernetes
-    - Kafka
     - Scala
     - GCP Pub/Sub
     - OpenAPI/Swagger
     - Redis
     - Celery
-    - production Spring Boot depth vs Spring Framework/Spring MVC
 
 verification_needed:
-  - correct_current_contact_set_for_india
-  - correct_current_contact_set_for_us
-  - current_email_preference
-  - current_location
-  - work_authorization_status
-  - final_cmu_gpa
-  - official_cmu_graduation_date
-  - exact_ntt_data_title
-  - exact_ntt_data_end_date
-  - capgemini_grouped_vs_split
-  - kafka_depth
-  - kubernetes_depth
-  - spring_boot_depth
+  - current_contact_set_only_if_latest_resume_contact_block_is_unavailable
   - 99_percent_code_coverage_claim
   - lamprey_99_9_uptime_and_10gb_claim
-  - leetcode_stats
