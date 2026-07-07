@@ -1,24 +1,24 @@
 % !TeX program = pdflatex
 \documentclass[10pt,letterpaper]{article}
-\usepackage[letterpaper,margin=0.50in]{geometry}
+\usepackage[letterpaper,margin=0.48in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \ifdefined\pdfglyphtounicode\input{glyphtounicode}\pdfgentounicode=1\fi
 \setlength{\parindent}{0pt}\setlength{\parskip}{0pt}\setlength{\emergencystretch}{1em}
-\renewcommand{\baselinestretch}{0.96}
-\setlist[itemize]{label=-,leftmargin=10pt,itemsep=0.05pt,topsep=0.7pt,parsep=0pt,partopsep=0pt}
-\newcommand{\ressection}[1]{\vspace{2.6pt}\par\textbf{#1}\par\vspace{0.8pt}\hrule\vspace{1.6pt}}
+\renewcommand{\baselinestretch}{0.94}
+\setlist[itemize]{label=-,leftmargin=9pt,itemsep=0pt,topsep=0.5pt,parsep=0pt,partopsep=0pt}
+\newcommand{\ressection}[1]{\vspace{2.3pt}\par\textbf{#1}\par\vspace{0.7pt}\hrule\vspace{1.3pt}}
 \begin{document}
-\pagestyle{empty}\raggedright\fontsize{9.92}{10.68}\selectfont
+\pagestyle{empty}\raggedright\fontsize{9.82}{10.50}\selectfont
 
 {\Large \textbf{Kunal Maheshwari}}\\
-Haldwani, Uttarakhand, India \textbar{} 9258446350 \textbar{} \href{mailto:work.kunal.maheshwari@gmail.com} {work.kunal.maheshwari@gmail.com} \\
-LinkedIn: \href{https://www.linkedin.com/in/kunalmaheshwari26}{linkedin.com/in/kunalmaheshwari26} \textbar{} GitHub: \href{https://github.com/preferablehuman}{github.com/preferablehuman}\\
-Portfolio: \href{https://preferablehuman.github.io/portfolio/}{https://preferablehuman.github.io/portfolio/}
+Haldwani, Uttarakhand, India \textbar{} 9258446350 \textbar{} \href{mailto:work.kunal.maheshwari@gmail.com}{work.kunal.maheshwari@gmail.com}\\
+LinkedIn: \href{https://www.linkedin.com/in/kunalmaheshwari26}{linkedin.com/in/kunalmaheshwari26} \textbar{} GitHub: \href{https://github.com/preferablehuman}{github.com/preferablehuman} \textbar{} Portfolio: \href{https://preferablehuman.github.io/portfolio/}{preferablehuman.github.io/portfolio/}
+
 \ressection{Summary}
-Java Backend Developer with 4.6+ years of professional experience building Java 8/11, Spring Boot, Spring MVC, REST/SOAP APIs, SOA, microservices, SQL, Azure integrations, CI/CD, and production systems across healthcare and automotive domains. Delivered 50K+ daily API requests at 99.99\% SLA, improved issue resolution 20\%, and optimized legacy Java/Oracle workflows for approximately 90\% performance improvement.
+Java Backend Developer with 4.6+ years of experience across Java 8/11, Spring Boot, REST/SOAP APIs, SQL, Azure integrations, AWS data pipelines, CI/CD, and production support. Delivered 50K+ daily API requests at 99.99\% SLA, reduced issue resolution 20\%, improved legacy Java/Oracle performance approximately 90\%, and built an AWS Spark pipeline with S3, Lambda, EFS, ECS, RDS PostgreSQL, and Terraform.
 
 \ressection{Work Experience}
 \textbf{NTT Data}, Bengaluru, India \hfill \textit{Software Developer, Aug 2022 - Aug 2024}
@@ -30,24 +30,28 @@ Java Backend Developer with 4.6+ years of professional experience building Java 
 \textbf{Capgemini}, Mumbai, India \hfill \textit{Senior Analyst, Jul 2020 - Aug 2022}
 \begin{itemize}
   \item Developed automotive backend modules using Java 8, Spring Boot, Spring MVC, J2EE, EJB, JSF, RESTful APIs, JDBC, Oracle SQL, and microservices patterns for high-availability transactional workflows.
-  \item Integrated a Python decision-tree service through REST APIs for vehicle option availability, pricing, and business-rule validation; improved production performance approximately 90\% through SQL tuning and legacy Java modernization.
-  \item Strengthened delivery with Jenkins, GitLab CI/CD, Maven, Git/SVN, JUnit4, automated testing, and quality gates while mentoring developers through code reviews, debugging, documentation, and OOP design practices.
+  \item Integrated a Python decision-tree REST service for vehicle option availability, pricing, and business-rule validation; improved production performance approximately 90\% through SQL tuning and legacy Java modernization.
+  \item Strengthened delivery with Jenkins, GitLab CI/CD, Maven, Git/SVN, JUnit4, testing, quality gates, code reviews, debugging, documentation, and OOP design practices.
 \end{itemize}
 \textbf{Capgemini}, Mumbai, India \hfill \textit{Analyst Trainee, Jan 2020 - Jun 2020}
 \begin{itemize}
   \item Built Java Spring/Spring MVC and PostgreSQL modules for fitness-club and digital-wallet applications, implementing authentication, email/OTP login, CRUD, account balances, transactions, and profile workflows in a 30-member Agile program.
 \end{itemize}
 
+\ressection{Selected AWS Project}
+\textbf{AWS Automated Spark Pipeline / NYU Taxi Platform} \hfill \textit{AWS, Spark, Terraform, PostgreSQL}
+\begin{itemize}
+  \item Built event-driven data pipeline where S3 ObjectCreated events trigger Lambda, stage files into EFS, process micro-batches with Spark Structured Streaming on ECS, and persist analytics to RDS PostgreSQL with EFS checkpoints and CloudWatch logs.
+  \item Defined Terraform infrastructure for VPC, subnets, NAT, IAM, S3 notifications, Lambda, EFS access points, ECS tasks/services, RDS, and security groups; processed 8GB+ taxi data with 40\% runtime improvement.
+\end{itemize}
+
 \ressection{Technical Skills}
 Languages: Java 8/11, SQL, Python.\\
-Backend: Spring Boot, Spring Framework, Spring MVC, Spring Data JPA, Hibernate, JPA, J2EE, EJB, JSF, JDBC, REST APIs, SOAP APIs, Microservices, SOA, JMS, API Gateway, OAuth 2.0.\\
-Cloud/DevOps: Azure Functions, Azure Service Bus, Azure Relay, Azure DevOps, AWS ECS/Lambda/RDS/S3/EFS, Docker, Kubernetes, Kafka, Jenkins, GitLab CI/CD, Maven, UrbanCode, Git, SVN, Linux.\\
-Databases/Quality: Oracle SQL, PostgreSQL, IBM DB2, SQL Optimization, JUnit/JUnit4, Integration Testing, Log4j 2.x, SoapUI, Agile/Scrum, OOP, Design Patterns, System Design, Production Support, Observability.
+Backend: Spring Boot, Spring Framework, Spring MVC, JPA, Hibernate, J2EE, EJB, JSF, JDBC, REST/SOAP APIs, Microservices, SOA, JMS, API Gateway, OAuth 2.0.\\
+Cloud/DevOps/Data: AWS S3, Lambda, EFS, ECS, RDS, CloudWatch, Terraform, Azure Functions, Azure Service Bus, Azure Relay, Docker, Kubernetes, Kafka, Jenkins, GitLab CI/CD, Maven, UrbanCode, Git, SVN.\\
+Databases/Quality: Oracle SQL, PostgreSQL, IBM DB2, SQL Optimization, JUnit/JUnit4, Integration Testing, Log4j 2.x, SoapUI, Agile/Scrum, OOP, System Design, Production Support, Observability.
 
-\ressection{Education}
-\textbf{Central Michigan University}, Mount Pleasant, MI, USA --- MS Computer Science, Aug 2024 - Dec 2025, GPA: 3.87/4.0\\
-\textbf{Lovely Professional University}, Punjab, India --- B.Tech Computer Science and Engineering, Aug 2016 - May 2020, CGPA: 8.02/10
-
-\ressection{Certifications}
+\ressection{Education and Certifications}
+\textbf{Central Michigan University}, MS Computer Science, Aug 2024 - Dec 2025, GPA: 3.87/4.0 \textbar{} \textbf{Lovely Professional University}, B.Tech CSE, 2016 - 2020, CGPA: 8.02/10\\
 Microsoft Certified: Azure Fundamentals \textbar{} Azure Developer Associate \textbar{} Azure Data Engineer Associate
 \end{document}
