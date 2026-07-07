@@ -3,3 +3,5 @@ aditi/*
 *.log
 .codex/
 .agents/
+*.aux
+*.gz
