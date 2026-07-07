@@ -7,22 +7,18 @@
 \usepackage[hidelinks]{hyperref}
 \ifdefined\pdfglyphtounicode\input{glyphtounicode}\pdfgentounicode=1\fi
 \setlength{\parindent}{0pt}\setlength{\parskip}{0pt}\setlength{\emergencystretch}{1em}
-\renewcommand{\baselinestretch}{0.965}
-\setlist[itemize]{label=-,leftmargin=10pt,itemsep=0.15pt,topsep=0.8pt,parsep=0pt,partopsep=0pt}
-\newcommand{\ressection}[1]{\vspace{3pt}\par\textbf{#1}\par\vspace{0.9pt}\hrule\vspace{1.8pt}}
+\renewcommand{\baselinestretch}{0.94}
+\setlist[itemize]{label=-,leftmargin=9pt,itemsep=0pt,topsep=0.5pt,parsep=0pt,partopsep=0pt}
+\newcommand{\ressection}[1]{\vspace{2.3pt}\par\textbf{#1}\par\vspace{0.7pt}\hrule\vspace{1.3pt}}
 \begin{document}
-<<<<<<< HEAD
-\pagestyle{empty}\raggedright\fontsize{12}{10.50}\selectfont
-=======
-\pagestyle{empty}\raggedright\fontsize{9.98}{10.78}\selectfont
->>>>>>> 4d564f983e43bf72e4aa34d3b498aaaf95c704a1
+\pagestyle{empty}\raggedright\fontsize{9.82}{10.50}\selectfont
 
 {\Large \textbf{Kunal Maheshwari}}\\
 Haldwani, Uttarakhand, India \textbar{} 9258446350 \textbar{} \href{mailto:work.kunal.maheshwari@gmail.com}{work.kunal.maheshwari@gmail.com}\\
 LinkedIn: \href{https://www.linkedin.com/in/kunalmaheshwari26}{linkedin.com/in/kunalmaheshwari26} \textbar{} GitHub: \href{https://github.com/preferablehuman}{github.com/preferablehuman} \textbar{} Portfolio: \href{https://preferablehuman.github.io/portfolio/}{preferablehuman.github.io/portfolio/}
 
 \ressection{Summary}
-Java Backend Developer with 4.6+ years across Java 8/11, Spring Boot, REST/SOAP APIs, SQL, Azure integrations, AWS data pipelines, CI/CD, and production support. Delivered 50K+ daily API requests at 99.99\% SLA, reduced issue resolution 20\%, improved legacy Java/Oracle performance approximately 90\%, and built AWS/Spark workflows using S3, Lambda, EFS, ECS, RDS PostgreSQL, and Terraform.
+Java Backend Developer with 4.6+ years of experience across Java 8/11, Spring Boot, REST/SOAP APIs, SQL, Azure integrations, AWS data pipelines, CI/CD, and production support. Delivered 50K+ daily API requests at 99.99\% SLA, reduced issue resolution 20\%, improved legacy Java/Oracle performance approximately 90\%, and built an AWS Spark pipeline with S3, Lambda, EFS, ECS, RDS PostgreSQL, and Terraform.
 
 \ressection{Work Experience}
 \textbf{NTT Data}, Bengaluru, India \hfill \textit{Software Developer, Aug 2022 - Aug 2024}
@@ -42,29 +38,20 @@ Java Backend Developer with 4.6+ years across Java 8/11, Spring Boot, REST/SOAP 
   \item Built Java Spring/Spring MVC and PostgreSQL modules for fitness-club and digital-wallet applications, implementing authentication, email/OTP login, CRUD, account balances, transactions, and profile workflows in a 30-member Agile program.
 \end{itemize}
 
-\ressection{Selected GitHub Projects}
-\textbf{AWS Automated Spark Pipeline / NYU Taxi Platform} \hfill \href{https://github.com/preferablehuman/AWS-automated-spark-pipeline}{github.com/preferablehuman/AWS-automated-spark-pipeline}
+\ressection{Selected AWS Project}
+\textbf{AWS Automated Spark Pipeline / NYU Taxi Platform} \hfill \textit{AWS, Spark, Terraform, PostgreSQL}
 \begin{itemize}
-  \item Built event-driven AWS pipeline where S3 ObjectCreated events trigger Lambda, stage files into EFS, process Spark Structured Streaming micro-batches on ECS, and persist analytics to RDS PostgreSQL with EFS checkpoints and CloudWatch logs.
-  \item Defined Terraform infrastructure for VPC, subnets, NAT, IAM, S3 notifications, Lambda, EFS access points, ECS task/service resources, RDS, and security groups; processed 8GB+ taxi data with 40\% runtime improvement.
-\end{itemize}
-\textbf{Interactive Portfolio System} \hfill \href{https://github.com/preferablehuman/portfolio}{github.com/preferablehuman/portfolio}
-\begin{itemize}
-  \item Built recruiter-facing React, Vite, TypeScript, Tailwind CSS, Motion, and Lucide SPA with project case studies, skill evidence search, dark/light mode, resume modal, GitHub Pages deployment, and direct-route fallback.
+  \item Built event-driven data pipeline where S3 ObjectCreated events trigger Lambda, stage files into EFS, process micro-batches with Spark Structured Streaming on ECS, and persist analytics to RDS PostgreSQL with EFS checkpoints and CloudWatch logs.
+  \item Defined Terraform infrastructure for VPC, subnets, NAT, IAM, S3 notifications, Lambda, EFS access points, ECS tasks/services, RDS, and security groups; processed 8GB+ taxi data with 40\% runtime improvement.
 \end{itemize}
 
 \ressection{Technical Skills}
-Languages: Java 8/11, SQL, Python, TypeScript.\\
+Languages: Java 8/11, SQL, Python.\\
 Backend: Spring Boot, Spring Framework, Spring MVC, JPA, Hibernate, J2EE, EJB, JSF, JDBC, REST/SOAP APIs, Microservices, SOA, JMS, API Gateway, OAuth 2.0.\\
 Cloud/DevOps/Data: AWS S3, Lambda, EFS, ECS, RDS, CloudWatch, Terraform, Azure Functions, Azure Service Bus, Azure Relay, Docker, Kubernetes, Kafka, Jenkins, GitLab CI/CD, Maven, UrbanCode, Git, SVN.\\
 Databases/Quality: Oracle SQL, PostgreSQL, IBM DB2, SQL Optimization, JUnit/JUnit4, Integration Testing, Log4j 2.x, SoapUI, Agile/Scrum, OOP, System Design, Production Support, Observability.
 
-\ressection{Education}
-\textbf{Central Michigan University}, Mount Pleasant, MI, USA \hfill \textit{Aug 2024 - Dec 2025}\\
-Master of Science in Computer Science, GPA: 3.87/4.0\\
-\textbf{Lovely Professional University}, Punjab, India \hfill \textit{Aug 2016 - May 2020}\\
-Bachelor of Technology in Computer Science and Engineering, CGPA: 8.02/10
-
-\ressection{Certifications}
+\ressection{Education and Certifications}
+\textbf{Central Michigan University}, MS Computer Science, Aug 2024 - Dec 2025, GPA: 3.87/4.0 \textbar{} \textbf{Lovely Professional University}, B.Tech CSE, 2016 - 2020, CGPA: 8.02/10\\
 Microsoft Certified: Azure Fundamentals \textbar{} Azure Developer Associate \textbar{} Azure Data Engineer Associate
 \end{document}
