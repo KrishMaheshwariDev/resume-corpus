@@ -1,9 +1,14 @@
-version: 2
-last_updated: 2026-08-11
+version: 3
+last_updated: 2026-08-12
 purpose: Machine-readable checklist for every resume optimization run.
 
 mandatory: true
-non_negotiable_rule: Do not edit resume files directly from memory alone. Reload the profile evidence and knowledge base first.
+non_negotiable_rule: Do not edit resume files directly from memory alone. Reload profile evidence and KB first.
+
+agent_entry:
+  root_contract: AGENTS.md
+  resume_skill: .agents/skills/resume-optimizer/SKILL.md
+  market_refresh_skill: .agents/skills/market-benchmark-refresh/SKILL.md
 
 preflight_required_files:
   - profiles/MASTER_PROFILE_V2.md
@@ -13,6 +18,7 @@ preflight_required_files:
   - profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-11.md
   - profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml
   - profiles/UNRESOLVED_SOURCES.md
+  - profiles/RESUME_POSITIONING_V1.yml
   - kb/resume_optimization_knowledge_base.md
   - kb/human_review/resume_perception_knowledge_base.md
   - kb/scoring/weights.yml
@@ -21,7 +27,11 @@ preflight_required_files:
   - kb/roles/java_backend_engineer.yml
   - kb/writing/bullet_semantics.yml
   - kb/writing/action_verbs_java_backend.yml
+  - kb/resume_output_requirements.yml
   - kb/optimization_run_protocol.md
+
+general_market_extra_files:
+  - kb/market/india_java_backend.yml
 
 evidence_precedence:
   - explicit_user_confirmation_current_conversation
@@ -33,7 +43,6 @@ evidence_precedence:
   - older_resume_variants
 
 overlay_rules:
-  apply_after_v2_baseline: true
   prefer_overlay_for:
     - implementation_detail
     - architecture
@@ -44,56 +53,71 @@ overlay_rules:
     - HR_title_conflicts
     - employment_date_conflicts
     - contact_conflicts
+    - final_GPA_conflicts
+    - work_authorization_conflicts
 
 run_types:
   general_optimization:
     requires_job_description: false
     focus:
-      - baseline_java_backend_fit
+      - india_java_backend_market_fit
       - parse_safety
       - evidence_density
-      - human_review_clarity
+      - human_review
+      - candidate_differentiation
+
   jd_specific_tailoring:
     requires_job_description: true
     focus:
       - hard_requirement_gate
-      - exact_jd_keyword_coverage
-      - semantic_responsibility_alignment
+      - exact_alias_semantic_coverage
+      - responsibility_alignment
+      - evidence_strength
       - truthfulness_guard
+
   one_page_compression:
     requires_job_description: false
     focus:
-      - preserve_high_signal_metrics
-      - preserve_strongest_ownership_stories
-      - remove_low_signal_filler
-      - retain_required_keywords
-      - maintain_readability
+      - preserve_high_value_evidence
+      - remove_redundancy_first
+      - maintain_readability_floor
+
+  two_page_expansion:
+    requires_job_description: false
+    focus:
+      - add_material_verified_depth_only
+      - no_filler
+      - keep_strongest_signals_on_page_one
+
   human_review_pass:
     requires_job_description: false
     focus:
       - first_pass_role_clarity
       - top_half_signal_strength
-      - action_language
+      - evidence_density
       - skimmability
-  ats_pass:
-    requires_job_description: true
+      - credibility
+
+  ats_ai_pass:
+    requires_job_description: false
     focus:
       - parse_quality
-      - exact_keyword_match
-      - alias_normalization
-      - required_skill_coverage
+      - role_or_JD_coverage
+      - semantic_evidence
+      - keyword_saturation
 
 required_phases:
   - intake
-  - mandatory_profile_and_kb_reload
-  - parse_and_baseline_review
+  - mandatory_preflight
+  - baseline_review
   - evidence_reconciliation
-  - ats_or_role_fit_analysis
+  - requirement_or_market_analysis
   - human_review_analysis
   - truthfulness_gate
   - edit_strategy
   - source_edit
-  - post_edit_validation
+  - build_validation
+  - rescore_compare
   - change_summary
 
 evidence_reconciliation:
@@ -103,15 +127,20 @@ evidence_reconciliation:
     - metric_confidence
     - architecture_precision
     - unresolved_source_conflicts
-  current_high_value_examples:
-    - ntt_log4j2_migration_strong_ownership
-    - ntt_monitoring_jar_correlation_ids
-    - ntt_memory_incident_supporting_investigator
-    - ntt_edifecs_integration_analysis
-    - capgemini_vin_latency_60_plus_to_10_20_seconds
-    - capgemini_python_prediction_plus_java_deterministic_validation
-    - aws_spark_local_mode_runtime_boundary
+
+  high_value_current_rules:
+    - ntt_50K_plus_daily_requests_safe
+    - ntt_99_99_SLA_safe
+    - ntt_log4j2_strong_ownership
+    - ntt_20_percent_issue_resolution_source_dependent
+    - capgemini_VIN_60_plus_to_10_20_seconds_preferred
+    - capgemini_90_percent_not_default
+    - aws_spark_local_mode_boundary
     - aws_jdbc_exactly_once_not_established
+    - aws_40_percent_metric_source_dependent
+    - kafka_not_production_ownership
+    - kubernetes_not_production_ownership
+    - fhir_PoC_exposure
 
 truthfulness_gate:
   reject_if_introduces:
@@ -120,56 +149,74 @@ truthfulness_gate:
     - inflated_years_of_experience
     - exaggerated_leadership
     - fake_production_exposure
-    - project_only_skill_presented_as_professional_production_experience
+    - project_only_skill_as_professional_experience
     - unsupported_cloud_kafka_kubernetes_claims
-    - ownership_of_systems_managed_by_other_teams
+    - ownership_of_other_teams_systems
     - guessed_legacy_implementation_details
-  allowed_labels:
-    - production experience
-    - project experience
-    - academic experience
-    - local project experience
-    - exposure
-    - familiar with
-    - currently learning
-    - supporting investigator
-    - integration contributor
-    - proof of concept
+    - unsupported_distributed_system_guarantees
+
+page_policy:
+  allowed_pages: [1, 2]
+  body_font_pt_min: 10
+  margin_in_min: 0.5
+  second_page_must_add_material_value: true
+  no_filler: true
 
 post_edit_validation:
   must_verify:
     - no_unsupported_claims_added
-    - no_critical_keywords_removed
-    - high_signal_metrics_preserved
-    - source_dependent_metrics_not_promoted_without_evidence
+    - no_critical_evidence_regression
+    - source_dependent_metrics_not_promoted_without_intentional_basis
     - ownership_qualifiers_preserved
     - production_project_skill_depth_preserved
     - standard_section_headings_preserved
-    - parse_safe_format_preserved
-    - bullets_readable_not_overcompressed
+    - parse_safe_layout
+    - readable_1_to_2_page_output
     - target_role_alignment_preserved
+
+scoring_report:
+  dimensions:
+    - parse_safety
+    - requirement_or_market_coverage
+    - evidence_strength
+    - human_review
+    - composite_fit
+  targets:
+    truthfulness: PASS
+    parse_safety_min: 95
+    human_review_min: 82
+    composite_target_if_truthfully_achievable: 80
+  rules:
+    - critical_requirement_failures_reported_separately
+    - score_never_overrides_truthfulness
+    - report_maximum_credible_fit_when_target_cannot_be_met
+
+preferred_validation_commands:
+  - python scripts/validate_resume.py --tex resume.tex --pdf Resume.pdf
+  - python scripts/score_resume.py --resume resume.tex
+
+regression_reference:
+  - evals/resume_optimizer_cases.yml
 
 required_report_fields:
   - run_type
-  - knowledge_base_files_loaded
-  - resume_source_path
-  - target_role
-  - overall_fit
-  - ats_fit
-  - human_review_fit
-  - hard_requirements
-  - required_skill_coverage
-  - preferred_skill_coverage
-  - top_matched_evidence
-  - weak_or_missing_areas
-  - recommended_edits
+  - source_resume
+  - target_role_or_JD
+  - market
+  - files_loaded
+  - page_count
+  - parse_safety
+  - requirement_or_market_coverage
+  - evidence_strength
+  - human_review
+  - composite_fit
+  - hard_requirements_or_gaps
+  - top_evidence
+  - edits_made
   - truthfulness_risks
-  - metric_confidence_risks
-  - ownership_qualifiers_applied
-  - parse_risks
+  - source_confidence_risks
+  - ownership_qualifiers
+  - claims_excluded
+  - validation
   - files_changed
   - commit_sha
-
-consistency_instruction: >
-  Future resume optimization runs must begin by reading the preflight_required_files.
-  If chat context is lost, reload this checklist and optimization_run_protocol.md first.

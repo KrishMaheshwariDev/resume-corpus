@@ -2,6 +2,7 @@ tmp/*
 aditi/*
 *.log
 .codex/
-.agents/
 *.aux
 *.gz
+runs/**/tmp/
+runs/**/build/

@@ -1,50 +1,81 @@
-version: 1
-last_updated: 2026-07-05
-purpose: Default scoring weights for local resume-to-job-description optimization.
+version: 2
+last_updated: 2026-08-12
+purpose: Explainable resume fit scorecard for general-market and JD-specific optimization.
 
 scoring_philosophy:
   note: >
-    Do not present this as a proprietary ATS replica. Use it as an explainable
-    hybrid scorecard combining hard requirements, lexical match, semantic match,
-    evidence strength, and parse safety.
-  final_score_scale: 0_to_100
+    Do not present this as a proprietary ATS replica. Use separate, explainable
+    dimensions for parse safety, requirement/market coverage, evidence strength,
+    human review, and composite fit.
+  score_scale: 0_to_100
   truthfulness_required: true
   keyword_stuffing_penalty: true
+  score_cannot_override_evidence: true
 
-final_score_weights:
-  required_skill_coverage: 0.25
-  preferred_skill_coverage: 0.15
-  role_title_and_seniority_match: 0.15
-  responsibility_semantic_match: 0.15
-  domain_and_project_match: 0.10
-  experience_depth_match: 0.10
-  education_and_certification_match: 0.05
-  parse_quality_and_format_safety: 0.05
+score_dimensions:
+  parse_safety:
+    target: 95
+    description: Can mainstream ATS/recruiter systems reliably extract the resume?
+  requirement_or_market_coverage:
+    target: 80
+    description: Does the resume cover the target JD or general role benchmark?
+  evidence_strength:
+    target: 80
+    description: Are important skills demonstrated in credible context rather than only listed?
+  human_review:
+    target: 82
+    source: kb/scoring/human_review_weights.yml
+  composite_fit:
+    target_when_truthfully_achievable: 80
+
+jd_specific_composite_weights:
+  required_skill_coverage: 0.24
+  preferred_skill_coverage: 0.10
+  role_title_and_seniority_match: 0.12
+  responsibility_semantic_match: 0.16
+  evidence_strength: 0.14
+  domain_and_project_match: 0.08
+  experience_depth_match: 0.08
+  human_review: 0.05
+  parse_quality_and_format_safety: 0.03
+
+general_market_composite_weights:
+  durable_role_cluster_coverage: 0.25
+  evidence_strength: 0.25
+  role_identity_and_seniority: 0.15
+  production_scale_and_impact: 0.15
+  human_review: 0.12
+  parse_quality_and_format_safety: 0.08
 
 hard_requirement_status:
   pass:
     description: Requirement is clearly satisfied and supported by resume evidence.
     score: 1.0
   weak:
-    description: Requirement is partially satisfied, only implied, or only listed without evidence.
+    description: Requirement is partially satisfied, implied, or only weakly evidenced.
     score: 0.5
   fail:
     description: Requirement is missing, contradicted, or unsupported.
     score: 0.0
 
+hard_requirement_gate:
+  rule: >
+    A high composite score must not hide a failed critical requirement.
+    Report critical failures separately even when other dimensions are strong.
+
 skill_match_status:
   exact:
     score: 1.0
-    description: Exact JD term appears truthfully in resume.
+    description: Exact target term appears truthfully in relevant context.
   alias:
     score: 0.85
-    description: Canonical alias or equivalent term appears.
+    description: Canonical alias/equivalent term appears.
   semantic:
     score: 0.70
-    description: Similar responsibility appears but exact term is absent.
+    description: Similar responsibility/evidence appears without the exact term.
   weak:
     score: 0.40
-    description: Skill appears only in skills list or weak context.
+    description: Skill appears only in a skills list or weak context.
   missing:
     score: 0.0
     description: No truthful support found.
@@ -52,19 +83,28 @@ skill_match_status:
 evidence_strength:
   level_0_missing:
     score: 0.0
-    description: Skill or requirement missing.
   level_1_keyword_only:
     score: 0.35
-    description: Appears only in skills list.
   level_2_generic_bullet:
     score: 0.55
-    description: Appears in a generic bullet without project, ownership, or impact.
   level_3_contextual_evidence:
     score: 0.78
-    description: Appears with project, responsibility, or domain context.
-  level_4_impact_evidence:
+  level_4_impact_or_constraint_evidence:
     score: 1.0
-    description: Appears with production, scale, metric, reliability, security, cost, latency, SLA, or business impact.
+    description: >
+      Technology/capability appears with system/domain context plus scale,
+      reliability, latency, security, operational constraint, or verified outcome.
+
+source_confidence_adjustment:
+  direct_verified:
+    multiplier: 1.0
+  verified_contextual:
+    multiplier: 0.9
+  source_dependent_metric:
+    multiplier: 0.65
+    note: Prefer safer qualitative/direct-measure wording.
+  unresolved:
+    multiplier: 0.0
 
 parse_quality:
   preferred:
@@ -72,6 +112,8 @@ parse_quality:
     - standard_section_headers
     - text_based_pdf
     - consistent_dates
+    - readable_font
+    - readable_margins
     - no_icons_for_required_contact_details
     - no_images_of_text
   penalties:
@@ -83,6 +125,8 @@ parse_quality:
     hidden_text_or_keyword_stuffing: -0.30
     missing_standard_headings: -0.08
     broken_pdf_text_extraction: -0.30
+    body_font_below_10pt: -0.10
+    margins_below_0_5in: -0.08
 
 keyword_frequency_rules:
   exact_high_value_skill_minimum: 1
@@ -90,26 +134,43 @@ keyword_frequency_rules:
   repeated_term_saturation: true
   stuffing_warning_threshold_same_term: 5
   stuffing_penalty_same_term: -0.10
+  note: >
+    Repetition is not evidence. Important terms should preferably appear once in
+    Skills and again only where they are naturally demonstrated.
 
 fit_bands:
   high:
     min_score: 80
-    interpretation: Strong fit; resume should be tailored but core alignment is present.
+    interpretation: Strong credible fit.
   medium:
     min_score: 60
     max_score: 79
-    interpretation: Plausible fit; important gaps or weak evidence exist.
+    interpretation: Plausible fit with important gaps or weaker evidence.
   low:
     max_score: 59
-    interpretation: Weak fit; missing must-have skills or seniority/domain mismatch likely.
+    interpretation: Weak fit or major hard-requirement/seniority gap.
+
+release_gates:
+  truthfulness: PASS
+  parse_safety_min: 95
+  human_review_min: 82
+  composite_target: 80
+  no_hidden_failed_critical_requirement: true
+  no_keyword_stuffing: true
+  no_unsupported_ownership_or_metrics: true
+  fallback_rule: >
+    If evidence cannot truthfully support the target, report the maximum credible
+    score and gap instead of fabricating experience.
 
 report_sections:
-  - overall_fit
-  - hard_requirements
-  - required_skill_coverage
-  - preferred_skill_coverage
-  - semantic_alignment
+  - parse_safety
+  - requirement_or_market_coverage
   - evidence_strength
-  - parse_quality
+  - human_review
+  - composite_fit
+  - hard_requirements
+  - top_matched_evidence
+  - weak_or_missing_areas
   - recommended_edits
   - truthfulness_risks
+  - source_confidence_risks

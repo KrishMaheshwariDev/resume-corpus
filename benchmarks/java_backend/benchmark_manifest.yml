@@ -1,0 +1,34 @@
+version: 1
+last_refreshed: 2026-08-12
+role_family: java_backend
+market: India
+status: qualitative_baseline
+
+purpose: >
+  Manifest for representative Java/backend market sampling. The aggregate
+  benchmark consumed by normal resume runs is kb/market/india_java_backend.yml.
+
+sampling_policy:
+  target_companies:
+    - product
+    - GCC
+    - enterprise
+    - consulting
+    - startup
+  target_experience_years:
+    min: 3
+    max: 7
+  desired_sample_size: 30
+  exact_frequency_claims_require_reproducible_count: true
+
+current_run:
+  counted_sample_size: null
+  note: >
+    Initial benchmark is qualitative from current-market research. Do not infer
+    exact skill percentages until a source list is captured and counted.
+
+outputs:
+  aggregate: kb/market/india_java_backend.yml
+  research_digest: kb/research/resume_research_2026.md
+
+refresh_skill: .agents/skills/market-benchmark-refresh/SKILL.md

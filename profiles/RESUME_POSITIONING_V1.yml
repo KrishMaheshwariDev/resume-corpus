@@ -1,0 +1,277 @@
+version: 1
+last_updated: 2026-08-12
+purpose: >
+  Profile-specific strategic positioning layer for Kunal Maheshwari's resume.
+  This file ranks verified evidence by resume value. It does not replace the
+  factual profile or August 11 evidence overlays.
+
+source_precedence:
+  - explicit_user_confirmation_current_conversation
+  - work_experience_overlay_2026_08_11
+  - project_evidence_overlay_2026_08_11
+  - evidence_fact_overlay_2026_08_11
+  - current_repo_resume
+  - master_profile_v2_and_fact_matrix
+  - archive_and_current_project_repositories
+  - older_resume_variants
+
+primary_identity:
+  role_family: Backend Software Engineering
+  preferred_labels:
+    - Java Backend Engineer
+    - Backend Software Engineer
+    - Java/Spring Backend Engineer
+    - Java Developer
+    - Software Engineer II / SDE II
+  senior_label_rule: >
+    Use Senior Java Developer/Senior Software Engineer only when the target's
+    seniority expectations are consistent with verified scope and experience.
+
+core_value_proposition: >
+  Enterprise Java backend engineer with 4.6+ years across healthcare payer and
+  automotive systems, combining Java/Spring/SOAP/REST integration, databases,
+  production reliability, middleware, release validation, and troubleshooting
+  with newer project-backed AWS/Terraform/Spark and React/TypeScript breadth.
+
+first_glance_message:
+  - Java/backend identity
+  - 4.6+ years
+  - enterprise healthcare and automotive
+  - production scale and availability
+  - APIs/integration/database/cloud
+  - measurable modernization/performance evidence
+
+primary_differentiators:
+  enterprise_scale_reliability:
+    priority: 1
+    evidence:
+      - "50K+ daily requests across NTT healthcare integration services"
+      - "99.99% SLA availability context"
+    evidence_level: P1
+    resume_value: very_high
+
+  enterprise_integration_depth:
+    priority: 2
+    evidence:
+      - Java 8/11
+      - JAX-WS/SOAP
+      - Spring Framework/Spring Boot
+      - REST integration
+      - IBM WebSphere
+      - Oracle/OJDBC
+      - Azure Relay
+      - Azure Service Bus
+      - Azure Functions
+      - JMS
+      - API Gateway security boundary
+    evidence_level: P1
+    resume_value: very_high
+
+  modernization_observability:
+    priority: 3
+    evidence:
+      - "Led initial PoC and team rollout for project-wide Log4j2 migration"
+      - "Maintained/integrated AOP-based monitoring library with correlation IDs"
+      - "Captured latency, success/failure, request-volume telemetry"
+    evidence_level: P1
+    resume_value: very_high
+    metric_note: "Do not default to the older 20% issue-resolution metric."
+
+  database_performance:
+    priority: 4
+    evidence:
+      - "Reduced VIN repeat-configuration API from ~60+ sec to ~10–20 sec"
+      - "Moved stable option-code mapping into set-based HQL/DB2 CASE processing"
+      - "Retained business validation in Java"
+    evidence_level: P1
+    resume_value: very_high
+    metric_note: "Prefer direct timing over older broad ~90% claim."
+
+  prediction_integration_with_authoritative_rules:
+    priority: 5
+    evidence:
+      - "Integrated Python vehicle-configuration prediction workflow"
+      - "Java remained authoritative for deterministic option/package validation"
+      - "Debugged across Python output, Java validation, and DB2 reference data"
+    evidence_level: P1
+    resume_value: high
+
+  production_release_troubleshooting:
+    priority: 6
+    evidence:
+      - Jenkins/Maven/UrbanCode workflows
+      - post-deployment smoke/business validation
+      - go/no-go/rollback recommendations
+      - root-cause investigation support
+      - code review and mentoring
+    evidence_level: P1
+    resume_value: high
+    ownership_boundary: "Do not claim sole NTT production deployment execution."
+
+  modern_cloud_data_extension:
+    priority: 7
+    evidence:
+      - AWS S3/Lambda/EFS/ECS/RDS
+      - Terraform
+      - Docker
+      - Spark/PySpark/Structured Streaming
+      - PostgreSQL/JDBC
+      - event-driven ingestion
+      - 8GB+ dataset
+    evidence_level: P2
+    resume_value: high_for_cloud_or_data_roles
+    boundaries:
+      - "Spark is local mode inside the ECS container in current code."
+      - "Do not claim multi-node Spark."
+      - "Do not claim end-to-end exactly-once JDBC persistence."
+      - "40% runtime improvement is source-dependent until baseline is reconstructed."
+
+  fullstack_extension:
+    priority: 8
+    evidence:
+      - React
+      - TypeScript
+      - Vite
+      - Tailwind CSS
+      - GitHub Pages
+      - GitHub Actions
+      - searchable skill evidence
+      - project case studies
+    evidence_level: P2
+    resume_value: high_for_fullstack_roles
+
+role_overlays:
+  java_backend:
+    emphasize:
+      - enterprise_scale_reliability
+      - enterprise_integration_depth
+      - modernization_observability
+      - database_performance
+      - production_release_troubleshooting
+    projects:
+      - modern_cloud_data_extension_if_space
+
+  cloud_backend:
+    emphasize:
+      - enterprise_integration_depth
+      - modern_cloud_data_extension
+      - production_release_troubleshooting
+      - enterprise_scale_reliability
+
+  java_fullstack:
+    emphasize:
+      - enterprise_integration_depth
+      - database_performance
+      - fullstack_extension
+      - enterprise_scale_reliability
+
+  data_cloud_hybrid:
+    emphasize:
+      - modern_cloud_data_extension
+      - database_performance
+      - enterprise_integration_depth
+    caution: "Do not position as a production data engineer unless the role accepts project-backed evidence."
+
+  ai_backend:
+    emphasize:
+      - prediction_integration_with_authoritative_rules
+      - modern_cloud_data_extension
+    optional_project_source: privacy_preserving_ai_email_client
+
+do_not_over_position:
+  - production Kafka specialist
+  - Kubernetes/platform engineer
+  - Java 17 production engineer
+  - pure frontend engineer
+  - pure data engineer
+  - senior AI/ML engineer
+  - principal PL/SQL/database owner at NTT
+  - API Gateway authentication owner
+  - datacenter/load-balancer/WebSphere infrastructure owner
+  - sole NTT production deployment owner
+
+skill_depth_labels:
+  professional_production:
+    - Java 8/11
+    - Spring Framework
+    - Spring Boot
+    - JAX-WS
+    - REST/SOAP
+    - J2EE/Java EE
+    - EJB
+    - JSF
+    - Hibernate/HQL
+    - JDBC/OJDBC
+    - Oracle
+    - DB2
+    - WebSphere
+    - WebLogic
+    - Jenkins
+    - Maven
+    - JUnit
+    - Git
+    - SVN
+    - Azure Service Bus
+    - Azure Relay
+    - Azure Functions
+    - JMS
+    - production support
+
+  project_strong:
+    - AWS
+    - Terraform
+    - Docker
+    - Spark
+    - PySpark
+    - Spark Structured Streaming
+    - PostgreSQL
+    - React
+    - TypeScript
+    - Vite
+    - Tailwind CSS
+    - FastAPI
+
+  limited_or_qualify:
+    Kafka: project_or_hands_on
+    Kubernetes: knowledge_or_project_exposure
+    FHIR: proof_of_concept_exposure
+    Spring_Security: knowledge_or_project_context_unless_specific_professional_evidence_is_loaded
+    OAuth2_JWT: knowledge_or_project_context_unless_specific_professional_evidence_is_loaded
+
+resume_content_priority:
+  preserve_first:
+    - 50K_plus_daily_requests
+    - 99_99_percent_SLA
+    - NTT_java_soap_rest_websphere_evidence
+    - Log4j2_migration_ownership
+    - Capgemini_VIN_latency_direct_timing
+    - Python_prediction_plus_java_validation
+    - core_Java_Spring_SQL_API_terms
+
+  preserve_when_relevant:
+    - AWS_Terraform_Spark_project
+    - monitoring_correlation_ID_story
+    - CI_CD_release_validation
+    - mentoring
+    - React_TypeScript_portfolio
+
+  compress_or_remove_first:
+    - generic_soft_skill_statements
+    - duplicated_skill_mentions
+    - low_relevance_training
+    - uncontextualized_tool_lists
+    - unsupported_marketing_percentages
+    - low_relevance_project_detail
+
+summary_policy:
+  structure:
+    - role_identity
+    - experience_depth
+    - enterprise_domain_and_system_type
+    - one_or_two_high_value_proof_points
+    - supporting_modern_breadth_if_space
+  avoid:
+    - generic_self_praise
+    - adjective_stacking
+    - list_of_every_tool
+    - unsupported_metrics

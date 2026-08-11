@@ -1,39 +1,89 @@
-version: 1
-last_updated: 2026-07-06
+version: 2
+last_updated: 2026-08-12
 priority: mandatory
 
 resume_length:
-  default: one_page
-  max_pages: 1
+  default_strategy: shortest_readable_version_with_material_evidence
+  allowed_pages:
+    min: 1
+    max: 2
+  general_preference: one_page_when_natural
   applies_to:
     - optimized_resumes
     - newly_created_resumes
     - jd_tailored_resumes
     - general_backend_resumes
 
-rules:
-  - Every resume optimized or created from this corpus must target exactly one page unless the user explicitly overrides this in the same request.
-  - Preserve high-signal keywords, metrics, and truthful evidence while compressing content.
-  - Prefer concise, achievement-oriented bullets over removing core experience.
-  - Do not remove critical Java backend, Spring Boot, REST API, SQL, cloud, CI/CD, testing, and production-support signals unless the target JD makes them irrelevant.
-  - If space is constrained, reduce repetition first, then compress wording, then remove lower-priority sections.
+readability_floor:
+  body_font_pt_min: 10
+  margin_in_min: 0.5
+  rules:
+    - Do not reduce below the readability floor merely to force a page target.
+    - Prefer content prioritization and de-duplication over layout compression.
 
-compression_priority:
-  preserve_first:
-    - name_and_contact
-    - Java_backend_identity
-    - high_signal_skills
-    - NTT_DATA_production_metrics
-    - Capgemini_performance_metrics
-    - education
-    - certifications_when_space_allows
-  compress_first:
-    - summary
-    - repeated_skill_mentions
-    - lower_relevance_project_details
-    - older_training_details
-  remove_first_if_needed:
-    - low_relevance_certifications
-    - extra_project_explanations
-    - non_target_role_tools
-    - duplicate cloud/data/AI wording
+page_selection:
+  one_page:
+    prefer_when:
+      - strongest_professional_evidence_fits_comfortably
+      - target_is_general_recruiter_portal_or_broad_java_backend
+      - second_page_would_be_mostly_optional_or_repeated_content
+
+  two_pages:
+    allow_when:
+      - second_page_adds_material_role_relevant_evidence
+      - architecture_or_seniority_depth_materially_improves_fit
+      - target_JD_is_broad_and_requires_multiple_verified_capabilities
+      - one_page_would_require_removing_material_evidence
+      - one_page_would_violate_readability_floor
+
+  two_page_guardrail:
+    - Page two must earn its existence.
+    - Never add filler to reach two pages.
+    - Do not bury the strongest evidence on page two.
+
+content_rules:
+  - Preserve truthful high-signal evidence before generic keyword coverage.
+  - Prefer direct measurements and verified ownership over source-dependent marketing percentages.
+  - Prefer concise achievement-oriented bullets over responsibility lists.
+  - Keep exact high-value target terms where truthful.
+  - Put important technologies in experience/project context, not only the Skills section.
+  - Use standard section names and a single-column parse-safe layout.
+  - For targeted resumes, low-relevance skills may be omitted from the resume without deleting them from the factual corpus.
+  - Do not remove critical Java backend, Spring, REST/SOAP, SQL, integration, CI/CD, testing, or production evidence unless the target genuinely makes it irrelevant.
+
+information_density_rule: >
+  Every resume line should contribute target-role relevance, technical capability,
+  ownership, context, scale/constraint, outcome, credibility, or differentiated evidence.
+
+preserve_first:
+  - name_and_contact
+  - Java_backend_identity
+  - 50K_plus_daily_requests
+  - 99_99_percent_SLA
+  - strongest_NTT_integration_or_Log4j2_evidence
+  - Capgemini_VIN_60_plus_to_10_20_seconds
+  - core_Java_Spring_API_SQL_terms
+  - education
+  - relevant_certifications_when_space_allows
+
+preserve_when_relevant:
+  - AWS_Terraform_Spark_project
+  - monitoring_correlation_ID_story
+  - Python_prediction_plus_Java_validation
+  - mentoring
+  - React_TypeScript_portfolio
+
+compress_first:
+  - repeated_skill_mentions
+  - generic_responsibility_phrasing
+  - low_relevance_project_details
+  - older_training_details
+  - duplicated_cloud_data_AI_wording
+  - verbose_summary
+
+remove_first_if_needed:
+  - low_relevance_certifications
+  - extra_project_explanation
+  - non_target_role_tools
+  - unsupported_or_source_dependent_marketing_metrics
+  - generic_soft_skill_claims
