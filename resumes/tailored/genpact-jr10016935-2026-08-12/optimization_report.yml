@@ -1,0 +1,99 @@
+version: 1
+run_date: 2026-08-12
+run_type: jd_specific_tailoring
+company: Genpact
+target_role: Sr. Developer - Application Development JAVA N
+requisition: JR10016935
+market: India
+source_resume: resume.tex
+variant_path: resumes/tailored/genpact-jr10016935-2026-08-12/
+
+scorecard_note: >
+  Explainable repository estimate, not a proprietary Genpact/Workday ATS score.
+  Truthfulness and evidence boundaries override score optimization.
+
+baseline_estimate:
+  parse_safety: 100
+  requirement_coverage: 74
+  evidence_strength: 88
+  human_review: 86
+  composite_fit: 79
+
+final_estimate:
+  parse_safety: 100
+  requirement_coverage: 82
+  evidence_strength: 92
+  human_review: 89
+  composite_fit: 84
+
+page_count: 1
+truthfulness: PASS
+
+strong_matches:
+  - Java 8/11 application development and maintenance
+  - Java EE/J2EE and enterprise application experience
+  - Troubleshooting and production root-cause analysis
+  - Java system upgrades and modernization through Log4j2 and vendor-library work
+  - Performance optimization with direct VIN latency reduction from ~60+ seconds to ~10-20 seconds
+  - IBM DB2, HQL/Hibernate, Oracle and SQL optimization
+  - REST/SOAP services and enterprise integration
+  - JMS, Azure Service Bus and event-driven messaging concepts
+  - Agile Methodology and cross-functional delivery
+  - JUnit/JUnit4, SoapUI, Postman and release validation
+  - Jenkins, Maven, GitLab CI/CD, Azure DevOps and UrbanCode
+  - Code reviews and junior developer mentoring
+  - Bachelor's and Master's degrees in Computer Science
+
+partial_or_transferable:
+  apache_kafka:
+    status: PARTIAL
+    evidence: hands-on/project experience
+    rule: Do not represent as production Kafka ownership.
+  client_relations:
+    status: TRANSFERABLE
+    evidence: cross-functional/client-governed enterprise delivery, documentation and release coordination
+    rule: Do not invent formal account-management responsibility.
+  collaboration_tools:
+    status: STRONG_SEMANTIC
+    evidence: Jira, Git, SVN, GitLab, Azure DevOps, Jenkins and Agile delivery workflows
+
+real_gaps_or_unresolved:
+  - Oracle Certified Java Associate is not held and is not added to the resume.
+  - Production Apache Kafka ownership is not established.
+  - English C2 proficiency is not asserted because repository sources contain conflicting/older language evidence.
+  - Design Thinking is not explicitly evidenced as a named methodology.
+  - Executive Presence is not asserted as a resume claim.
+  - Inclusion, Personal Effectiveness and Storytelling are not keyword-stuffed without specific evidence.
+
+edits_made:
+  - Reframed summary around Java development, troubleshooting, upgrades, optimization and messaging.
+  - Added exact Agile Methodology wording.
+  - Added exact Apache Kafka wording with a hands-on project qualifier.
+  - Elevated Log4j2 and Edifecs upgrade evidence to directly match Java system upgrade responsibility.
+  - Elevated DB2/HQL VIN latency optimization to directly match performance/scalability responsibility.
+  - Strengthened cross-functional troubleshooting, testing and release-validation language.
+  - Prioritized Java/application-development and messaging skills over frontend presentation.
+  - Reduced project content to one role-relevant event-driven AWS project.
+  - Preserved the canonical general resume unchanged.
+
+claims_intentionally_excluded:
+  - production Kafka specialist
+  - Oracle Java certification
+  - C2 English proficiency
+  - API Gateway authentication ownership
+  - sole production deployment ownership
+  - NTT 20% issue-resolution metric
+  - Capgemini broad 90% performance metric
+  - AWS 40% runtime metric
+  - multi-node Spark
+  - exactly-once PostgreSQL delivery
+
+validation:
+  latex_compile: PASS
+  pdf_generated: PASS
+  pages: 1
+  text_extraction: PASS
+  body_font_pt: 10
+  margin_in: 0.5
+  single_column: true
+  visual_review: PASS
