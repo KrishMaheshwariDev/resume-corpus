@@ -1,0 +1,40 @@
+mode: JD-specific tailoring
+target:
+  company: TransUnion
+  role: Sr Developer, Software Development
+  team: Fraud Solutions Engineering
+  date: 2026-08-12
+source_resume: ../../../resume.tex
+
+scores:
+  baseline_jd_fit: 78
+  tailored_jd_fit_estimate: 85
+  parse_safety: 100
+  requirement_coverage: 83
+  evidence_strength: 92
+  human_review: 87
+  composite_fit: 85
+
+strong_matches:
+  - Enterprise Java and Spring application delivery
+  - REST/SOAP APIs and integration services
+  - Business-rule and scenario workflow implementation
+  - Relational databases, Hibernate and query performance tuning
+  - Automated testing, code reviews, CI/CD and release validation
+  - Regulated-data context and Log4j2 security modernization
+  - Production monitoring, incident investigation and root-cause analysis
+  - Agile cross-functional requirements and delivery collaboration
+  - Documentation, knowledge sharing and mentoring
+
+material_gaps:
+  - Resume shows 4.6+ years versus the requested five-to-eight years
+  - Production microservices ownership is not established
+  - Direct fraud-detection and credit-risk domain experience is missing
+  - Formal data-modeling ownership is not strongly evidenced
+  - Kanban experience is not explicitly established
+
+truthfulness_boundaries:
+  - Enterprise integration services are not relabeled as microservices.
+  - Regulated healthcare context is not presented as fraud-domain experience.
+  - Log4j2 modernization is tied to client security review without naming an unverified CVE.
+  - Experience remains stated as 4.6+ years.

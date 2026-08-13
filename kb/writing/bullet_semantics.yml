@@ -10,6 +10,7 @@ principles:
   - Keep one dominant idea per bullet.
   - Make metrics visible as numerals.
   - Avoid vague responsibility language.
+  - Use restrained bold emphasis on short high-value technology, metric, or outcome phrases when the output format supports it.
 
 preferred_bullet_models:
   default_engineering:

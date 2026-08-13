@@ -1,0 +1,99 @@
+mode: jd_specific_tailoring
+source_resume: resume.tex
+target:
+  company: FIS
+  role: Java Developer (Banking / Payments)
+  date: 2026-08-12
+
+files_loaded:
+  - kb/optimization_run_protocol.md
+  - kb/optimization_run_checklist.yml
+  - profiles/MASTER_PROFILE_V2.md
+  - profiles/PROFILE_FACT_MATRIX_V2.yml
+  - profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md
+  - profiles/WORK_EXPERIENCE_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml
+  - profiles/UNRESOLVED_SOURCES.md
+  - profiles/RESUME_POSITIONING_V1.yml
+  - kb/resume_optimization_knowledge_base.md
+  - kb/human_review/resume_perception_knowledge_base.md
+  - kb/scoring/weights.yml
+  - kb/scoring/human_review_weights.yml
+  - kb/skills/java_backend_taxonomy.yml
+  - kb/roles/java_backend_engineer.yml
+  - kb/writing/bullet_semantics.yml
+  - kb/writing/action_verbs_java_backend.yml
+  - kb/resume_output_requirements.yml
+
+scores:
+  baseline_composite_fit_estimate: 75
+  parse_safety: 100
+  requirement_coverage: 80
+  evidence_strength: 85
+  human_review: 86
+  composite_fit: 82
+  repository_general_market_proxy: 90.2
+
+truthfulness: PASS
+page_count: 2
+body_font_pt: 11
+margin_inches: 0.65
+
+strongest_retained_evidence:
+  - 4.6+ years of enterprise Java/J2EE application development
+  - Java, Spring, EJB, JSF, Hibernate/HQL, JDBC/OJDBC, XML, JMS, Oracle, and DB2
+  - WebSphere and WebLogic application-server experience
+  - 50K+ daily healthcare integration requests at 99.99% SLA availability
+  - Maven, Jenkins, GitLab CI/CD, UrbanCode, Git, SVN, JUnit, SoapUI, and Postman
+  - Production support, debugging, code review, documentation, and mentoring
+  - Digital-wallet training application with balances and transaction workflows
+  - VIN API latency reduced from approximately 60+ seconds to 10–20 seconds
+
+hard_gaps:
+  - No verified professional banking, payments, OPF, or FIS product experience
+  - No verified Struts, localization, JSP, DHTML, or Gradle experience
+  - No verified production microservices or Kubernetes ownership
+  - Docker is project-backed rather than employment-backed
+  - No verified day-to-day Copilot or AI-agent usage
+
+edits_made:
+  - Repositioned the summary around Java/J2EE application development, complex integrations, maintenance, debugging, and business-rule translation
+  - Rebuilt the skills section around the exact FIS enterprise stack and labeled Docker/Kubernetes depth
+  - Promoted JMS, XML, JDBC, Oracle, DB2, WebSphere, WebLogic, Maven, Jenkins, SVN, Jira, testing, and production support
+  - Elevated code-review, mentoring, technical-documentation, and client/cross-functional collaboration signals
+  - Used the digital-wallet trainee application as payment-adjacent evidence without presenting it as banking-domain employment
+  - Preserved 11 pt text, readable spacing, restrained bold emphasis, natural two-page flow, and no page-two identity header
+
+claims_intentionally_not_used:
+  - claim: Professional banking or payment-processing experience
+    reason: Digital-wallet evidence is limited to a training application
+  - claim: Production microservices and Kubernetes delivery
+    reason: Production ownership is not established
+  - claim: Struts, localization, JSP, DHTML, Gradle, or Eclipse
+    reason: Not sufficiently verified in the evidence corpus
+  - claim: Copilot or AI-agent use in daily engineering
+    reason: LLM capstone evidence does not establish AI coding-tool usage
+
+unresolved_source_conflicts:
+  - Existing title, date, contact, and GPA conflicts remain governed by the selected canonical source and evidence overlays; none were newly resolved in this variant
+
+validation:
+  latex_compile: PASS
+  structural_validator: PASS
+  page_count: PASS
+  pdf_text_extraction: PASS
+  font_and_margin_policy: PASS
+  visual_review: PASS
+  visual_notes:
+    - No large avoidable blank region on page one
+    - No repeated name, role, or contact header on page two
+    - No orphaned section heading or broken bullet was observed
+    - Section, title, metadata, and bullet spacing remains readable
+    - No clipping, overlap, or unreadable glyphs were observed
+
+files_changed:
+  - resumes/tailored/fis-java-developer-banking-payments-2026-08-12/resume.tex
+  - resumes/tailored/fis-java-developer-banking-payments-2026-08-12/jd.md
+  - resumes/tailored/fis-java-developer-banking-payments-2026-08-12/optimization_report.yml
+  - resumes/tailored/fis-java-developer-banking-payments-2026-08-12/FIS_Java_Developer_Banking_Payments.pdf

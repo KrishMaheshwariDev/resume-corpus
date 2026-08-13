@@ -124,8 +124,8 @@ def main() -> int:
 
     if layout["margin_inches"] is not None and layout["margin_inches"] < 0.5:
         report["errors"].append("Margins are below the 0.5in readability floor.")
-    if layout["body_font_pt"] is not None and layout["body_font_pt"] < 10:
-        report["errors"].append("Body font is below the 10pt readability floor.")
+    if layout["body_font_pt"] is not None and layout["body_font_pt"] < 11:
+        report["errors"].append("Body font is below the 11pt readability floor.")
     if not layout["single_column_proxy"]:
         report["errors"].append("Multi-column layout detected.")
     if layout["table_warning"]:

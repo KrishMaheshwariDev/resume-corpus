@@ -109,8 +109,8 @@ if (-not $PageLine) {
 }
 
 $PageCount = [int]([regex]::Match($PageLine, "^Pages:\s+(\d+)\s*$").Groups[1].Value)
-if ($PageCount -ne 1) {
-    throw "The resume must remain one page, but the generated PDF has $PageCount pages."
+if ($PageCount -lt 1 -or $PageCount -gt 2) {
+    throw "The resume must remain within the readable 1-2 page policy, but the generated PDF has $PageCount pages."
 }
 
 Write-Host "[2/4] Rendering the portfolio preview PNG..."

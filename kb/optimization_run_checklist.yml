@@ -1,9 +1,19 @@
-version: 3
-last_updated: 2026-08-12
+version: 4
+last_updated: 2026-08-13
 purpose: Machine-readable checklist for every resume optimization run.
 
 mandatory: true
 non_negotiable_rule: Do not edit resume files directly from memory alone. Reload profile evidence and KB first.
+
+tailored_file_preflight:
+  required_before_tailored_optimization: true
+  command: powershell -ExecutionPolicy Bypass -File scripts/archive-tailored-resumes.ps1
+  source_root: resumes/tailored
+  archive_pattern: resumes/tailored/old/DD-MM.YYYY
+  archive_condition: variant_date_before_current_local_date
+  preserve_complete_variant_directory: true
+  collision_policy: stop_without_overwrite
+  undated_directory_policy: skip_and_report
 
 agent_entry:
   root_contract: AGENTS.md
@@ -127,6 +137,33 @@ evidence_reconciliation:
     - metric_confidence
     - architecture_precision
     - unresolved_source_conflicts
+    - summary_to_experience_or_project_alignment
+    - technical_skills_to_experience_or_project_alignment
+    - strongest_downstream_evidence_represented_in_top_half
+
+cross_section_alignment_gate:
+  mandatory: true
+  map_format: summary_or_skill_claim_to_visible_evidence_to_depth
+  summary_rule: every_material_capability_domain_delivery_approach_and_working_style_claim_requires_visible_work_or_project_proof
+  skills_rule: every_prominent_technology_or_skill_family_requires_contextual_work_or_project_proof
+  semantic_aliases_allowed: true
+  professional_claim_destination: work_experience
+  project_claim_destination: projects
+  p4_exception:
+    allowed_when_relevant: true
+    required_labels:
+      - knowledge
+      - exposure
+      - training
+      - certification
+  orphan_resolution:
+    - add_concise_verified_context
+    - qualify_to_actual_depth
+    - omit_from_current_resume_but_preserve_in_corpus
+  release_failure_conditions:
+    - material_orphaned_summary_claim
+    - material_orphaned_unqualified_technology
+    - project_skill_presented_as_professional_proof
 
   high_value_current_rules:
     - ntt_50K_plus_daily_requests_safe
@@ -157,10 +194,34 @@ truthfulness_gate:
 
 page_policy:
   allowed_pages: [1, 2]
-  body_font_pt_min: 10
+  body_font_pt_min: 11
   margin_in_min: 0.5
+  readability_over_compactness: true
+  one_page_not_required: true
   second_page_must_add_material_value: true
   no_filler: true
+
+emphasis_policy:
+  use_restrained_bold: true
+  preferred_targets:
+    - role_defining_technologies
+    - verified_metrics
+    - ownership_signals
+    - measurable_outcomes
+  avoid:
+    - entire_bold_bullets
+    - dense_bold_paragraphs
+    - bold_keyword_stuffing
+
+pagination_and_spacing_policy:
+  natural_page_flow: true
+  forbid_large_avoidable_blank_regions: true
+  forbid_repeated_page_two_identity_header_unless_requested: true
+  prevent_orphaned_section_headings: true
+  require_visible_spacing_between:
+    - section_heading_and_content
+    - employer_or_project_title_and_bullets
+    - subtitle_or_metadata_and_body_text
 
 post_edit_validation:
   must_verify:
@@ -173,6 +234,9 @@ post_edit_validation:
     - parse_safe_layout
     - readable_1_to_2_page_output
     - target_role_alignment_preserved
+    - no_material_orphaned_summary_claims
+    - no_material_orphaned_unqualified_technologies
+    - project_and_professional_evidence_destinations_preserved
 
 scoring_report:
   dimensions:

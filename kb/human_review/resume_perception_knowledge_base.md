@@ -48,10 +48,12 @@ Resume implications:
 - Use familiar section names.
 - Keep visual structure consistent.
 - Use enough whitespace.
+- Prefer a readable two-page layout over a cramped one-page layout when material evidence warrants it.
 - Prefer one-column layouts.
 - Avoid dense paragraphs.
 - Avoid decorative clutter.
 - Make the strongest evidence easy to locate.
+- Use restrained bold emphasis for short, high-value phrases such as core technologies, verified metrics, and outcomes.
 
 Practical rule: if the reader has to work hard to understand the resume, the resume is already losing.
 
@@ -199,6 +201,11 @@ Strong signals:
 - bullets usually one to two lines,
 - key technologies appear early,
 - metrics are visible,
+- important evidence is selectively bolded without overwhelming the page,
+- page breaks do not create large avoidable blank regions,
+- later pages do not repeat the full identity header unless requested,
+- section headings remain attached to the content they introduce,
+- headings, titles, subtitles, and body text have clear vertical separation,
 - no long prose blocks,
 - consistent date and title formatting.
 

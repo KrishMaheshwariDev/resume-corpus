@@ -104,7 +104,7 @@ def main() -> int:
     if margin and float(margin.group(1)) < 0.5:
         parse_safety -= 10
     font = re.search(r"\\fontsize\{([0-9.]+)\}", text)
-    if font and float(font.group(1)) < 10:
+    if font and float(font.group(1)) < 11:
         parse_safety -= 10
     parse_safety = max(parse_safety, 0)
 

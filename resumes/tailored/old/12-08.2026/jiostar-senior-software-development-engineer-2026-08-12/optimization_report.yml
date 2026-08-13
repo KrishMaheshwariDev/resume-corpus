@@ -1,0 +1,41 @@
+mode: JD-specific tailoring
+target:
+  company: JioStar
+  role: Senior Software Development Engineer - Viewer Experience
+  date: 2026-08-12
+source_resume: ../../../resume.tex
+
+scores:
+  baseline_jd_fit_estimate: 69
+  tailored_jd_fit_estimate: 76
+  parse_safety: 100
+  requirement_coverage: 71
+  evidence_strength: 90
+  human_review: 86
+  composite_fit: 76
+
+strong_matches:
+  - 4.6+ years within the requested four-to-seven-year range
+  - Java backend and enterprise integration delivery
+  - 50K+ daily requests and 99.99% SLA context
+  - API and database performance optimization
+  - Production incident investigation and root-cause analysis
+  - Operational telemetry, logging and release validation
+  - AWS event-driven project architecture and CI/CD
+  - Cross-functional Python prediction integration
+  - Mentoring, code reviews and technical deep dives
+
+material_gaps:
+  - Production microservices ownership is not established
+  - Kafka is hands-on project exposure, not production ownership
+  - Adtech, video advertising, targeting and measurement domain experience is missing
+  - Caching design and implementation evidence is missing
+  - Architecture-strategy and autonomous ownership of large-scale programs are not established
+  - AWS evidence is project-based rather than production backend ownership
+  - Scale evidence is enterprise production scale, but not comparable to a national streaming ad platform
+
+truthfulness_boundaries:
+  - Kafka remains labeled as hands-on project experience.
+  - AWS remains clearly supported by project evidence.
+  - Enterprise integration is not described as production microservices architecture.
+  - No advertising-platform, caching, Golang or architecture-strategy ownership is claimed.

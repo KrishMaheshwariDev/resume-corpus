@@ -43,7 +43,7 @@ cases:
       - preserve_Log4j2_ownership_or_equivalent_high_value_NTT_signal
       - preserve_VIN_60_plus_to_10_20_seconds
       - remove_redundancy_before_evidence
-      - body_font_at_least_10pt
+      - body_font_at_least_11pt
       - margins_at_least_0_5in
 
   - id: two_page_expansion
@@ -98,3 +98,16 @@ cases:
       - tailored_resume_may_omit_low_relevance_skills
       - factual_profile_keeps_full_verified_skill_inventory
       - do_not_remove_a_required_truthful_term_for_aesthetic_reasons
+
+  - id: cross_section_evidence_alignment
+    input: "Optimize a resume whose Summary and Technical Skills contain claims not demonstrated in Work Experience or Projects."
+    expected:
+      - map_every_material_summary_claim_to_visible_work_or_project_evidence
+      - map_every_prominent_technology_or_skill_family_to_contextual_evidence
+      - allow_clear_semantic_aliases_instead_of_forced_exact_repetition
+      - map_professional_skills_to_work_experience
+      - map_project_skills_to_projects_with_project_depth_preserved
+      - allow_relevant_P4_items_only_with_explicit_knowledge_exposure_training_or_certification_labels
+      - remove_or_qualify_material_orphaned_keywords
+      - preserve_omitted_facts_in_the_profile_corpus
+      - fail_release_if_material_orphaned_summary_or_unqualified_skill_claims_remain

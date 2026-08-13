@@ -12,7 +12,7 @@ The workflow is evidence-first and optimizes for:
 2. ATS/AI parse and retrieval,
 3. recruiter/hiring-manager comprehension,
 4. technical credibility,
-5. readable 1–2 page output.
+5. readable 1–2 page output, with readability taking priority over compactness.
 
 No resume source file should be edited before the required profile and knowledge-base files are loaded.
 
@@ -100,7 +100,7 @@ Focus:
 - truthful gap reporting.
 
 ### One-page compression
-Compress without sacrificing material evidence or readability.
+Use only when the content fits naturally. Compress without sacrificing material evidence, whitespace, scanability, or readability.
 
 ### Two-page expansion
 Use only when page two adds material role-relevant evidence or architecture/seniority depth.
@@ -128,6 +128,8 @@ Resolve:
 
 Do not overwrite the canonical root resume for a one-off JD unless the user explicitly asks.
 
+For every optimization run that creates or edits a tailored variant, first run `scripts/archive-tailored-resumes.ps1`. The archive preflight must move all root-level tailored variant directories dated before the current local date into `resumes/tailored/old/DD-MM.YYYY/`, preserving each complete variant folder. Current-day variants remain at the tailored root. Never overwrite an existing destination or guess the date of an undated directory.
+
 ## Phase 2: Baseline review
 
 Evaluate:
@@ -151,6 +153,12 @@ Before scoring or rewriting:
 - distinguish P1 professional, P2 project, P3 academic/training, P4 knowledge/exposure, P5 unresolved;
 - prefer direct measurements over broad historical percentages when they conflict;
 - preserve unresolved HR/contact/date conflicts.
+
+Build a cross-section evidence map for the actual resume content:
+
+`Summary/Skills claim -> visible Work Experience or Project proof -> P1/P2/P3/P4 depth`
+
+Every material Summary claim and prominent technology/skill family must have visible contextual proof in Work Experience or Projects. Clear semantic aliases are acceptable; loose thematic similarity is not. Professional claims should map to professional bullets, while project-backed claims must remain mapped to and qualified by Projects. A relevant P4 item may remain only when explicitly labeled as knowledge, exposure, training, or certification. The fact being present elsewhere in the corpus does not satisfy this resume-level alignment check.
 
 Current examples:
 - NTT Log4j2: strong PoC/rollout ownership; do not call the trigger Log4Shell without proof.
@@ -231,11 +239,23 @@ Bullet rules:
 - no forced metric;
 - no generic promotional adjectives.
 
+Emphasis rules:
+- use restrained bolding for important technologies, verified metrics, ownership signals, and outcomes;
+- bold short phrases, not complete bullets;
+- avoid dense or repetitive emphasis that harms parsing or visual rhythm.
+
+Pagination and spacing rules:
+- allow content to flow naturally across pages; never insert a forced break that creates a large avoidable blank area;
+- prevent orphaned section headings by keeping each heading with several lines of following content;
+- do not repeat the candidate identity header on later pages unless explicitly requested;
+- maintain visible separation between section headings, employer/project titles, subtitles or metadata, and body text.
+
 Skills:
 - preserve truthful search coverage;
 - targeted resumes may omit low-relevance skills;
 - omission does not delete skills from factual corpus;
 - label limited/project skills when unqualified presentation would mislead.
+- remove, qualify, or contextually demonstrate material technologies that would otherwise be orphaned in the Skills section.
 
 Projects:
 - use to demonstrate modern capabilities or close truthful gaps;
@@ -252,6 +272,7 @@ After source changes:
 6. check body font/margins;
 7. check keyword saturation/regression;
 8. re-check evidence boundaries.
+9. verify every material Summary and Technical Skills claim against visible Work Experience or Project evidence, and resolve all material orphans.
 
 Preferred helpers:
 

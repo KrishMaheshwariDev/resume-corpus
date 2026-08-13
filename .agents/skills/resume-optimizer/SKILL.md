@@ -7,7 +7,7 @@ description: Evidence-driven resume optimization for Kunal Maheshwari. Use when 
 
 ## Objective
 
-Produce the strongest truthful 1–2 page resume for the requested role while optimizing both machine retrieval and human review.
+Produce the strongest truthful, readable 1–2 page resume for the requested role while optimizing both machine retrieval and human review.
 
 Do not treat keyword count as the objective. The goal is high-relevance, high-evidence, low-friction communication.
 
@@ -60,7 +60,7 @@ Compress in this order:
 4. low-relevance project detail;
 5. lower-value optional sections.
 
-Do not remove material evidence or reduce body text below the repository readability floor merely to hit one page.
+Do not remove material evidence, crowd the page, or reduce body text below the repository readability floor merely to hit one page.
 
 ### Two-page expansion
 Use only when a second page materially improves fit.
@@ -112,6 +112,15 @@ The first quarter should answer:
 3. What makes him different from a generic Java developer?
 4. Is there enough credible evidence to continue reading?
 
+### Summary
+Use the canonical skimmable capability-summary pattern for all general and tailored resumes unless the user explicitly requests another format:
+1. identity, experience depth, and product/domain context;
+2. **Delivery scope:** what Kunal can carry from requirements through implementation, testing, release validation, and production support;
+3. **Engineering approach:** how he handles performance, reliability, observability, integrations, data, and business-rule boundaries;
+4. **Working style:** how he collaborates, communicates, documents, reviews, and mentors.
+
+Write for a recruiter's first-pass scan. Keep these labels visually distinct, use short evidence-backed phrases, and make the bold anchors sufficient to reconstruct the intended value proposition. Retain searchable technologies and discussion hooks, but keep detailed metrics and proof in the experience section. Adapt technologies and emphasis to the target JD without changing the four-part structure or fabricating capability.
+
 ### Experience bullets
 For each employer:
 - strongest target-role evidence first;
@@ -132,6 +141,23 @@ Projects exist to:
 - show architecture depth.
 
 Do not let projects displace stronger production evidence for ordinary Java/backend roles.
+
+### Cross-section alignment gate
+
+Before editing, and again before release, build a compact cross-section evidence map:
+
+`Summary capability or skill -> Work Experience/Project proof -> evidence class and depth`
+
+Rules:
+- every material Summary promise must have visible downstream proof;
+- every prominent technology or skill family must be used in context in Work Experience or Projects, using exact wording or a clear semantic alias;
+- professional skills map to Work Experience; project skills map to Projects and retain project qualification;
+- P4 knowledge/exposure/certification may appear without a delivery bullet only when explicitly labeled and relevant;
+- an underlying corpus fact is not enough to justify an orphaned resume keyword;
+- remove, qualify, or add concise verified context for every material orphan;
+- confirm that relevant differentiated downstream proof is represented in the top half rather than hidden.
+
+Treat unresolved material orphans as a failed release gate, not a cosmetic warning.
 
 ## Current candidate-specific safeguards
 
@@ -187,16 +213,31 @@ If `Resume.pdf` is stale, rebuild it before claiming final validation.
 
 Check:
 - 1–2 pages;
-- body font >=10pt;
+- body font >=11pt (hard floor; never reduce below it to meet a page target);
 - margins >=0.5in unless explicitly overridden;
+- readable line spacing and section separation;
+- restrained bold emphasis on high-value technologies, metrics, and outcomes;
+- no forced page break that creates a large avoidable blank region;
+- no repeated identity header on page two unless explicitly requested;
+- section headings kept with following content;
+- visible spacing between headings, titles/subtitles, and body text;
 - single-column/readable text;
 - standard headings;
 - no bullet overflow/splitting where avoidable;
 - PDF extraction;
 - high-value term regression;
 - evidence boundary compliance.
+- Summary/Skills-to-Experience/Projects alignment, with no material orphaned claims or unqualified technologies.
 
 ## Variant storage
+
+Before starting any optimization that creates or edits a tailored variant, run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/archive-tailored-resumes.ps1
+```
+
+This is the daily tailored-file preflight. It moves every dated variant older than the current local date from `resumes/tailored/` to `resumes/tailored/old/DD-MM.YYYY/`, preserving the full variant directory. It must run before the new current-day variant is created. Do not overwrite collisions or infer dates for undated directories.
 
 General baseline:
 - `resume.tex`
@@ -207,6 +248,9 @@ JD-specific:
 - corresponding PDF if generated;
 - `jd.txt` or `jd.md`;
 - optional `optimization_report.yml`.
+
+Archived JD-specific:
+- `resumes/tailored/old/DD-MM.YYYY/<company-role-YYYY-MM-DD>/`
 
 Do not overwrite `resume.tex` for a one-off JD unless the user explicitly asks.
 

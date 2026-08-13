@@ -103,15 +103,16 @@ For current-market research or benchmark refresh, use `.agents/skills/market-ben
 
 ## Page-length policy
 
-Default to the shortest version that preserves material evidence and remains easy to read.
+Default to the most readable version that preserves material evidence. Compactness is secondary to comprehension.
 
 - Allowed: 1–2 pages.
-- One page is preferred when the candidate's strongest relevant evidence fits naturally.
+- One page is acceptable when the candidate's strongest relevant evidence fits naturally without crowding.
 - Two pages are allowed when page two adds material role-relevant evidence, architecture depth, or projects required for the target.
 - Page two must earn its existence.
 - Never add filler to reach two pages.
 - Never remove material evidence merely to satisfy one page.
-- Do not shrink normal body text below 10 pt or margins below 0.5 in merely to fit content unless the user explicitly requests a denser format.
+- Prefer readable spacing, line length, and visual separation over forcing a one-page result.
+- Never reduce normal resume body text below 11 pt. This is a hard readability floor for canonical, general, and tailored resumes, including when the user requests a denser format; reduce or reprioritize content instead. Do not reduce margins below 0.5 in merely to fit content.
 - Prefer deleting redundancy before tightening layout.
 
 ## Content-selection rule
@@ -131,6 +132,18 @@ Every line should contribute at least one of:
 Remove or compress filler, generic responsibilities, repeated tools, and weak self-description.
 
 Do not delete skills from the factual corpus just because they are omitted from a tailored resume. A tailored resume may omit low-relevance skills while preserving them in profile/KB sources.
+
+## Cross-section evidence alignment
+
+The Summary and Technical Skills sections are promises that the Work Experience and Projects sections must substantiate.
+
+- Every material capability, work-area, domain, delivery-scope, engineering-approach, or working-style claim in the Summary must map to at least one visible Work Experience or Project bullet.
+- Every prominently listed technology or skill family must appear in a contextual Work Experience or Project bullet. Exact repetition is not required when an unambiguous alias or parent/child technology mapping carries the same meaning.
+- A P4 knowledge, exposure, or certification item may remain without a delivery bullet only when it is clearly labeled as `knowledge`, `exposure`, `training`, or `certification`, is relevant to the target, and is not presented as hands-on delivery.
+- Do not use the Skills section as an inventory dump. If a term has no visible evidence and is not a necessary qualified P4 item, omit it from that resume while preserving it in the factual corpus.
+- Project-backed technologies must map to Projects and must not be made to look employment-backed. Professional capabilities should normally map to Work Experience.
+- Validate alignment in both directions before release: top-of-resume claims must have downstream proof, and the strongest downstream proof should be represented appropriately in the Summary or Skills when relevant to the target.
+- A resume with material orphaned summary claims or orphaned unqualified technologies fails the optimization release gate even when the underlying fact exists elsewhere in the corpus.
 
 ## Evidence and claim rules
 
@@ -199,6 +212,14 @@ The first screen/top quarter should establish:
 
 The first bullet under each employer must be the strongest role-relevant evidence.
 
+Use restrained bold emphasis to improve scanning. Bold section labels and a small number of high-value technologies, verified metrics, ownership signals, or outcomes. Do not bold entire bullets, create dense patches of bold text, or use bolding as keyword stuffing.
+
+Formatting continuity rules:
+- Never force a page break that leaves a large avoidable blank region on the preceding page.
+- Do not repeat the candidate name, role, or contact header on page two unless the user explicitly requests a running header.
+- Keep each section heading with enough following content to prevent an orphaned heading at the bottom of a page.
+- Preserve visible spacing between section headings, employer/project titles, subtitles or metadata, and the text or bullets that follow.
+
 ## Scoring and release gates
 
 Use repository scores as explainable heuristics, not proprietary ATS replicas.
@@ -233,13 +254,23 @@ When there is no JD:
 ## JD-specific variants
 
 When given a JD:
-1. parse mandatory, preferred, responsibility, seniority, domain, and technology requirements;
-2. map each important requirement to evidence;
-3. mark exact/alias/semantic/weak/missing;
-4. identify hard gaps before writing;
-5. tailor wording and section emphasis without fabricating;
-6. save a variant under `resumes/tailored/<company-role-date>/` unless the user explicitly wants to replace `resume.tex`;
-7. preserve the canonical general resume.
+1. before creating or editing a variant, run `scripts/archive-tailored-resumes.ps1` so every dated variant older than the current local date is moved from the root of `resumes/tailored/` into `resumes/tailored/old/DD-MM.YYYY/`, preserving the complete variant folder;
+2. parse mandatory, preferred, responsibility, seniority, domain, and technology requirements;
+3. map each important requirement to evidence;
+4. mark exact/alias/semantic/weak/missing;
+5. identify hard gaps before writing;
+6. tailor wording and section emphasis without fabricating;
+7. save a variant under `resumes/tailored/<company-role-YYYY-MM-DD>/` unless the user explicitly wants to replace `resume.tex`;
+8. preserve the canonical general resume.
+
+Tailored archive rules:
+- Only current-day variant folders remain directly under `resumes/tailored/`.
+- Archive folders use the exact date structure `resumes/tailored/old/DD-MM.YYYY/`.
+- Move each complete variant directory as-is; do not flatten, rename, or split its contents.
+- Determine archive date from the terminal `YYYY-MM-DD` suffix in the variant directory name.
+- Skip `old/` and any undated directory; report undated directories for manual review rather than guessing.
+- Archiving must be idempotent and must never overwrite an existing destination. Stop and report a collision.
+- Run the archive step once at the beginning of every future resume optimization request, before creating the new current-day variant.
 
 ## Build and validation
 
@@ -269,6 +300,7 @@ Before finalizing an optimization:
 - compare before/after high-value signals;
 - preserve or intentionally replace the strongest evidence;
 - reject an edit that improves prose but materially damages retrieval or truthfulness;
+- build a Summary/Skills-to-Evidence map and resolve material orphaned claims or technologies;
 - use `evals/resume_optimizer_cases.yml` as behavioral regression guidance.
 
 ## Output report

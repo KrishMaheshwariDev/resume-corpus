@@ -265,11 +265,22 @@ resume_content_priority:
 
 summary_policy:
   structure:
-    - role_identity
-    - experience_depth
-    - enterprise_domain_and_system_type
-    - one_or_two_high_value_proof_points
-    - supporting_modern_breadth_if_space
+    - role_identity_experience_and_product_domain
+    - labeled_delivery_scope
+    - labeled_engineering_approach
+    - labeled_working_style
+  default_pattern: >
+    Use a recruiter-skimmable capability summary on all resumes. The opening line
+    establishes role, experience, and product domains. Delivery scope explains
+    end-to-end execution; Engineering approach explains system-level reasoning;
+    Working style explains collaboration, communication, documentation, review,
+    and mentoring. Adapt emphasis to the target while preserving this sequence.
+  scan_rule: >
+    A recruiter reading only the bold identity, domain phrases, and three labels
+    should still reconstruct the intended value proposition.
+  evidence_placement: >
+    Keep searchable technologies and discussion hooks in the summary, but place
+    detailed metrics and supporting proof in experience bullets.
   avoid:
     - generic_self_praise
     - adjective_stacking

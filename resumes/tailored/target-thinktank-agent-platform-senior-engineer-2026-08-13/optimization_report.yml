@@ -1,0 +1,102 @@
+mode: jd_specific_tailoring
+source_resume: resume.tex
+target:
+  company: Target
+  role: Senior Engineer - Thinktank Agent Platform
+  job_id: R0000437730
+  date: 2026-08-13
+
+files_loaded:
+  - kb/optimization_run_protocol.md
+  - kb/optimization_run_checklist.yml
+  - profiles/MASTER_PROFILE_V2.md
+  - profiles/PROFILE_FACT_MATRIX_V2.yml
+  - profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md
+  - profiles/WORK_EXPERIENCE_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml
+  - profiles/UNRESOLVED_SOURCES.md
+  - profiles/RESUME_POSITIONING_V1.yml
+  - kb/resume_optimization_knowledge_base.md
+  - kb/human_review/resume_perception_knowledge_base.md
+  - kb/scoring/weights.yml
+  - kb/scoring/human_review_weights.yml
+  - kb/skills/java_backend_taxonomy.yml
+  - kb/roles/java_backend_engineer.yml
+  - kb/writing/bullet_semantics.yml
+  - kb/writing/action_verbs_java_backend.yml
+  - kb/resume_output_requirements.yml
+
+scores:
+  baseline_composite_fit: 66
+  parse_safety: 100
+  requirement_coverage: 64
+  evidence_strength: 77
+  human_review: 85
+  composite_fit: 74
+  repository_general_market_proxy: 92.7
+
+truthfulness: PASS
+page_count: 2
+body_font_pt: 11
+margin_inches: 0.65
+
+strongest_retained_evidence:
+  - LLM service with model configuration, adapter lifecycle, diagnostics, Prometheus, React, and offline ROUGE evaluation
+  - Java/Spring integration services supporting 50K+ daily requests at 99.99% SLA availability
+  - Reusable AOP monitoring integration with correlation IDs, latency, success/failure, and volume telemetry
+  - Event-driven AWS pipeline using S3 notifications, Lambda, EFS, ECS/Docker, PostgreSQL, CloudWatch, and Terraform
+  - Asynchronous Python prediction-service integration with Java callbacks and deterministic validation
+  - Production incident analysis, performance tuning, documentation, code review, and mentoring
+
+hard_gaps:
+  - No verified AI-agent orchestration, tool calling, prompt management, or multi-agent implementation
+  - No verified production GenAI platform or agent lifecycle-management ownership
+  - No verified online agent evaluation framework, guardrails, governance, or AI auditability
+  - No verified platform SDK or reusable developer-tool development
+  - No verified production microservices or Kubernetes ownership
+  - No verified RAG, vector databases, model gateways, or semantic search
+  - Senior platform-architecture and cloud cost-optimization ownership are not established
+
+edits_made:
+  - Repositioned the summary around Java backend delivery with applied LLM and platform-adjacent breadth
+  - Moved the LLM capstone and AWS event-driven project ahead of work experience
+  - Expanded verified capstone evidence for model configuration, adapter lifecycle, service APIs, diagnostics, and offline evaluation
+  - Elevated reusable observability integration, asynchronous workflows, operational telemetry, reliability, and incident response
+  - Included React in project-qualified skills and capstone context
+  - Removed a low-priority portfolio bullet after visual QA showed it splitting across pages
+  - Preserved 11 pt body text, readable spacing, restrained bolding, and no page-two identity header
+
+claims_intentionally_not_used:
+  - claim: Agent orchestration, tool calling, prompt management, or multi-agent systems
+    reason: No verified implementation evidence
+  - claim: Production AI guardrails, governance, privacy, auditability, or responsible-AI ownership
+    reason: The capstone supports model evaluation and diagnostics, not enterprise governance
+  - claim: Online agent evaluation or agent optimization platform
+    reason: Verified evaluation is offline ROUGE-based model evaluation
+  - claim: Production Kubernetes, microservices platform, or distributed-agent architecture
+    reason: Available evidence is enterprise services plus project/knowledge depth
+  - claim: RAG, vector databases, model gateways, or semantic search
+    reason: Not verified in the evidence corpus
+
+unresolved_source_conflicts:
+  - Existing title, date, contact, and GPA conflicts remain governed by the canonical source and evidence overlays; no conflict was newly resolved
+
+validation:
+  latex_compile: PASS
+  structural_validator: PASS
+  page_count: PASS
+  pdf_text_extraction: PASS
+  font_and_margin_policy: PASS
+  visual_review: PASS
+  visual_notes:
+    - No repeated identity header on page two
+    - No large avoidable blank region on page one
+    - No orphaned section heading or split bullet in the release render
+    - No clipping, overlap, broken glyph, or unreadable text observed
+
+files_changed:
+  - resumes/tailored/target-thinktank-agent-platform-senior-engineer-2026-08-13/resume.tex
+  - resumes/tailored/target-thinktank-agent-platform-senior-engineer-2026-08-13/jd.md
+  - resumes/tailored/target-thinktank-agent-platform-senior-engineer-2026-08-13/optimization_report.yml
+  - resumes/tailored/target-thinktank-agent-platform-senior-engineer-2026-08-13/Target_Thinktank_Agent_Platform_Senior_Engineer.pdf

@@ -1,0 +1,103 @@
+mode: jd_specific_tailoring
+source_resume: resume.tex
+target:
+  company: JPMorganChase
+  role: Software Engineer III - Connected Commerce
+  date: 2026-08-13
+
+files_loaded:
+  - kb/optimization_run_protocol.md
+  - kb/optimization_run_checklist.yml
+  - profiles/MASTER_PROFILE_V2.md
+  - profiles/PROFILE_FACT_MATRIX_V2.yml
+  - profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md
+  - profiles/WORK_EXPERIENCE_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml
+  - profiles/UNRESOLVED_SOURCES.md
+  - profiles/RESUME_POSITIONING_V1.yml
+  - kb/resume_optimization_knowledge_base.md
+  - kb/human_review/resume_perception_knowledge_base.md
+  - kb/scoring/weights.yml
+  - kb/scoring/human_review_weights.yml
+  - kb/skills/java_backend_taxonomy.yml
+  - kb/roles/java_backend_engineer.yml
+  - kb/writing/bullet_semantics.yml
+  - kb/writing/action_verbs_java_backend.yml
+  - kb/resume_output_requirements.yml
+
+scores:
+  baseline_composite_fit_estimate: 70
+  parse_safety: 100
+  requirement_coverage: 75
+  evidence_strength: 84
+  human_review: 86
+  composite_fit: 78
+  repository_general_market_proxy: 90.2
+
+truthfulness: PASS
+page_count: 2
+body_font_pt: 11
+margin_inches: 0.65
+
+strongest_retained_evidence:
+  - 4.6+ years of Java/J2EE development in large corporate environments
+  - Java 8/11, Spring Framework, REST/SOAP, SQL, Hibernate/HQL, JPA, JDBC, and enterprise integrations
+  - AWS event-driven project using S3, Lambda, EFS, ECS/Docker, RDS PostgreSQL, CloudWatch, and Terraform
+  - Services supporting 50K+ daily requests at 99.99% SLA availability
+  - Upstream/downstream troubleshooting, application resiliency, observability, release validation, and production support
+  - Analysis of Python output, Java logs, and DB2 data to isolate cross-system defects
+  - React/TypeScript project exposure and LLM capstone with repeatable offline output evaluation
+  - JUnit, Mockito, Jenkins, GitLab CI/CD, GitHub Actions, code reviews, documentation, and mentoring
+
+hard_gaps:
+  - No verified workplace use of enterprise-authorized AI coding-assistant tools
+  - No verified responsible-AI workflow experience involving sensitive enterprise data and secure AI input/output handling
+  - Spring Boot remains skills-level without a strongly mapped production project
+  - AWS is project-backed rather than professional production ownership
+  - No financial-services or connected-commerce domain experience
+  - No explicit formal software-engineering certification beyond degree training and cloud certifications
+
+edits_made:
+  - Repositioned the summary around secure, stable Java development, system design, upstream/downstream analysis, and operational stability
+  - Elevated Java/J2EE, Spring, AWS, SQL, CI/CD, application resiliency, automated testing, and large-corporate development
+  - Strengthened evidence for troubleshooting across diverse operational datasets and technical boundaries
+  - Reframed the LLM capstone as adjacent evidence of critically evaluating model outputs through repeatable offline metrics
+  - Added modern frontend project coverage while keeping it clearly project-backed
+  - Preserved the strongest scale, availability, performance, observability, and mentoring evidence
+  - Kept the Capgemini employer block intact after visual QA found an initial page split
+  - Maintained 11 pt body text, readable spacing, restrained bolding, two-page flow, and no page-two identity header
+
+claims_intentionally_not_used:
+  - claim: Professional use of Copilot or another enterprise-authorized AI coding assistant
+    reason: Not verified in the evidence corpus
+  - claim: Responsible AI use with enterprise-sensitive code or data
+    reason: The capstone supports model-output evaluation, not workplace governance or secure AI-assisted development
+  - claim: Production Spring Boot and AWS ownership
+    reason: Spring Boot is skills-level and AWS is project-backed
+  - claim: Financial-services or connected-commerce experience
+    reason: Verified professional domains are healthcare payer and automotive
+  - claim: AI-generated code validation through professional peer-review and secure-coding workflows
+    reason: General peer review and testing are supported, but not specifically for AI-generated outputs
+
+unresolved_source_conflicts:
+  - Existing title, date, contact, and GPA conflicts remain governed by the canonical source and evidence overlays; no conflict was newly resolved
+
+validation:
+  latex_compile: PASS
+  structural_validator: PASS
+  page_count: PASS
+  pdf_text_extraction: PASS
+  font_and_margin_policy: PASS
+  visual_review: PASS
+  visual_notes:
+    - No repeated identity header on page two
+    - No large avoidable blank region on page one
+    - No orphaned employer heading or split bullet in the release render
+    - No clipping, overlap, broken glyph, or unreadable text observed
+
+files_changed:
+  - resumes/tailored/jpmorganchase-software-engineer-iii-connected-commerce-2026-08-13/resume.tex
+  - resumes/tailored/jpmorganchase-software-engineer-iii-connected-commerce-2026-08-13/jd.md
+  - resumes/tailored/jpmorganchase-software-engineer-iii-connected-commerce-2026-08-13/optimization_report.yml
+  - resumes/tailored/jpmorganchase-software-engineer-iii-connected-commerce-2026-08-13/JPMorganChase_Software_Engineer_III_Connected_Commerce.pdf

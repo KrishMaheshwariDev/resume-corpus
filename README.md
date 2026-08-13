@@ -123,13 +123,14 @@ Every line should contribute relevance, technical capability, ownership, context
 
 ## Page policy
 
-Use 1–2 pages.
+Use 1–2 pages, with readability taking priority over compactness.
 
-- Prefer one page when material evidence fits naturally.
+- Use one page only when material evidence fits naturally without crowding.
 - Use two pages when the second page materially improves role fit.
 - Never add filler.
 - Never remove material evidence just to satisfy one page.
 - Do not shrink below 10pt body text / 0.5in margins merely to force fit.
+- Use restrained bold emphasis for short, high-value technologies, verified metrics, ownership signals, and outcomes; never bold entire bullets or stuff keywords.
 
 See `kb/resume_output_requirements.yml`.
 

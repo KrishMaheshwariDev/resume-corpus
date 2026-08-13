@@ -125,7 +125,7 @@ parse_quality:
     hidden_text_or_keyword_stuffing: -0.30
     missing_standard_headings: -0.08
     broken_pdf_text_extraction: -0.30
-    body_font_below_10pt: -0.10
+    body_font_below_11pt: -0.10
     margins_below_0_5in: -0.08
 
 keyword_frequency_rules:

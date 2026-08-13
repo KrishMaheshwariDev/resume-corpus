@@ -1,0 +1,95 @@
+mode: jd_specific_tailoring
+source_resume: resume.tex
+target:
+  company: ISS STOXX
+  role: Java Full Stack Developer
+  location: Mumbai, India
+  date: 2026-08-12
+
+files_loaded:
+  - kb/optimization_run_protocol.md
+  - kb/optimization_run_checklist.yml
+  - profiles/MASTER_PROFILE_V2.md
+  - profiles/PROFILE_FACT_MATRIX_V2.yml
+  - profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md
+  - profiles/WORK_EXPERIENCE_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml
+  - profiles/UNRESOLVED_SOURCES.md
+  - profiles/RESUME_POSITIONING_V1.yml
+  - kb/resume_optimization_knowledge_base.md
+  - kb/human_review/resume_perception_knowledge_base.md
+  - kb/scoring/weights.yml
+  - kb/scoring/human_review_weights.yml
+  - kb/skills/java_backend_taxonomy.yml
+  - kb/roles/java_backend_engineer.yml
+  - kb/writing/bullet_semantics.yml
+  - kb/writing/action_verbs_java_backend.yml
+  - kb/resume_output_requirements.yml
+
+scores:
+  parse_safety: 100
+  requirement_coverage: 74
+  evidence_strength: 82
+  human_review: 86
+  composite_fit: 78
+  repository_general_market_proxy: 92.7
+
+truthfulness: PASS
+page_count: 2
+body_font_pt: 11
+margin_inches: 0.65
+
+strongest_retained_evidence:
+  - Java/Spring and REST/SOAP services supporting 50K+ daily requests at 99.99% SLA availability
+  - React/TypeScript portfolio deployed with GitHub Actions
+  - LLM-powered React/FastAPI graduate capstone with reported ROUGE evaluation
+  - VIN API latency reduced from approximately 60+ seconds to 10–20 seconds
+  - Oracle, DB2, PostgreSQL, JUnit, CI/CD, observability, and production support
+
+hard_gaps:
+  - No verified one year of professional React experience; React evidence is project based
+  - No verified agentic-AI or Copilot/Claude workflow integration
+  - No verified production microservices ownership
+  - No verified GCP experience
+  - No verified Selenium, Cypress, or OWASP experience
+  - 4.6+ years is slightly above the stated 2–4 year range
+
+edits_made:
+  - Reframed the summary around Java backend capability with clearly qualified full-stack project breadth
+  - Moved selected projects ahead of work experience to surface React, GitHub Actions, LLM, and cloud evidence early
+  - Split skills by evidence context so project technologies are not mistaken for production tenure
+  - Elevated React/TypeScript, HTML/CSS, REST, SQL, testing, CI/CD, design patterns, and performance evidence
+  - Preserved 11 pt body text, readable spacing, restrained bold emphasis, two-page flow, and no page-two header
+
+claims_intentionally_not_used:
+  - claim: One or more years of professional React development
+    reason: Project evidence does not establish professional duration
+  - claim: Agentic AI or AI-agent integration
+    reason: The capstone supports LLM summarization and classification, not autonomous agents
+  - claim: Production microservices architecture
+    reason: Professional evidence supports services and integrations but not explicit microservices ownership
+  - claim: GCP, Selenium, Cypress, or OWASP
+    reason: Not verified in the evidence corpus
+
+unresolved_source_conflicts:
+  - Existing profile conflicts remain governed by the evidence overlays; no unresolved title, date, GPA, contact, or authorization fact was changed in this variant
+
+validation:
+  latex_compile: PASS
+  structural_validator: PASS
+  page_count: PASS
+  pdf_text_extraction: PASS
+  font_and_margin_policy: PASS
+  visual_review: PASS
+  visual_notes:
+    - No repeated name or role header on page two
+    - No large avoidable blank area on page one
+    - Section headings, titles, metadata, and bullets have visible separation
+    - No clipped, overlapping, or broken text was observed
+
+files_changed:
+  - resumes/tailored/iss-stoxx-java-full-stack-developer-2026-08-12/resume.tex
+  - resumes/tailored/iss-stoxx-java-full-stack-developer-2026-08-12/jd.md
+  - resumes/tailored/iss-stoxx-java-full-stack-developer-2026-08-12/optimization_report.yml
+  - resumes/tailored/iss-stoxx-java-full-stack-developer-2026-08-12/ISS_STOXX_Java_Full_Stack_Developer.pdf

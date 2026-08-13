@@ -3,11 +3,11 @@ last_updated: 2026-08-12
 priority: mandatory
 
 resume_length:
-  default_strategy: shortest_readable_version_with_material_evidence
+  default_strategy: most_readable_version_with_material_evidence
   allowed_pages:
     min: 1
     max: 2
-  general_preference: one_page_when_natural
+  general_preference: readability_over_compactness
   applies_to:
     - optimized_resumes
     - newly_created_resumes
@@ -15,9 +15,10 @@ resume_length:
     - general_backend_resumes
 
 readability_floor:
-  body_font_pt_min: 10
+  body_font_pt_min: 11
   margin_in_min: 0.5
   rules:
+    - Never reduce body text below 11 pt, including for compact or one-page variants.
     - Do not reduce below the readability floor merely to force a page target.
     - Prefer content prioritization and de-duplication over layout compression.
 
@@ -27,6 +28,7 @@ page_selection:
       - strongest_professional_evidence_fits_comfortably
       - target_is_general_recruiter_portal_or_broad_java_backend
       - second_page_would_be_mostly_optional_or_repeated_content
+    rule: One page is never mandatory when it would create crowding or reduce scanability.
 
   two_pages:
     allow_when:
@@ -41,12 +43,59 @@ page_selection:
     - Never add filler to reach two pages.
     - Do not bury the strongest evidence on page two.
 
+visual_emphasis:
+  use_restrained_bold: true
+  bold_short_phrases_only: true
+  preferred_targets:
+    - section_and_skill_labels
+    - role_defining_technologies
+    - verified_scale_or_SLA_metrics
+    - measurable_performance_outcomes
+    - confirmed_ownership_signals
+  avoid:
+    - full_bullet_bolding
+    - repeated_bolding_of_the_same_keyword
+    - decorative_or_keyword_stuffing_emphasis
+
+pagination_and_vertical_rhythm:
+  natural_content_flow: true
+  no_large_avoidable_page_gaps: true
+  no_repeated_identity_header_after_page_one_unless_requested: true
+  keep_section_heading_with_following_content: true
+  spacing_required_between:
+    - section_heading_and_first_entry
+    - employer_or_project_title_and_body
+    - subtitle_or_metadata_and_body
+  rule: Page breaks should follow content flow and section cohesion, not arbitrary employer boundaries.
+
+summary_format:
+  default_for_all_resumes: skimmable_capability_summary
+  required_sequence:
+    - role_identity_experience_and_domain
+    - delivery_scope
+    - engineering_approach
+    - working_style
+  required_labels:
+    - "Delivery scope"
+    - "Engineering approach"
+    - "Working style"
+  rules:
+    - Write the summary around what the candidate can deliver and how the candidate works, not as a compressed list of facts.
+    - Make the role, domain, and labeled anchors understandable during a rapid recruiter skim.
+    - Keep searchable technologies and interview discussion hooks while placing detailed proof and metrics in experience bullets.
+    - Tailor the content under each anchor to the target without changing the four-part reading sequence.
+    - Use restrained bold emphasis so the anchors reconstruct the intended value proposition without reading every word.
+
 content_rules:
   - Preserve truthful high-signal evidence before generic keyword coverage.
   - Prefer direct measurements and verified ownership over source-dependent marketing percentages.
   - Prefer concise achievement-oriented bullets over responsibility lists.
   - Keep exact high-value target terms where truthful.
   - Put important technologies in experience/project context, not only the Skills section.
+  - Require every material Summary capability and prominent Technical Skills claim to map to visible Work Experience or Project evidence through exact wording or an unambiguous semantic alias.
+  - Clearly label relevant knowledge, exposure, training, or certification terms when they do not have delivery evidence in Work Experience or Projects.
+  - Omit orphaned resume keywords that cannot be contextually demonstrated or appropriately qualified, while preserving the facts in the profile corpus.
+  - Keep professional evidence mapped to Work Experience and project-backed evidence mapped to Projects.
   - Use standard section names and a single-column parse-safe layout.
   - For targeted resumes, low-relevance skills may be omitted from the resume without deleting them from the factual corpus.
   - Do not remove critical Java backend, Spring, REST/SOAP, SQL, integration, CI/CD, testing, or production evidence unless the target genuinely makes it irrelevant.

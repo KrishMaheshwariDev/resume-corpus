@@ -169,7 +169,7 @@ Two pages:
 - never justified by filler.
 
 Readability floors:
-- normal body text should generally remain >=10 pt;
+- normal body text must remain >=11 pt under the repository's current readability policy;
 - margins should generally remain >=0.5 in;
 - reduce redundancy before tightening typography.
 

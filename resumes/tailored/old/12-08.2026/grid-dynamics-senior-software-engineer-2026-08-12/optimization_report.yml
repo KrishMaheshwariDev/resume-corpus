@@ -1,0 +1,39 @@
+mode: JD-specific tailoring
+target:
+  company: Grid Dynamics
+  role: Senior Software Engineer
+  date: 2026-08-12
+source_resume: ../../../resume.tex
+
+scores:
+  baseline_jd_fit_estimate: 61
+  tailored_jd_fit_estimate: 68
+  parse_safety: 100
+  requirement_coverage: 62
+  evidence_strength: 88
+  human_review: 85
+  composite_fit: 68
+
+strong_matches:
+  - Java SE/EE, Spring and enterprise backend development
+  - Enterprise integrations across REST, SOAP, JMS and cloud messaging
+  - AWS S3, Lambda and ECS project evidence
+  - Docker, Jenkins, JUnit, Mockito and CI/CD
+  - Logging, correlation telemetry, production support and performance tuning
+  - Edifecs upgrade analysis and vendor integration troubleshooting
+  - Stakeholder collaboration, requirements understanding and mentoring
+
+material_gaps:
+  - IBM Sterling Integrator installation, configuration and development
+  - Named EDI transaction sets and Sterling business processes
+  - Managed file transfer and external trading-partner templates
+  - DynamoDB, SQS, SNS and OpenSearch
+  - Gradle, Splunk, Serverless Framework and Dagger
+  - Production microservices ownership is not firmly established
+  - OAuth-based Sterling authentication is not supported by evidence
+
+truthfulness_boundaries:
+  - Edifecs analysis is not presented as IBM Sterling experience.
+  - AWS technologies are labeled and evidenced through the project section.
+  - Serverless event triggers are not called Serverless Framework experience.
+  - Unsupported EDI standards, MFT, Gradle, Splunk, Dagger and AWS services are omitted.

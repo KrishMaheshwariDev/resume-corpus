@@ -1,0 +1,101 @@
+mode: jd_specific_tailoring
+source_resume: resume.tex
+target:
+  company: Target
+  role: Senior Engineer - Java / AI
+  job_id: R0000441054
+  date: 2026-08-12
+
+files_loaded:
+  - kb/optimization_run_protocol.md
+  - kb/optimization_run_checklist.yml
+  - profiles/MASTER_PROFILE_V2.md
+  - profiles/PROFILE_FACT_MATRIX_V2.yml
+  - profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md
+  - profiles/WORK_EXPERIENCE_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml
+  - profiles/UNRESOLVED_SOURCES.md
+  - profiles/RESUME_POSITIONING_V1.yml
+  - kb/resume_optimization_knowledge_base.md
+  - kb/human_review/resume_perception_knowledge_base.md
+  - kb/scoring/weights.yml
+  - kb/scoring/human_review_weights.yml
+  - kb/skills/java_backend_taxonomy.yml
+  - kb/roles/java_backend_engineer.yml
+  - kb/writing/bullet_semantics.yml
+  - kb/writing/action_verbs_java_backend.yml
+  - kb/resume_output_requirements.yml
+
+scores:
+  baseline_composite_fit: 64
+  parse_safety: 100
+  requirement_coverage: 62
+  evidence_strength: 76
+  human_review: 85
+  composite_fit: 72
+  repository_general_market_proxy: 92.7
+
+truthfulness: PASS
+page_count: 2
+body_font_pt: 11
+margin_inches: 0.65
+
+strongest_retained_evidence:
+  - Java/Spring integration services supporting 50K+ daily requests at 99.99% SLA availability
+  - Production observability through correlation IDs, latency, success/failure, and request-volume telemetry
+  - Applied LLM capstone using FastAPI, PyTorch, Hugging Face, T5, PEFT/LoRA, Prometheus, and ROUGE evaluation
+  - Event-driven AWS pipeline using S3, Lambda, EFS, ECS, Docker, RDS PostgreSQL, CloudWatch, and Terraform
+  - VIN API latency reduced from approximately 60+ seconds to 10–20 seconds
+  - Production incident analysis, release validation, code reviews, and mentoring
+
+hard_gaps:
+  - No verified agentic framework or OpenAI API/SDK experience
+  - No verified production hallucination-mitigation or GenAI reliability ownership
+  - No verified production microservices, Kafka, or Kubernetes ownership
+  - No verified Cassandra, MongoDB, or RabbitMQ experience
+  - No verified Kotlin, Micronaut, reactive programming, GraphQL, Spock, or TestContainers
+  - No verified Grafana/ELK or security/vulnerability-engineering ownership
+  - Senior architecture strategy and team delivery-planning ownership are only partially supported
+
+edits_made:
+  - Reframed the summary around Java backend delivery with applied AI and cloud-project breadth
+  - Moved the LLM capstone and AWS event-driven pipeline ahead of employment to expose role-critical adjacent evidence early
+  - Added explicit project/knowledge qualifiers for AI, Kafka, Docker, and Kubernetes depth
+  - Elevated scalability, resilience, observability, performance tuning, incident response, modernization, and mentoring signals
+  - Preserved the strongest production scale and measurable performance evidence
+  - Maintained 11 pt text, readable spacing, restrained bold emphasis, natural two-page flow, and no page-two identity header
+
+claims_intentionally_not_used:
+  - claim: Agentic AI framework or OpenAI API integration
+    reason: The verified capstone covers LLM summarization, classification, fine-tuning, evaluation, and diagnostics instead
+  - claim: Production microservices, Kafka, Docker, or Kubernetes ownership
+    reason: Available evidence is professional enterprise integration or project/knowledge depth
+  - claim: Hallucination mitigation for production AI systems
+    reason: ROUGE evaluation is supported, but production reliability ownership is not
+  - claim: Cassandra, MongoDB, RabbitMQ, Kotlin, Micronaut, GraphQL, reactive programming, Grafana, ELK, or TestContainers
+    reason: Not verified in the evidence corpus
+  - claim: Security architecture or vulnerability detection ownership
+    reason: Log4j2 modernization does not establish broad security-engineering expertise
+
+unresolved_source_conflicts:
+  - Existing title, date, contact, and GPA conflicts remain governed by the canonical source and evidence overlays; no conflict was newly resolved
+
+validation:
+  latex_compile: PASS
+  structural_validator: PASS
+  page_count: PASS
+  pdf_text_extraction: PASS
+  font_and_margin_policy: PASS
+  visual_review: PASS
+  visual_notes:
+    - No repeated name, role, or contact header on page two
+    - No forced page break or large avoidable first-page gap
+    - Project and employment sections remain visually distinct
+    - No orphaned heading, split bullet, clipping, overlap, or unreadable glyph was observed
+
+files_changed:
+  - resumes/tailored/target-senior-engineer-java-ai-2026-08-12/resume.tex
+  - resumes/tailored/target-senior-engineer-java-ai-2026-08-12/jd.md
+  - resumes/tailored/target-senior-engineer-java-ai-2026-08-12/optimization_report.yml
+  - resumes/tailored/target-senior-engineer-java-ai-2026-08-12/Target_Senior_Engineer_Java_AI.pdf

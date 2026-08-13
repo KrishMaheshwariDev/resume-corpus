@@ -1,0 +1,104 @@
+run:
+  mode: jd_specific_tailoring
+  date: 2026-08-13
+  source_resume: resume.tex
+  target: Infios Senior Software Developer - OMS Product Engineering
+  requisition: JR102889
+  location: Bangalore, India
+
+scores:
+  baseline:
+    parse_safety: 100
+    requirement_coverage: 73
+    evidence_strength: 88
+    human_review: 84
+    composite_fit: 82
+  final:
+    parse_safety: 100
+    requirement_coverage: 84
+    evidence_strength: 90
+    human_review: 89
+    composite_fit: 88
+  note: Evidence-aware JD scorecard; the generic Java/backend heuristic reports 92.7 but does not penalize the experience-duration and Spring Boot depth gaps.
+
+requirement_map:
+  exact_or_strong:
+    - Java enterprise backend development
+    - REST APIs and service-based architecture
+    - SQL, Hibernate/HQL, relational databases, and query optimization
+    - Git, CI/CD, unit/API/integration testing, code reviews, and Agile delivery
+    - Production troubleshooting, performance improvement, observability, reliability, and failure handling
+    - Azure Service Bus and JMS messaging
+    - Cloud and Docker project evidence
+    - Automotive configuration, recommendation, and ordering product workflows
+    - Cross-functional work with QA, deployment, database, vendor, and business-facing teams
+    - AI-assisted project engineering with human validation and accountability
+  adjacent_or_qualified:
+    - 4.6+ years rather than the requested 5+ years
+    - Spring Framework and Spring MVC professional evidence; Spring Boot is knowledge-level in this resume
+    - SOA/service-based architecture adjacent to cloud-native microservices
+    - Automotive ordering workflows adjacent to enterprise OMS and configurable product capabilities
+    - AWS and Docker are project-backed rather than production employment evidence
+  missing:
+    - MongoDB
+    - Verified production Spring Boot service ownership
+    - Production Kubernetes ownership
+    - Production Kafka ownership
+    - Direct supply-chain OMS, ATP, inventory visibility, fulfillment, or warehouse-management product experience
+    - Verified daily enterprise AI-assistant workflow
+
+cross_section_alignment:
+  status: PASS
+  summary_to_evidence:
+    identity_and_domain: Capgemini ordering/configuration product and NTT enterprise healthcare services
+    delivery_scope: implementation, integration, testing, CI/CD, release support, and production bullets
+    engineering_approach: configurable rules, VIN performance, messaging failures, telemetry, and memory-incident evidence
+    working_style: NTT cross-functional delivery, Log4j2 documentation/review, Capgemini mentoring, and portfolio AI-assisted project
+  skills_to_evidence:
+    professional_skills_destination: Work Experience
+    project_skills_destination: Projects
+    qualified_p4_items:
+      - Spring Boot (knowledge)
+  orphaned_material_claims: none
+  orphaned_unqualified_technologies: none
+
+truthfulness:
+  status: PASS
+  intentionally_excluded:
+    - 5+ years claim
+    - Professional Spring Boot ownership
+    - MongoDB
+    - Production Kafka or Kubernetes
+    - Direct supply-chain OMS, inventory, ATP, fulfillment, or warehouse-management experience
+    - Daily enterprise AI-tool usage
+    - Multi-node Spark or exactly-once PostgreSQL guarantees
+  ownership_qualifiers:
+    - Spring Boot is labeled knowledge.
+    - AWS, Terraform, Docker, GitHub Actions, and AI assistance remain project-backed.
+    - Deployment execution remains support and validation work.
+
+strongest_retained_evidence:
+  - Mercedes/Daimler configuration, recommendation, and ordering workflows
+  - Configurable Java business-rule validation
+  - 50K+ daily requests at 99.99% SLA availability
+  - Azure Service Bus and JMS messaging
+  - VIN latency reduction from about 60+ seconds to 10-20 seconds
+  - Log4j2 migration, telemetry, and production troubleshooting
+  - AWS ECS/Docker/Terraform project and AI-assisted portfolio project
+
+validation:
+  compile: PASS
+  page_count: 2
+  body_font_pt: 11
+  margins_in: 0.65
+  single_column: true
+  pdf_text_extraction: PASS
+  visual_review: PASS
+  cross_section_alignment_gate: PASS
+  repeated_page_two_header: false
+  avoidable_page_one_gap: false
+  latex_overflow_warnings: none
+
+unresolved_source_conflicts:
+  - Existing HR-title and employment-date conflicts remain unresolved; no new resolution was inferred.
+
