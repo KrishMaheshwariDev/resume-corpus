@@ -308,3 +308,26 @@ Future resume runs must read these after the V2 baseline profile:
 - `profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml`
 
 They are the preferred source for detailed architecture, ownership boundaries, skill-depth corrections, direct timing evidence, and project implementation limits.
+
+## 16. AI product and AI-assisted engineering boundaries (2026-08-15)
+
+Confirmed by the user and repository evidence:
+
+- runtime-AI project work retained in the AI corpus covers AI Email Client, CodingHelper, and Article Voice Desk;
+- Codex and GitHub Copilot AI-assisted-delivery attribution is limited to Resume Corpus and Portfolio, with human direction, review, tests, runtime checks, and acceptance;
+- AWS Automated Spark Pipeline is a master's coursework project and is not AI-assisted-delivery evidence;
+- Ollama, llama.cpp, and LM Studio were installed/configured and executed for local-inference comparison and integration evaluation;
+- Ollama has direct application-integration evidence through CodingHelper.
+
+Still unresolved or unsupported and therefore prohibited from promotion:
+
+- exact llama.cpp/LM Studio model names, quantization formats, hardware, tokens/second, memory, quality, or latency comparisons;
+- direct llama.cpp or LM Studio application integration beyond evaluation;
+- production traffic, user counts, adoption, SLA, security certification, or commercial deployment for the personal AI projects;
+- measured productivity improvement attributable to Codex or GitHub Copilot;
+- employer authorization or production use of AI coding tools/local runtimes;
+- autonomous agent acceptance, deployment, application submission, or final decision-making;
+- formal correctness/security guarantees from CodingHelper's bounded tests;
+- GitHub Models, Cursor, Claude Code, or Microsoft Copilot hands-on experience.
+
+Rule: use the ownership formulation `directed, reviewed, tested, and validated AI-assisted delivery`; preserve P2/P3/P4 depth and never convert these claims to P1 without separate professional evidence.

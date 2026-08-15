@@ -1,0 +1,138 @@
+run_date: 2026-08-14
+mode: JD-specific tailoring
+source_resume: ../../../resume.tex
+target: Mid-Level Java Backend Engineer - GIFT City, Gandhinagar
+employer: not supplied
+market: India
+
+score_basis: explainable repository heuristics plus requirement-to-evidence mapping; not a proprietary ATS score
+baseline:
+  parse_safety: 100
+  requirement_coverage: 46
+  evidence_strength: 91
+  human_review: 86
+  composite_fit: 70
+final:
+  parse_safety: 100
+  requirement_coverage: 64
+  evidence_strength: 88
+  human_review: 87
+  composite_fit: 78
+  general_market_composite_proxy_from_script: 92.7
+truthfulness: PASS
+
+hard_requirement_status:
+  experience_4_to_5_years: PASS; 4.6+ years
+  qualifying_degree: PASS; B.Tech in Computer Science and Engineering
+  gift_city_work_location: UNCONFIRMED; relocation/on-site availability not stated by the user
+  java_backend: PASS
+  rest_api_framework: PASS_SEMANTIC; professional JAX-WS/Spring REST/SOAP evidence, but no verified JAX-RS/Jersey/RESTEasy delivery
+  java_ee_application_server: PASS_SEMANTIC; professional Java EE/EJB/WebLogic and WebSphere evidence
+  mysql: FAIL; no verified MySQL evidence
+  kafka: WEAK; only limited project/hands-on context exists, so it is not promoted as professional experience
+  jboss_wildfly: FAIL_EXACT; strong similar WebLogic/WebSphere evidence but no verified JBoss/WildFly delivery
+
+requirement_map:
+  - requirement: Java backend development, 4-5 years
+    match: strong exact
+    evidence: 4.6+ years across NTT Data and Capgemini
+    depth: P1 professional
+  - requirement: REST APIs
+    match: strong semantic/exact REST
+    evidence: NTT Java/Spring/JAX-WS REST and SOAP healthcare services
+    depth: P1 professional
+  - requirement: Java EE/Jakarta EE and EJB
+    match: strong exact for Java EE/J2EE and EJB
+    evidence: Capgemini Mercedes/Daimler Vans enterprise application
+    depth: P1 professional
+  - requirement: identity, authentication, profile, and OTP workflows
+    match: partial
+    evidence: Capgemini training applications implemented authentication, email/OTP login, and user-profile workflows
+    depth: P3 training; explicitly qualified
+  - requirement: secure authentication and sensitive-data boundaries
+    match: partial
+    evidence: NTT services operated within a certificate-authenticated API gateway boundary managed by the platform team
+    depth: P1 integration boundary; no gateway-authentication ownership
+  - requirement: JWT, token validation/refresh/logout, MFA retry/expiry
+    match: missing
+    evidence: no verified delivery evidence
+    depth: none
+  - requirement: SQL and JDBC
+    match: strong exact
+    evidence: Oracle/OJDBC integration, HQL/DB2 optimization, PostgreSQL/JDBC training/project work
+    depth: P1 professional plus P2/P3
+  - requirement: MySQL
+    match: missing
+    evidence: verified databases are Oracle, DB2, and PostgreSQL
+    depth: none
+  - requirement: Kafka
+    match: weak/limited
+    evidence: small project/hands-on context only; no production ownership
+    depth: qualified project exposure; omitted from resume due lack of contextual bullet evidence
+  - requirement: external HTTP enterprise systems and messaging
+    match: strong semantic
+    evidence: REST dependencies, Azure Service Bus, JMS, Relay, Functions, WebSphere
+    depth: P1 professional
+  - requirement: JBoss/WildFly and WAR/JNDI administration
+    match: similar-platform only
+    evidence: WebLogic and WebSphere application support, release configuration, logs, and troubleshooting
+    depth: P1 professional for similar platforms; exact technologies missing
+  - requirement: production investigation
+    match: strong
+    evidence: Java/server logs, request correlation IDs, Oracle/DB2 records, messaging, API traces, vendor/specialist coordination
+    depth: P1 professional
+  - requirement: tests, reviews, documentation, and runbooks
+    match: strong except formal runbooks
+    evidence: JUnit/JUnit4, integration testing, code reviews, release documentation, repeatable Log4j2 upgrade documentation
+    depth: P1 professional
+  - requirement: core Java collections, streams, concurrency, secure coding
+    match: Java strong; named subskills not visibly verified in delivery evidence
+    evidence: production Java 8/11 work
+    depth: P1 Java; exact subskills not promoted
+
+strongest_retained_evidence:
+  - 50K+ daily requests at 99.99% SLA availability
+  - Java/Spring REST/SOAP services on IBM WebSphere
+  - Java EE/EJB/JSF/Hibernate application on Oracle WebLogic with DB2
+  - VIN API latency reduced from approximately 60+ seconds to 10-20 seconds
+  - Log4j2 migration ownership, request correlation, telemetry, and production troubleshooting
+  - authentication, email/OTP login, and user-profile workflows at training depth
+
+edits_made:
+  - Repositioned the summary around the exact mid-level Java backend experience band.
+  - Promoted Java EE/EJB, similar enterprise application-server experience, REST APIs, JDBC/SQL, production logs, request IDs, API traces, testing, and release support.
+  - Added identity and OTP evidence with an explicit training qualifier.
+  - Described the certificate-authentication boundary while preserving platform-team ownership.
+  - Reduced project content to one PostgreSQL/JDBC and cloud operations example.
+
+claims_intentionally_not_used:
+  - JWT, token refresh, logout, session-management ownership, or MFA controls: not verified
+  - MySQL: not verified
+  - production Apache Kafka: not verified
+  - JBoss/WildFly, JNDI configuration, or WAR deployment ownership: not verified
+  - CDI, Servlets, JAX-RS, Jersey, or RESTEasy: not verified
+  - collections, streams, or concurrency implementation claims: not sufficiently contextualized in the evidence corpus
+  - sole production deployment ownership: NTT deployments were executed by a deployment team
+
+unresolved_source_conflicts:
+  - NTT HR title and end-date variants remain unresolved; canonical values retained.
+  - Contact, final GPA, and degree-date variants remain unresolved; canonical values retained.
+  - GIFT City relocation/on-site availability is unconfirmed.
+
+validation:
+  archive_preflight: PASS; 0 archived, 5 current-day variants before this variant, 0 undated
+  pdf_skill_operation_marker: unavailable; required marker script is missing from the installed plugin package
+  pdf_build: PASS; compiled with MiKTeX pdfLaTeX in two passes
+  page_count: 2; PASS under the 1-2 page policy
+  source_layout: PASS; 11 pt body, 0.65 inch margins, single-column proxy
+  source_validator: PASS
+  pdf_text_extraction: PASS; both pages contain extractable text in correct section order
+  pdf_visual_review: PASS; both pages rendered with pypdfium2 and inspected with no clipping, overlap, broken glyphs, repeated identity header, orphaned section heading, or unreadable content
+  cross_section_alignment: PASS
+  external_contact_or_application_activity: none
+
+files_changed:
+  - resume.tex
+  - Gift_City_Java_Backend_Engineer.pdf
+  - jd.md
+  - optimization_report.yml

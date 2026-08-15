@@ -230,6 +230,20 @@ skill_depth_labels:
     - Vite
     - Tailwind CSS
     - FastAPI
+    - Codex
+    - GitHub Copilot
+    - Ollama local LLM serving
+    - LangChain
+    - RAG
+    - Qdrant
+    - Java 21
+    - Flyway
+    - llama.cpp local inference R&D
+    - LM Studio local inference R&D
+    - SmolVLM local vision inference
+    - Supertonic ONNX TTS
+    - AI output verification
+    - human-in-the-loop acceptance
 
   limited_or_qualify:
     Kafka: project_or_hands_on
@@ -237,6 +251,11 @@ skill_depth_labels:
     FHIR: proof_of_concept_exposure
     Spring_Security: knowledge_or_project_context_unless_specific_professional_evidence_is_loaded
     OAuth2_JWT: knowledge_or_project_context_unless_specific_professional_evidence_is_loaded
+    AI_assisted_development: hands_on_project_use_not_employer_production
+    llama_cpp: hands_on_local_runtime_comparison_not_direct_app_integration
+    LM_Studio: hands_on_local_runtime_comparison_not_direct_app_integration
+    GitHub_Models: not_verified
+    autonomous_agents: do_not_claim_autonomous_acceptance_or_deployment
 
 resume_content_priority:
   preserve_first:
@@ -254,6 +273,12 @@ resume_content_priority:
     - CI_CD_release_validation
     - mentoring
     - React_TypeScript_portfolio
+    - Codex_GitHub_Copilot_project_workflow
+    - CodingHelper_local_LLM_validation_project
+    - JobHunt_Java21_orchestration_project
+    - AI_Email_Client_transformer_fine_tuning_and_evaluation
+    - Article_Voice_Desk_local_vision_and_ONNX_TTS
+    - Ollama_llama_cpp_LM_Studio_local_runtime_R_and_D
 
   compress_or_remove_first:
     - generic_soft_skill_statements
@@ -262,6 +287,27 @@ resume_content_priority:
     - uncontextualized_tool_lists
     - unsupported_marketing_percentages
     - low_relevance_project_detail
+
+ai_evidence_selection:
+  evidence_scope: project_personal_not_employer_production
+  ownership_language: directed_reviewed_tested_and_validated
+  runtime_ai_priority:
+    - CodingHelper
+    - AI_Email_Client
+    - Article_Voice_Desk_when_local_inference_desktop_or_streaming_is_relevant
+  ai_assisted_delivery_projects:
+    - Resume_Corpus
+    - Portfolio
+  excluded_from_ai_assisted_delivery:
+    - AWS_Automated_Spark_Pipeline_masters_coursework
+  general_java_resume_rule: select_only_role_relevant_AI_evidence
+  ai_enabled_backend_rule: promote_strongest_visible_project_proof
+  prohibited:
+    - employer_authorized_AI_tool_use
+    - production_AI_scale
+    - formal_correctness_guarantees
+    - autonomous_acceptance_or_deployment
+    - measured_AI_productivity_gain
 
 summary_policy:
   structure:

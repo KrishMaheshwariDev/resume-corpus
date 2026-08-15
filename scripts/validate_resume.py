@@ -26,7 +26,10 @@ STANDARD_HEADINGS = [
 
 
 def run(cmd: list[str], cwd: Path | None = None) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(cmd, cwd=cwd, text=True, capture_output=True, check=False)
+    try:
+        return subprocess.run(cmd, cwd=cwd, text=True, capture_output=True, check=False)
+    except OSError as exc:
+        return subprocess.CompletedProcess(cmd, 127, "", str(exc))
 
 
 def parse_tex_layout(tex: str) -> dict:

@@ -317,7 +317,7 @@ Metrics: ROUGE-1 F 53.04, ROUGE-2 F 44.90, ROUGE-L F 45.90.
 
 ### NYU Taxi Data Analysis Platform / AWS Automated Spark Pipeline
 
-Type: Big data / AWS / Spark / Terraform / data engineering.
+Type: Master's coursework project / big data / AWS / Spark / Terraform / data engineering. Not AI-assisted-project evidence.
 
 Repositories: `preferablehuman/AWS-automated-spark-pipeline`, `preferablehuman/NYU-taxi`.
 
@@ -531,3 +531,32 @@ Software Developer and Java Backend Engineer with 4+ years of professional exper
 ### Cloud/data project summary
 
 Built an AWS event-driven Spark pipeline using S3, Lambda, EFS, ECS, RDS PostgreSQL, Terraform, and Docker to process 8GB+ taxi data with a 40% runtime improvement. Also developed a privacy-oriented AI email client using FastAPI, T5, LoRA, PyTorch, Hugging Face, Docker, MinIO, and Prometheus metrics.
+
+---
+
+## 13. AI product and AI-assisted engineering profile (2026-08-15 overlay)
+
+Evidence depth: personal/project evidence only; do not present as employer production usage.
+
+### AI product engineering
+
+- **AI Email Client (P2/P3):** implemented T5/PEFT-LoRA summarization and classification through a FastAPI model service with PyTorch, Hugging Face Transformers, adapter lifecycle controls, ROUGE evaluation, MinIO artifacts, Prometheus diagnostics, and React/TypeScript.
+- **CodingHelper (P2):** implemented a LangChain/Ollama/Qwen coding platform with RAG, Qdrant, PostgreSQL, isolated Java/Python execution, and bounded-test repair/rejection/promotion gates.
+- **Article Voice Desk (P2):** implemented local SmolVLM image description and Supertonic ONNX speech inference with a prioritized worker, packaged models, persistent buffering, streaming ingestion, and fallback engines.
+
+### Local-model R&D
+
+- Hands-on installation, configuration, execution, comparison, and integration evaluation using **Ollama, llama.cpp, and LM Studio** (P3).
+- Direct application integration is verified for Ollama through CodingHelper. llama.cpp and LM Studio remain comparison/evaluation evidence; no direct application integration or benchmark result is claimed.
+
+### AI-assisted delivery
+
+- Sustained project use of **Codex and GitHub Copilot** for architecture/implementation iteration, debugging, and documentation (P2 workflow evidence).
+- Ownership wording: directed, reviewed, tested, and validated generated work; accepted changes only after relevant builds, automated tests, execution checks, and runtime validation.
+- Repository-backed AI-assisted attribution is limited to **Resume Corpus** and **Portfolio**.
+- The AWS Automated Spark Pipeline remains a master's coursework project and is explicitly excluded from AI-assisted-delivery evidence.
+- Explicit exclusions: GitHub Models, Cursor, Claude Code, Microsoft Copilot, autonomous deployment, measured AI productivity gains, and employer-authorized AI-tool use.
+
+### Selection policy
+
+The complete AI inventory belongs in the corpus. General Java/backend resumes should select only role-relevant AI evidence; AI-enabled backend and AI-assisted-development JDs may promote the strongest mapped project proof without changing it into P1 professional evidence.

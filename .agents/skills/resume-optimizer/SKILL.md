@@ -11,6 +11,8 @@ Produce the strongest truthful, readable 1–2 page resume for the requested rol
 
 Do not treat keyword count as the objective. The goal is high-relevance, high-evidence, low-friction communication.
 
+Evaluate each resume independently from application and outreach history. Never use response rates, rejection stages, application outcomes, or outreach results as resume evidence or scoring inputs.
+
 ## Inputs
 
 Resolve from the request or repository:
@@ -28,7 +30,9 @@ If the user does not provide a JD, use the general Java/backend market baseline.
 
 Read root `AGENTS.md`, then follow its mandatory preflight list.
 
-Do not skip the August 11 evidence overlays.
+Do not skip the August 11 evidence overlays or the August 15 AI-assisted engineering overlay.
+
+Treat Codex, GitHub Copilot, and local Ollama/LLM-server experience as hands-on project evidence. Keep it visibly mapped to recent Projects, and do not imply employer production use unless separate professional evidence is loaded.
 
 ## Run-mode selection
 
@@ -267,3 +271,5 @@ Return:
 - claims excluded for truthfulness;
 - validation status;
 - changed files.
+
+End the workflow after the resume report. Do not research contacts, draft outreach, queue messages, log applications, or send externally. A resume/JD request alone never authorizes those actions.

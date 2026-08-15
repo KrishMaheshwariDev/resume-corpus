@@ -10,8 +10,21 @@ global_invariants:
   - maintain_parse_safe_single_column_output
   - use_one_to_two_pages_based_on_material_evidence
   - do_not_shrink_below_readability_floor_to_force_one_page
+  - never_use_application_or_outreach_outcomes_as_resume_inputs
+  - never_trigger_outreach_or_application_logging_from_optimization
 
 cases:
+  - id: isolated_optimization_boundary
+    input: "Optimize my resume for this JD."
+    expected:
+      - evaluate_only_the_JD_verified_candidate_evidence_and_resume_rules
+      - do_not_load_application_or_outreach_results
+      - do_not_research_contacts
+      - do_not_draft_or_queue_messages
+      - do_not_log_an_application
+      - do_not_send_externally
+      - end_after_validated_resume_and_optimization_report
+
   - id: java17_required
     input: "JD requires 5 years Java 17 production experience."
     expected:

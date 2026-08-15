@@ -265,7 +265,8 @@ projects:
       - ROUGE-2 F 44.90
       - ROUGE-L F 45.90
   nyu_taxi_aws_spark_pipeline:
-    type: AWS / Spark / data engineering
+    type: master's coursework project / AWS / Spark / data engineering
+    ai_assisted_delivery: false
     technologies:
       - Apache Spark
       - PySpark
@@ -339,6 +340,31 @@ projects:
       - OOP
 
 skills:
+  ai_product_and_assisted_engineering:
+    evidence_scope: personal_project_only_not_employer_production
+    runtime_ai_projects:
+      AI_Email_Client:
+        evidence_class: P2_P3
+        technologies: [PyTorch, Hugging_Face_Transformers, T5, PEFT, LoRA, ROUGE, FastAPI, MinIO, Prometheus, React, TypeScript]
+      CodingHelper:
+        evidence_class: P2
+        technologies: [LangChain, Ollama, Qwen_2_5_Coder_7B, RAG, Qdrant, PostgreSQL, FastAPI, isolated_Java_Python_execution]
+      Article_Voice_Desk:
+        evidence_class: P2
+        technologies: [SmolVLM_256M_Instruct, Supertonic_3, ONNX_Runtime, Electron, SQLite, local_model_packaging]
+    local_model_r_and_d:
+      evidence_class: P3
+      runtimes: [Ollama, llama.cpp, LM_Studio]
+      verified_scope: [installation, configuration, execution, comparison, integration_evaluation]
+      direct_application_integration: [Ollama_via_CodingHelper]
+      not_verified: [direct_llama.cpp_integration, direct_LM_Studio_integration, benchmark_metrics, production_serving]
+    ai_assisted_delivery:
+      evidence_class: P2_workflow
+      tools: [Codex, GitHub_Copilot]
+      ownership: directed_reviewed_tested_and_validated
+      projects: [Resume_Corpus, Portfolio]
+      acceptance_signals: [code_review, builds, automated_tests, execution_checks, runtime_validation]
+      explicitly_excluded: [GitHub_Models, Cursor, Claude_Code, Microsoft_Copilot, autonomous_deployment, measured_productivity_gain, employer_production_use]
   high_confidence:
     - Java 8/11
     - Core Java

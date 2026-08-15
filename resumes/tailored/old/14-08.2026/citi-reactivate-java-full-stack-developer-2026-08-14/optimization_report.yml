@@ -1,0 +1,51 @@
+mode: jd_specific_tailoring
+company: Citi
+role: Reactivate Your Career Program - Java Full Stack Developer
+source_resume: resume.tex
+truthfulness: PASS
+baseline_release_status: FAIL_missing_mandatory_motivational_responses_and_explicit_career_break_context
+scores:
+  parse_safety: 100
+  requirement_coverage: 84
+  evidence_strength: 81.8
+  human_review: 86
+  composite_fit: 85
+  deterministic_general_market_composite_proxy: 92.7
+output:
+  pdf: Citi_Reactivate_Java_Full_Stack_Developer.pdf
+  pages: 2
+  sha256: 31BF52F0617C4D72ADF37DB937564A7AF8F0A35D284AD817B4A3432608423261
+validation:
+  structural_validator: PASS
+  visual_qa: PASS
+  pdf_text_extraction: PASS_with_pypdf
+  motivational_response_word_limits: PASS
+  motivational_response_words: [81, 77, 74, 78]
+  body_font_pt: 11
+  margins_in: 0.65
+  repeated_page_two_header: false
+  large_avoidable_page_one_gap: false
+  outreach_side_effects: none
+fit_assessment:
+  overall: strong_return_program_fit_pending_india_work_eligibility_confirmation
+  exact_or_strong:
+    - 4.6+ years professional application-development experience
+    - employment break exceeds 18 months by the September 2026 program start
+    - Java enterprise application and API development
+    - Oracle SQL and existing PL/SQL procedure integration
+    - full-stack delivery through professional JSF/AJAX and Angular training plus React projects
+    - Python service integration and project-backed FastAPI
+    - teamwork, documentation, code reviews, problem solving, and production accountability
+  semantic_or_partial:
+    - JavaScript is project-backed through React and Angular rather than a primary professional language
+    - Spring Boot is knowledge/resume-listed without sufficiently mapped production depth
+    - AI-assisted development is exposure rather than quantified professional delivery
+  hard_gaps:
+    - India work eligibility is not explicitly resolved in the evidence corpus
+    - direct PL/SQL procedure authorship is not verified
+    - deep professional React or modern JavaScript ownership is not verified
+claims_intentionally_excluded:
+  - principal PL/SQL or Oracle schema ownership
+  - production React ownership
+  - production Spring Boot specialization without mapped evidence
+  - unsupported AI productivity outcomes

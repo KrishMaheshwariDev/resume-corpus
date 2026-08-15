@@ -16,6 +16,8 @@ The workflow is evidence-first and optimizes for:
 
 No resume source file should be edited before the required profile and knowledge-base files are loaded.
 
+Each run is an isolated document optimization. Application outcomes, recruiter responses, outreach history, funnel metrics, and rejection stages are outside this protocol and must not influence resume scoring or edits.
+
 ## Agent routing
 
 Start with root `AGENTS.md`.
@@ -35,28 +37,30 @@ For current-market benchmark research only, use:
 3. `profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md`
 4. `profiles/WORK_EXPERIENCE_EVIDENCE_OVERLAY_2026-08-11.md`
 5. `profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-11.md`
-6. `profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml`
-7. `profiles/UNRESOLVED_SOURCES.md`
-8. `profiles/RESUME_POSITIONING_V1.yml`
+6. `profiles/AI_ASSISTED_ENGINEERING_EVIDENCE_OVERLAY_2026-08-15.md`
+7. `profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml`
+8. `profiles/UNRESOLVED_SOURCES.md`
+9. `profiles/RESUME_POSITIONING_V1.yml`
 
-Apply the 2026-08-11 overlays after the V2 baseline. On conflicts involving implementation detail, architecture, ownership, skill depth, or metric confidence, prefer the overlays.
+Apply the 2026-08-11 overlays and the 2026-08-15 AI-assisted engineering overlay after the V2 baseline. On conflicts involving implementation detail, architecture, ownership, skill depth, or metric confidence, prefer the overlays.
 
 Do not silently resolve HR title/date/contact/final-GPA/work-authorization conflicts unless explicitly marked resolved.
 
 ### Optimization knowledge
 
-9. `kb/resume_optimization_knowledge_base.md`
-10. `kb/human_review/resume_perception_knowledge_base.md`
-11. `kb/scoring/weights.yml`
-12. `kb/scoring/human_review_weights.yml`
-13. `kb/skills/java_backend_taxonomy.yml`
-14. `kb/roles/java_backend_engineer.yml`
-15. `kb/writing/bullet_semantics.yml`
-16. `kb/writing/action_verbs_java_backend.yml`
-17. `kb/resume_output_requirements.yml`
+10. `kb/resume_optimization_knowledge_base.md`
+11. `kb/human_review/resume_perception_knowledge_base.md`
+12. `kb/scoring/weights.yml`
+13. `kb/scoring/human_review_weights.yml`
+14. `kb/skills/java_backend_taxonomy.yml`
+15. `kb/skills/ai_assisted_engineering.yml`
+16. `kb/roles/java_backend_engineer.yml`
+17. `kb/writing/bullet_semantics.yml`
+18. `kb/writing/action_verbs_java_backend.yml`
+19. `kb/resume_output_requirements.yml`
 
 For a general India Java/backend run also load:
-18. `kb/market/india_java_backend.yml`
+20. `kb/market/india_java_backend.yml`
 
 For the research rationale, consult `kb/research/resume_research_2026.md` when needed; it is not required on every edit.
 
@@ -332,6 +336,10 @@ Validation:
 Files changed:
 Commit SHA, if pushed:
 ```
+
+## Terminal boundary
+
+The optimization run ends after the validated resume and report are delivered. Do not perform contact research, outreach drafting, message queueing, application logging, or external sending from an optimization request. Those actions require a separate explicit user request and remain outside resume scoring.
 
 ## Consistency rule
 

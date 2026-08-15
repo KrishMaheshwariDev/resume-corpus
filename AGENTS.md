@@ -13,6 +13,8 @@ Optimize resumes for:
 
 Do not optimize for a fictional universal ATS score. Use the repository's explainable scorecards and evidence rules.
 
+Treat every optimization as an isolated document evaluation. Do not use application outcomes, recruiter-response history, outreach activity, conversion metrics, or prior rejection stages to score, position, or rewrite a resume.
+
 ## Canonical artifacts
 
 - `resume.tex` — canonical general-market resume source.
@@ -31,11 +33,12 @@ Before changing a resume, use this precedence:
 1. explicit user confirmation in the active conversation;
 2. `profiles/WORK_EXPERIENCE_EVIDENCE_OVERLAY_2026-08-11.md`;
 3. `profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-11.md`;
-4. `profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml`;
-5. current repo resume source;
-6. `profiles/MASTER_PROFILE_V2.md` and `profiles/PROFILE_FACT_MATRIX_V2.yml`;
-7. archive/export evidence and current project repositories;
-8. older resume variants.
+4. `profiles/AI_ASSISTED_ENGINEERING_EVIDENCE_OVERLAY_2026-08-15.md`;
+5. `profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml`;
+6. current repo resume source;
+7. `profiles/MASTER_PROFILE_V2.md` and `profiles/PROFILE_FACT_MATRIX_V2.yml`;
+8. archive/export evidence and current project repositories;
+9. older resume variants.
 
 Never silently resolve HR title, employment-date, contact, final GPA, or work-authorization conflicts unless a higher-priority source explicitly resolves them.
 
@@ -50,19 +53,21 @@ For any resume edit, optimization, score, or tailored variant, load:
 5. `profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md`
 6. `profiles/WORK_EXPERIENCE_EVIDENCE_OVERLAY_2026-08-11.md`
 7. `profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-11.md`
-8. `profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml`
-9. `profiles/UNRESOLVED_SOURCES.md`
-10. `profiles/RESUME_POSITIONING_V1.yml`
-11. `kb/resume_optimization_knowledge_base.md`
-12. `kb/human_review/resume_perception_knowledge_base.md`
-13. `kb/scoring/weights.yml`
-14. `kb/scoring/human_review_weights.yml`
-15. `kb/skills/java_backend_taxonomy.yml`
-16. `kb/roles/java_backend_engineer.yml`
-17. `kb/market/india_java_backend.yml` for general India Java/backend work
-18. `kb/writing/bullet_semantics.yml`
-19. `kb/writing/action_verbs_java_backend.yml`
-20. `kb/resume_output_requirements.yml`
+8. `profiles/AI_ASSISTED_ENGINEERING_EVIDENCE_OVERLAY_2026-08-15.md`
+9. `profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml`
+10. `profiles/UNRESOLVED_SOURCES.md`
+11. `profiles/RESUME_POSITIONING_V1.yml`
+12. `kb/resume_optimization_knowledge_base.md`
+13. `kb/human_review/resume_perception_knowledge_base.md`
+14. `kb/scoring/weights.yml`
+15. `kb/scoring/human_review_weights.yml`
+16. `kb/skills/java_backend_taxonomy.yml`
+17. `kb/skills/ai_assisted_engineering.yml`
+18. `kb/roles/java_backend_engineer.yml`
+19. `kb/market/india_java_backend.yml` for general India Java/backend work
+20. `kb/writing/bullet_semantics.yml`
+21. `kb/writing/action_verbs_java_backend.yml`
+22. `kb/resume_output_requirements.yml`
 
 Do not edit from model memory alone.
 
@@ -98,6 +103,8 @@ Supported modes:
 - ATS/AI parse and retrieval audit;
 - recruiter/hiring-manager review;
 - resume build and validation.
+
+Resume work is self-contained. An optimization request never authorizes or triggers contact research, outreach drafting, message queueing, application tracking, or external sending. Finish after the validated resume and optimization report unless the user makes a separate explicit request for another workflow.
 
 For current-market research or benchmark refresh, use `.agents/skills/market-benchmark-refresh/SKILL.md`. Do not browse the market on every normal edit.
 
@@ -165,6 +172,7 @@ Special current boundaries:
 - Log4j2 migration has strong ownership; the older `20% issue-resolution` number is source-dependent and should not be the default.
 - Capgemini VIN latency has direct evidence: ~60+ sec to ~10–20 sec. Prefer this over the older broad `~90%` claim.
 - AWS Spark project's `40% runtime improvement` is source-dependent until its comparison baseline is reconstructed.
+- Codex, GitHub Copilot, and local Ollama/LLM-server use are verified as hands-on project evidence; do not present them as employer production usage without separate evidence.
 - AWS Spark currently uses local-mode Spark inside the ECS container. Do not claim multi-node Spark execution.
 - Checkpointing does not prove end-to-end exactly-once JDBC/PostgreSQL writes.
 - Kafka and Kubernetes must not be represented as production ownership without separate evidence.
@@ -302,6 +310,7 @@ Before finalizing an optimization:
 - reject an edit that improves prose but materially damages retrieval or truthfulness;
 - build a Summary/Skills-to-Evidence map and resolve material orphaned claims or technologies;
 - use `evals/resume_optimizer_cases.yml` as behavioral regression guidance.
+- verify that the run created no application/outreach records and initiated no external contact.
 
 ## Output report
 

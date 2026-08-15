@@ -1,0 +1,51 @@
+mode: jd_specific_tailoring
+company: Undisclosed software-product client via Sampoorna Consultants
+role: Senior Software Engineer Java - Bangalore Whitefield
+source_resume: resume.tex
+truthfulness: PASS
+scores:
+  parse_safety: 100
+  requirement_coverage: 79
+  evidence_strength: 81.8
+  human_review: 86
+  composite_fit: 82
+  deterministic_general_market_composite_proxy: 92.7
+output:
+  pdf: Sampoorna_Senior_Software_Engineer_Java_Whitefield.pdf
+  pages: 2
+  sha256: DB66E073231BE41EE4590F9022B6227D3C98CDA4D24A6AF7BE8308D59E79EA72
+validation:
+  structural_validator: PASS
+  visual_qa: PASS
+  pdf_text_extraction: PASS_with_pypdf
+  body_font_pt: 11
+  margins_in: 0.65
+  repeated_page_two_header: false
+  large_avoidable_page_one_gap: false
+  outreach_side_effects: none
+fit_assessment:
+  overall: strong_java_enterprise_fit_with_platform_and_framework_depth_gaps
+  exact_or_strong:
+    - 4.6+ years of Java enterprise application development
+    - REST and SOAP API development and third-party integration
+    - Hibernate/HQL and relational database integration
+    - cloud integration through Azure Service Bus, Relay, and Functions
+    - CI/CD, observability, production troubleshooting, code reviews, and mentoring
+    - application performance and reliability optimization
+  semantic_or_partial:
+    - Spring Boot is profile-supported; detailed professional proof is strongest for Spring Framework and Spring MVC
+    - professional service-based/SOA and distributed-integration evidence maps semantically to microservices
+    - Docker and cloud-native architecture breadth are project-backed
+    - AI capability is supported by an applied-AI capstone and Java/Python integration, not verified AI coding-assistant use
+  hard_gaps:
+    - no verified production Kubernetes ownership
+    - no formal production microservices-platform ownership
+    - no verified Spring Cloud or JPA-specific delivery
+    - no verified enterprise AI-assisted engineering-tool usage
+claims_intentionally_excluded:
+  - production Kubernetes deployment or management
+  - production Docker platform ownership
+  - Spring Cloud delivery
+  - JPA-specific delivery
+  - enterprise AI coding-assistant usage
+  - unsupported Spring Boot or microservices duration

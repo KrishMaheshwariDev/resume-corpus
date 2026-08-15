@@ -1,0 +1,51 @@
+mode: jd_specific_tailoring
+company: Experian
+role: Java Developer - Talent Community
+source_resume: resume.tex
+truthfulness: PASS
+scores:
+  parse_safety: 100
+  requirement_coverage: 78
+  evidence_strength: 81.8
+  human_review: 86
+  composite_fit: 82
+  deterministic_general_market_composite_proxy: 92.7
+output:
+  pdf: Experian_Java_Developer_Talent_Community.pdf
+  pages: 2
+  sha256: C6C44A2BB7238410BE4284BC87008C970FF4701CDF903E9BEF2C13BB3CC3C842
+validation:
+  structural_validator: PASS
+  visual_qa: PASS
+  pdf_text_extraction: PASS_with_pypdf
+  body_font_pt: 11
+  margins_in: 0.65
+  repeated_page_two_header: false
+  large_avoidable_page_one_gap: false
+  outreach_side_effects: none
+fit_assessment:
+  overall: strong_java_fit_with_project_backed_frontend_aws_and_container_depth
+  exact_or_strong:
+    - 4.6+ years of Java enterprise application delivery
+    - REST and SOAP API development
+    - Git and CI/CD pipelines
+    - JUnit and integration testing
+    - Angular training and React/TypeScript project evidence
+    - AWS S3, Lambda, ECS, RDS, CloudWatch, IAM, VPC, Docker, and Terraform project evidence
+  semantic_or_partial:
+    - Spring Boot is profile-supported; detailed professional proof is strongest for Spring Framework and Spring MVC
+    - service-based/SOA and distributed integration map semantically to microservices
+    - API Gateway experience is as a professional application security boundary, not gateway ownership
+    - Kubernetes is knowledge/exposure rather than hands-on production ownership
+  hard_gaps:
+    - no verified one-plus year of professional Angular or React development
+    - no verified AWS EKS or DynamoDB experience
+    - no verified production Kubernetes ownership
+    - no formal production microservices-platform ownership
+claims_intentionally_excluded:
+  - one-plus year professional frontend ownership
+  - AWS EKS
+  - DynamoDB
+  - production Kubernetes deployment or management
+  - API Gateway implementation ownership
+  - production Spring Boot microservices ownership without a specific verified mapping

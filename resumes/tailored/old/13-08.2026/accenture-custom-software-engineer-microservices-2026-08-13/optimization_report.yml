@@ -1,0 +1,50 @@
+mode: jd_specific_tailoring
+company: Accenture
+role: Custom Software Engineer - Packaged Application Development Senior Analyst
+job_number: ATCI-5596924-S2026964
+source_resume: resume.tex
+truthfulness: PASS
+scores:
+  parse_safety: 100
+  requirement_coverage: 72
+  evidence_strength: 81.8
+  human_review: 86
+  composite_fit: 78
+  deterministic_general_market_composite_proxy: 92.7
+output:
+  pdf: Accenture_Custom_Software_Engineer_Microservices.pdf
+  pages: 2
+  sha256: 55DF220EC716E959E460D37F1DA29D27EC2352A347BBC7B83128461F31EBA7E5
+validation:
+  structural_validator: PASS
+  visual_qa: PASS
+  pdf_text_extraction: PASS_with_pypdf
+  body_font_pt: 11
+  margins_in: 0.65
+  repeated_page_two_header: false
+  large_avoidable_page_one_gap: false
+  outreach_side_effects: none
+fit_assessment:
+  overall: strong_semantic_delivery_fit_but_hard_microservices_duration_gap
+  exact_or_strong:
+    - 4.6+ years of enterprise Java application delivery
+    - REST API development and system integration
+    - asynchronous communication through Azure Service Bus, Azure Relay, Azure Functions, and JMS
+    - performance and reliability troubleshooting
+    - requirements translation, cross-functional delivery, documentation, code review, and junior guidance
+    - project-backed Docker containers and independently separated application services
+  semantic_or_partial:
+    - professional experience with service-based/SOA systems maps semantically to microservices responsibilities
+    - distributed-system experience is strongest in cross-service synchronous and asynchronous integration
+    - Spring Boot is profile-supported; detailed professional proof is strongest for Spring Framework and Spring MVC
+    - containerization is project-backed rather than production platform ownership
+  hard_gaps:
+    - no verified three years of formally labeled microservices and lightweight architecture experience
+    - no verified production Kubernetes or container-orchestration ownership
+    - no verified lightweight-architecture framework ownership beyond Spring-based and service-based Java systems
+claims_intentionally_excluded:
+  - three years of production microservices architecture ownership
+  - production Kubernetes deployment or orchestration ownership
+  - production Docker platform ownership
+  - principal distributed-platform architecture ownership
+  - unsupported lightweight-framework claims
