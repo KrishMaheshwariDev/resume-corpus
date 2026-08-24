@@ -1,0 +1,148 @@
+run:
+  date: 2026-08-20
+  mode: jd_specific_tailoring
+  company: Microsoft
+  team: Commerce Core Trust Platform / Microsoft Email Orchestrator
+  target_role: Software Engineer II
+  source_resume: resume.tex
+  output_pdf: Microsoft_SEII_Trust_Email_Platform.pdf
+  page_count: 2
+  pdf_sha256: F0FB4FD570712CD81A867F8C23A6B6CE6080157548F5D29129C056F8AA9D379F
+
+scores:
+  baseline_canonical_estimate:
+    parse_safety: 100
+    requirement_coverage: 70
+    evidence_strength: 90
+    human_review: 84
+    composite_fit: 81
+  final:
+    truthfulness: PASS
+    parse_safety: 100
+    requirement_coverage: 91
+    evidence_strength: 92
+    human_review: 89
+    composite_fit: 91
+  deterministic_script_reference:
+    general_market_coverage: 100
+    evidence_strength_proxy: 90.9
+    human_review_proxy: 74
+    composite_fit_proxy: 92.5
+  note: >-
+    The deterministic scorecard is general-market oriented. Final human and requirement scores
+    reflect JD-specific review, visual inspection, and evidence-boundary penalties.
+
+hard_gaps:
+  - Production email-orchestration and fraud/scam-prevention domain experience is not established.
+  - Verified professional scale is 50K+ daily requests, not billions of monthly transactions.
+  - Codex and GitHub Copilot use is verified through personal projects, not employer-authorized production workflows.
+  - Formal ownership of privacy, compliance, Responsible AI, or accessibility programs is not established.
+  - Professional cloud evidence centers on Azure integration services rather than sole ownership of a cloud-native platform architecture.
+
+strongest_retained_evidence:
+  - Java enterprise services supporting 50K+ daily requests at 99.99% SLA availability.
+  - Professional Azure Relay, Service Bus, Functions, JMS, and REST integration.
+  - Correlation-ID telemetry covering latency, success/failure, and request volume.
+  - Live-site memory/resource incident analysis and rolling-restart validation across load-balanced nodes.
+  - Security-review-driven Log4j2 modernization with architecture decisions, documentation, code reviews, and rollout coordination.
+  - AI Email Client with summarization, classification, reply support, adapter lifecycle, evaluation, and diagnostics.
+  - Codex/GitHub Copilot workflow with deterministic validation and human acceptance gates.
+
+edits_made:
+  - Repositioned the first quarter around Software Engineer II, Java cloud-service integration, high availability, and live-site ownership.
+  - Added direct coverage for requirements translation, implementation planning, reviews, documentation, testing, deployment support, and operations.
+  - Elevated telemetry, monitoring, diagnostics, security boundaries, regulated-data context, and reliability improvement evidence.
+  - Added qualified Responsible AI and accessibility knowledge without presenting formal ownership.
+  - Promoted the AI Email Client because it directly demonstrates email workflows, intelligent features, evaluation, and monitoring.
+  - Added Resume Corpus proof for hands-on Codex/Copilot use and human-validated AI-assisted engineering.
+  - Preserved AWS cloud architecture as project evidence and Azure integration as professional evidence.
+  - Maintained a readable two-page, 11 pt layout with natural flow and no repeated page-two header.
+
+claims_intentionally_not_used:
+  - claim: Billions of production transactions or Microsoft-scale service ownership
+    reason: Verified scale is 50K+ daily requests in enterprise healthcare services.
+  - claim: Production email platform ownership
+    reason: Email platform evidence comes from an implemented graduate capstone.
+  - claim: Fraud or scam prevention expertise
+    reason: No verified domain delivery evidence exists.
+  - claim: Employer production use of Codex or GitHub Copilot
+    reason: Current evidence supports project-based use only.
+  - claim: Formal privacy compliance or Responsible AI certification
+    reason: The project is privacy-oriented, but formal governance ownership is not established.
+  - claim: Accessibility implementation or certification
+    reason: Accessibility is retained only as qualified knowledge.
+  - claim: Sole production deployment ownership
+    reason: NTT production deployments were executed by a dedicated deployment team.
+
+cross_section_alignment:
+  mission_critical_java_services:
+    proof: NTT Java/JAX-WS/REST/SOAP services with 50K+ requests and 99.99% SLA
+    evidence_class: P1
+  distributed_and_cloud_integration:
+    proof: Professional Azure messaging/functions and REST/JMS service integration
+    evidence_class: P1
+  telemetry_monitoring_and_live_site:
+    proof: AOP monitoring library, correlation IDs, telemetry, incident RCA, and release validation
+    evidence_class: P1
+  security_and_regulated_data:
+    proof: Security-driven Log4j2 migration, API security boundary, and healthcare payer context
+    evidence_class: P1
+  rest_data_and_testing:
+    proof: REST/SOAP delivery, Oracle/DB2 integrations, JUnit/JUnit4, SoapUI, and Postman
+    evidence_class: P1
+  ai_email_workflows:
+    proof: AI Email Client summarization/classification/reply workflows with FastAPI and React
+    evidence_class: P2/P3
+  ai_assisted_development:
+    proof: Resume Corpus Codex/Copilot workflow with validators, regression cases, and human gates
+    evidence_class: P2_workflow
+  aws_cloud_architecture:
+    proof: AWS S3/Lambda/EFS/ECS/RDS/VPC/IAM/Terraform/CloudWatch project
+    evidence_class: P2
+  responsible_ai_and_accessibility:
+    proof: Explicitly qualified knowledge only
+    evidence_class: P4
+
+unresolved_source_conflicts:
+  - Preferred India phone/location/contact selection remains unresolved across historical sources; retained the canonical India contact block.
+  - NTT exact HR title/date variants remain unresolved; retained the canonical title and dates.
+  - CMU final GPA/date variants remain unresolved; retained the canonical education block.
+
+validation:
+  latex_compile: PASS
+  structural_validator: PASS
+  visual_review_all_pages: PASS
+  extracted_pdf_page_count: 2
+  identity_header_occurrences: 1
+  body_font_pt: 11
+  margins_inches: 0.65
+  standard_headings_present: PASS
+  no_large_avoidable_page_one_gap: PASS
+  no_page_two_identity_header: PASS
+  no_material_orphaned_summary_or_skill_claims: PASS
+  external_contact_or_outreach_created: false
+  validator_limitation: System pdftotext was unavailable; pypdf extraction and Poppler rendering were successful.
+
+files_loaded:
+  - kb/optimization_run_protocol.md
+  - kb/optimization_run_checklist.yml
+  - profiles/MASTER_PROFILE_V2.md
+  - profiles/PROFILE_FACT_MATRIX_V2.yml
+  - profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md
+  - profiles/WORK_EXPERIENCE_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/AI_ASSISTED_ENGINEERING_EVIDENCE_OVERLAY_2026-08-15.md
+  - profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml
+  - profiles/UNRESOLVED_SOURCES.md
+  - profiles/RESUME_POSITIONING_V1.yml
+  - kb/resume_optimization_knowledge_base.md
+  - kb/human_review/resume_perception_knowledge_base.md
+  - kb/scoring/weights.yml
+  - kb/scoring/human_review_weights.yml
+  - kb/skills/java_backend_taxonomy.yml
+  - kb/skills/ai_assisted_engineering.yml
+  - kb/roles/java_backend_engineer.yml
+  - kb/market/india_java_backend.yml
+  - kb/writing/bullet_semantics.yml
+  - kb/writing/action_verbs_java_backend.yml
+  - kb/resume_output_requirements.yml

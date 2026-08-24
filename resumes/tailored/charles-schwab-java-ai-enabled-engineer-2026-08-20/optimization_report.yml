@@ -1,0 +1,136 @@
+run:
+  date: 2026-08-20
+  mode: jd_specific_tailoring
+  company: Charles Schwab
+  target_role: Java / AI-Enabled Software Engineer
+  source_resume: resume.tex
+  output_pdf: Charles_Schwab_Java_AI_Enabled_Engineer.pdf
+  page_count: 2
+  pdf_sha256: BC6ABDD30BB724D6B66C27F07DB97D491112177E3A6146FD65FD736AA7C85586
+
+scores:
+  baseline_canonical_estimate:
+    parse_safety: 100
+    requirement_coverage: 63
+    evidence_strength: 90
+    human_review: 84
+    composite_fit: 78
+  final:
+    truthfulness: PASS
+    parse_safety: 100
+    requirement_coverage: 88
+    evidence_strength: 91
+    human_review: 90
+    composite_fit: 89
+  note: >-
+    JD-specific scores are explainable estimates rather than a proprietary ATS score.
+    The final score preserves project qualification for all AI-assisted engineering claims.
+
+hard_gaps:
+  - Codex and GitHub Copilot use is verified through recent personal projects, not employer-authorized production workflows.
+  - Cursor experience is not verified and is not claimed.
+  - Team-wide or organization-wide AI engineering standards leadership is not established; reusable project instructions and workflows are supported.
+  - Financial-services product-domain experience is not established.
+  - Deep professional concurrency and networking implementation evidence is limited; these are qualified as knowledge.
+
+strongest_retained_evidence:
+  - Java enterprise services supporting 50K+ daily requests at 99.99% SLA availability.
+  - Security-driven Log4j2 modernization with PoC, dependency decisions, reusable guidance, reviews, and rollout coordination.
+  - Correlation-ID monitoring and production incident analysis across load-balanced services.
+  - VIN API latency reduction from approximately 60+ seconds to 10-20 seconds.
+  - Codex and GitHub Copilot workflow with human review, deterministic validators, regression cases, and acceptance gates.
+  - CodingHelper agentic workflow with bounded tests for generated Java/Python implementations.
+  - AWS/Azure cloud evidence and CI/CD, unit-testing, integration-testing, and release-validation depth.
+
+edits_made:
+  - Repositioned the first quarter around Java backend delivery and verified AI-enabled engineering.
+  - Added concise recruiter-scan anchors for delivery scope, engineering approach, and working style.
+  - Added qualified Codex, GitHub Copilot, prompt engineering, custom instructions, and specification-driven workflows.
+  - Added a visible Resume Corpus project to substantiate AI-assisted development, review, validation, and instruction-authoring claims.
+  - Added CodingHelper as agent-development and AI-generated-code verification evidence.
+  - Retained production scale, secure dependency modernization, observability, performance, testing, and cloud evidence.
+  - Balanced content across two pages at 11 pt without a repeated page-two header or avoidable first-page gap.
+
+claims_intentionally_not_used:
+  - claim: Employer production use of Codex or GitHub Copilot
+    reason: Current evidence supports personal-project use only.
+  - claim: Cursor or Claude Code experience
+    reason: Not verified in the active evidence corpus.
+  - claim: Autonomous AI acceptance, deployment, or decision-making
+    reason: The verified workflow requires human review and acceptance.
+  - claim: Measured productivity improvement from AI tools
+    reason: No verified measurement baseline exists.
+  - claim: Formal security guarantee for AI-generated code
+    reason: Review and bounded tests improve confidence but do not establish a formal guarantee.
+  - claim: Organization-level ownership of AI engineering strategy
+    reason: Reusable project workflows are verified; enterprise-wide authority is not.
+
+cross_section_alignment:
+  java_backend_and_scale:
+    proof: NTT Java/JAX-WS/REST/SOAP bullet with 50K+ requests and 99.99% SLA
+    evidence_class: P1
+  secure_coding_and_modernization:
+    proof: NTT security-review-driven Log4j2 modernization and trainee authentication work
+    evidence_class: P1/P3
+  system_design_reliability_and_observability:
+    proof: Service failure behavior, AOP telemetry, production incident analysis, and VIN redesign
+    evidence_class: P1
+  ai_assisted_engineering:
+    proof: Resume Corpus Codex/Copilot, structured instructions, validators, regression cases, and acceptance gates
+    evidence_class: P2_workflow
+  agent_workflows_and_generated_code_review:
+    proof: CodingHelper LangChain/Ollama workflow, isolated execution, bounded tests, and repair/rejection/promotion gates
+    evidence_class: P2
+  cloud_platforms:
+    proof: Professional Azure integration and AWS/Terraform/Docker/CloudWatch pipeline project
+    evidence_class: P1/P2
+  testing_and_cicd:
+    proof: JUnit/JUnit4, SoapUI, Jenkins, Maven, UrbanCode, GitLab CI/CD, and project validation gates
+    evidence_class: P1/P2
+  networking_and_concurrency:
+    proof: Qualified knowledge plus VPC/IAM project context and asynchronous professional integrations
+    evidence_class: P4/P2/P1_semantic
+
+unresolved_source_conflicts:
+  - Preferred India phone/location/contact selection remains unresolved across historical sources; retained the canonical India contact block.
+  - NTT exact HR title/date variants remain unresolved; retained the canonical title and dates.
+  - CMU final GPA/date variants remain unresolved; retained the canonical education block.
+
+validation:
+  latex_compile: PASS
+  structural_validator: PASS
+  visual_review_all_pages: PASS
+  extracted_pdf_page_count: 2
+  identity_header_occurrences: 1
+  body_font_pt: 11
+  margins_inches: 0.65
+  standard_headings_present: PASS
+  no_large_avoidable_page_one_gap: PASS
+  no_page_two_identity_header: PASS
+  no_material_orphaned_summary_or_skill_claims: PASS
+  external_contact_or_outreach_created: false
+  validator_limitation: System pdftotext was unavailable; pypdf extraction and Poppler rendering were used successfully.
+
+files_loaded:
+  - kb/optimization_run_protocol.md
+  - kb/optimization_run_checklist.yml
+  - profiles/MASTER_PROFILE_V2.md
+  - profiles/PROFILE_FACT_MATRIX_V2.yml
+  - profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md
+  - profiles/WORK_EXPERIENCE_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/AI_ASSISTED_ENGINEERING_EVIDENCE_OVERLAY_2026-08-15.md
+  - profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml
+  - profiles/UNRESOLVED_SOURCES.md
+  - profiles/RESUME_POSITIONING_V1.yml
+  - kb/resume_optimization_knowledge_base.md
+  - kb/human_review/resume_perception_knowledge_base.md
+  - kb/scoring/weights.yml
+  - kb/scoring/human_review_weights.yml
+  - kb/skills/java_backend_taxonomy.yml
+  - kb/skills/ai_assisted_engineering.yml
+  - kb/roles/java_backend_engineer.yml
+  - kb/market/india_java_backend.yml
+  - kb/writing/bullet_semantics.yml
+  - kb/writing/action_verbs_java_backend.yml
+  - kb/resume_output_requirements.yml

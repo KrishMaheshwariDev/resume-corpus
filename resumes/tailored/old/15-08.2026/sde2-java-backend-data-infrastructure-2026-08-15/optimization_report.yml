@@ -1,0 +1,75 @@
+run_date: 2026-08-15
+mode: JD-specific tailoring
+source_resume: ../../../resume.tex
+target: Software Development Engineer (SDE-2) - Java Backend and Data Infrastructure
+score_basis: explainable repository heuristics plus JD-to-evidence mapping; not a proprietary ATS score
+truthfulness: PASS
+baseline:
+  parse_safety: 100
+  requirement_coverage: 67
+  evidence_strength: 91
+  human_review: 86
+  composite_fit: 73
+final:
+  parse_safety: 100
+  requirement_coverage: 80
+  evidence_strength: 92
+  human_review: 90
+  composite_fit: 79
+  general_market_composite_proxy_from_script: 92.5
+critical_fit_cap:
+  applied: true
+  reason: The JD requires production Spring Boot experience. The higher-priority detailed evidence establishes professional Spring Framework and Java services but does not identify a specific Spring Boot production implementation.
+hard_gaps:
+  - Spring Boot production mapping remains unresolved
+  - no verified Metabase dashboard experience
+  - no verified production data-engineering or data-infrastructure roadmap ownership
+  - no verified NoSQL or database schema-design ownership
+  - no verified production AWS/GCP or Docker deployment ownership
+  - fintech/payment experience is training-project depth rather than production
+strongest_evidence:
+  - 4.6+ years within the target 3-6 year range
+  - Java services handling 50K+ daily requests under a 99.99% availability SLA
+  - REST/SOAP/database integrations with timeout and partial-failure handling
+  - Oracle/DB2/Hibernate query optimization and VIN latency reduction from 60+ seconds to 10-20 seconds
+  - service authorization behind an enterprise API Gateway security boundary
+  - production debugging, observability, JUnit, CI/CD, release validation, code reviews, and mentoring
+  - AWS/Docker/Spark/PostgreSQL/Terraform data-pipeline project with analytics views
+  - digital-wallet training application and AI project with PostgreSQL source-of-truth design
+edits_made:
+  - Repositioned the resume as an SDE-2 backend engineer with project-backed data-infrastructure breadth.
+  - Mapped end-to-end delivery, reliability, security, observability, production support, and ownership to visible professional evidence.
+  - Promoted the AWS Spark pipeline and analytics views for data-pipeline and analytics enablement coverage.
+  - Added the CodingHelper project for structured PostgreSQL data and AI/ML enablement relevance.
+  - Retained fintech adjacency only through a clearly labeled digital-wallet training application.
+  - Qualified Spring Boot as knowledge and preserved project qualifiers for cloud/data technologies.
+claims_intentionally_excluded:
+  - professional Spring Boot ownership without a specific production service
+  - Metabase
+  - production fintech, payments, or lending delivery
+  - production data-platform roadmap ownership
+  - NoSQL or schema-design ownership
+  - production AWS/GCP, Docker, or cloud-native deployment ownership
+  - fintech-grade compliance ownership
+unresolved_source_conflicts:
+  - Older profile sources broadly describe Spring Boot as professional, while the higher-priority detailed work overlay establishes Spring Framework and enterprise service delivery without a specific Spring Boot production mapping.
+validation:
+  archive_preflight: PASS_0_archived_9_existing_current_day_variants
+  structural_validator: PASS
+  pdf_build: PASS_MiKTeX_pdflatex
+  pdf_page_count: 2_PASS
+  pdf_text_extraction: PASS_5737_characters
+  standard_headings_and_contact: PASS
+  exact_target_term_retrieval: PASS
+  candidate_name_occurrences: 1_PASS_no_page_two_header
+  body_font_pt: 11
+  margins_in: 0.65
+  visual_review: PASS_no_clipping_overlap_split_bullets_or_avoidable_page_break_gap
+  cross_section_alignment: PASS_with_P2_project_P3_training_and_P4_knowledge_qualification
+  pdf_sha256: 912FD03AC2B0616F71B6E38495A4E71487FE161F5DA9F2F3708565D067993579
+  external_contact_or_application_activity: none
+files_changed:
+  - resume.tex
+  - SDE2_Java_Backend_Data_Infrastructure.pdf
+  - jd.md
+  - optimization_report.yml

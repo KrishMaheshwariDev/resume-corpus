@@ -1,0 +1,140 @@
+run:
+  date: 2026-08-20
+  mode: jd_specific_tailoring
+  company: Google
+  team: Payments
+  target_role: Software Engineer
+  source_resume: resume.tex
+  output_pdf: Google_Payments_Software_Engineer.pdf
+  page_count: 2
+  pdf_sha256: 2EF4F2EA525572BD1542AC2A6CB581F1D001F238A44FDDA45576DFF46F49F1A5
+
+scores:
+  baseline_canonical_estimate:
+    parse_safety: 100
+    requirement_coverage: 68
+    evidence_strength: 90
+    human_review: 84
+    composite_fit: 80
+  final:
+    truthfulness: PASS
+    parse_safety: 100
+    requirement_coverage: 84
+    evidence_strength: 92
+    human_review: 90
+    composite_fit: 88
+  note: >-
+    JD-specific scores are explainable estimates, not a proprietary ATS score.
+    Fit is constrained by genuine scale and payments-domain gaps despite strong engineering evidence.
+
+hard_gaps:
+  - Production payments or financial-services product experience is not established.
+  - Verified production traffic is 50K+ daily requests, not Google-scale billions of users or transactions.
+  - Hardware-level and network-infrastructure debugging ownership is not established.
+  - Mobile development evidence is not established.
+  - AI, information retrieval, cloud data processing, and frontend breadth are project-backed rather than employer production evidence.
+
+strongest_retained_evidence:
+  - Java services supporting 50K+ daily requests at 99.99% SLA availability.
+  - Cross-service integration with explicit timeout and partial-failure behavior.
+  - Correlation-ID monitoring with latency, success/failure, and request-volume telemetry.
+  - Production memory/resource incident investigation across four load-balanced nodes.
+  - Security-driven Log4j2 modernization with PoC, code review, reusable guidance, and rollout coordination.
+  - VIN API latency reduction from approximately 60+ seconds to 10-20 seconds.
+  - CodingHelper retrieval/AI platform, AWS data pipeline, and React/TypeScript portfolio breadth.
+
+edits_made:
+  - Repositioned the first quarter around software engineering, Java systems, production scale, and full-lifecycle delivery.
+  - Added recruiter-scan anchors for delivery scope, system reasoning, ownership, design/code review, documentation, and mentoring.
+  - Prioritized service boundaries, data, networking, security, failure analysis, observability, and measurable performance.
+  - Reordered NTT evidence to foreground issue triage, operational impact analysis, reviews, and documentation.
+  - Selected projects that demonstrate AI/information retrieval, cloud/data storage, and full-stack UI versatility.
+  - Preserved transaction and balance workflows as explicitly training-backed evidence.
+  - Maintained a readable two-page layout at 11 pt with natural content flow and no repeated identity header.
+
+claims_intentionally_not_used:
+  - claim: Google-scale or billion-user production systems
+    reason: Verified professional scale is 50K+ daily requests.
+  - claim: Production payments engineering
+    reason: Payments-like balance and transaction workflows are limited to training applications.
+  - claim: Ownership of load balancers, networking infrastructure, or hardware operations
+    reason: Infrastructure ownership belonged to other teams.
+  - claim: Production distributed Spark or exactly-once database delivery
+    reason: The project uses local-mode Spark on ECS and does not prove end-to-end exactly-once writes.
+  - claim: Production AI/NLP systems
+    reason: AI and retrieval evidence comes from implemented personal/academic projects.
+  - claim: Sole production deployment ownership
+    reason: Dedicated deployment teams executed NTT production deployments.
+
+cross_section_alignment:
+  software_engineering_and_java:
+    proof: NTT and Capgemini Java system-development bullets
+    evidence_class: P1
+  scale_reliability_and_system_design:
+    proof: 50K+ daily requests, 99.99% SLA, service failure behavior, and load-balanced incident analysis
+    evidence_class: P1
+  design_and_code_review:
+    proof: Log4j2 PoC/decisions/reviews, release coordination, Capgemini reviews, and mentoring
+    evidence_class: P1
+  debugging_and_issue_triage:
+    proof: NTT resource incident plus Capgemini cross-system defect triage
+    evidence_class: P1
+  documentation_and_education:
+    proof: Reusable migration guidance, technical documentation, walkthroughs, and mentoring
+    evidence_class: P1
+  data_storage_and_performance:
+    proof: Oracle/DB2 integration, VIN set-based optimization, PostgreSQL-backed projects
+    evidence_class: P1/P2/P3
+  artificial_intelligence_and_retrieval:
+    proof: CodingHelper LangChain/Ollama/RAG/Qdrant platform with bounded execution tests
+    evidence_class: P2
+  cloud_and_distributed_data:
+    proof: Professional Azure integration and AWS/Terraform/Spark/Docker project
+    evidence_class: P1/P2
+  full_stack_and_ui:
+    proof: React/TypeScript portfolio and CodingHelper frontend
+    evidence_class: P2
+
+unresolved_source_conflicts:
+  - Preferred India phone/location/contact selection remains unresolved across historical sources; retained the canonical India contact block.
+  - NTT exact HR title/date variants remain unresolved; retained the canonical title and dates.
+  - CMU final GPA/date variants remain unresolved; retained the canonical education block.
+
+validation:
+  latex_compile: PASS
+  structural_validator: PASS
+  visual_review_all_pages: PASS
+  extracted_pdf_page_count: 2
+  identity_header_occurrences: 1
+  body_font_pt: 11
+  margins_inches: 0.65
+  standard_headings_present: PASS
+  no_large_avoidable_page_one_gap: PASS
+  no_page_two_identity_header: PASS
+  no_material_orphaned_summary_or_skill_claims: PASS
+  external_contact_or_outreach_created: false
+  validator_limitation: System pdftotext was unavailable; pypdf extraction and Poppler rendering were successful.
+
+files_loaded:
+  - kb/optimization_run_protocol.md
+  - kb/optimization_run_checklist.yml
+  - profiles/MASTER_PROFILE_V2.md
+  - profiles/PROFILE_FACT_MATRIX_V2.yml
+  - profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md
+  - profiles/WORK_EXPERIENCE_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/AI_ASSISTED_ENGINEERING_EVIDENCE_OVERLAY_2026-08-15.md
+  - profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml
+  - profiles/UNRESOLVED_SOURCES.md
+  - profiles/RESUME_POSITIONING_V1.yml
+  - kb/resume_optimization_knowledge_base.md
+  - kb/human_review/resume_perception_knowledge_base.md
+  - kb/scoring/weights.yml
+  - kb/scoring/human_review_weights.yml
+  - kb/skills/java_backend_taxonomy.yml
+  - kb/skills/ai_assisted_engineering.yml
+  - kb/roles/java_backend_engineer.yml
+  - kb/market/india_java_backend.yml
+  - kb/writing/bullet_semantics.yml
+  - kb/writing/action_verbs_java_backend.yml
+  - kb/resume_output_requirements.yml

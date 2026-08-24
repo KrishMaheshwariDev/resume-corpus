@@ -1,0 +1,105 @@
+run:
+  mode: jd_specific_tailoring
+  date: 2026-08-16
+  source_resume: resume.tex
+  target: "Delta Air Lines Developer I - AI-enabled Java/full-stack retail systems"
+  output_pdf: Delta_Developer_I.pdf
+  page_count: 2
+
+scores:
+  baseline_general_resume:
+    parse_safety: 100
+    requirement_coverage: 67
+    evidence_strength: 91
+    human_review: 83
+    composite_fit: 73
+  tailored_resume:
+    truthfulness: PASS
+    parse_safety: 100
+    requirement_coverage: 79
+    evidence_strength: 91
+    human_review: 90
+    composite_fit: 81
+  note: "The repository general-market scorer returned 94.9 for the tailored source. The JD-specific score is lower because production Spring Boot/microservices/AWS, MySQL/MongoDB, and retail experience remain material gaps."
+
+requirement_map:
+  exact_or_strong:
+    - "4+ years of Java application development and full SDLC delivery"
+    - "REST APIs, SQL, testing, CI/CD, debugging, observability, performance, and Agile collaboration"
+    - "professional messaging integration through JMS and Azure Service Bus"
+    - "hands-on Codex and GitHub Copilot workflows with human review, builds, tests, and runtime validation"
+    - "LangChain/Ollama/RAG agent-style workflow with Python/FastAPI, React/TypeScript, Qdrant, and PostgreSQL"
+    - "AWS Lambda/S3/ECS/RDS/CloudWatch/Docker/Terraform event-driven project"
+  qualified:
+    - "Spring Boot and microservices architecture: knowledge; no specific professional production implementation mapped"
+    - "Python backend and full-stack development: project-backed, plus professional Python-service integration"
+    - "AWS/cloud-native delivery: project-backed"
+    - "Qdrant vector/NoSQL storage: project-backed"
+    - "Kafka: project exposure; Kubernetes: knowledge"
+    - "API Gateway: professional security boundary, not gateway implementation ownership"
+    - "AI coding assistants: personal/project delivery, not employer production use"
+  missing_or_weak:
+    - "production Spring Boot microservices ownership"
+    - "production AWS deployment and EC2"
+    - "MySQL and MongoDB"
+    - "AWS Kinesis and AWS CodePipeline"
+    - "OAuth2, OpenID Connect, or JWT implementation"
+    - "retail, order-management, cart, catalog, or store-operations domain experience"
+    - "formal responsible-AI governance ownership"
+
+cross_section_alignment:
+  - "Java/Spring/API/SDLC -> NTT and Capgemini work bullets -> P1"
+  - "reliability/performance/observability -> 50K/99.99%, VIN latency, AOP telemetry -> P1"
+  - "Python integration -> Capgemini prediction-service bullet -> P1 integration depth"
+  - "AI-assisted engineering -> Resume Corpus/Portfolio project bullet -> P2 workflow"
+  - "agentic/LLM/RAG/FastAPI/React/NoSQL -> CodingHelper project bullets -> P2"
+  - "AWS/event-driven/Docker/Terraform/PostgreSQL -> AWS Spark project bullets -> P2/P3"
+  - "Spring Boot/microservices/Kubernetes -> explicitly qualified knowledge -> P4"
+  - "Kafka -> explicitly qualified project exposure -> P4/limited project depth"
+
+strongest_retained_evidence:
+  - "50K+ daily requests at 99.99% SLA availability"
+  - "VIN API latency reduced from approximately 60+ seconds to 10-20 seconds"
+  - "Codex/GitHub Copilot delivery with explicit build, test, runtime, and human-review gates"
+  - "CodingHelper agent workflow with isolated Java/Python execution and bounded-test promotion gates"
+  - "AWS event-driven pipeline processing an 8GB+ dataset"
+
+edits_made:
+  - "Repositioned the summary around Java backend delivery plus verified AI-enabled product and full-stack breadth."
+  - "Created an AI-Assisted Engineering skills cluster with project qualification."
+  - "Led Projects with CodingHelper and the human-plus-AI delivery workflow before AWS infrastructure evidence."
+  - "Promoted event-driven messaging, cloud, testing, observability, security-boundary, and cross-functional delivery evidence."
+  - "Added exact NoSQL retrieval through project-backed Qdrant without claiming MongoDB."
+  - "Preserved 11 pt body text, readable spacing, restrained bolding, and a clean two-page transition without a repeated header."
+
+claims_intentionally_not_used:
+  - "No professional Spring Boot/microservices ownership claim."
+  - "No employer-authorized or employer-production AI-tool use."
+  - "No autonomous acceptance, deployment, or formal correctness claim for AI-generated code."
+  - "No production AWS, Kafka, or Kubernetes ownership claim."
+  - "No MySQL, MongoDB, EC2, Kinesis, CodePipeline, OAuth2/OIDC/JWT, or retail-domain claim."
+  - "No multi-node Spark, exactly-once PostgreSQL, or unverified AWS runtime-improvement claim."
+
+unresolved_source_conflicts:
+  - "Older profile sources broadly list Spring Boot/microservices, but detailed evidence overlays do not map them to a specific professional production implementation."
+
+validation:
+  latex_build: PASS
+  structural_validator: PASS
+  page_count: 2
+  pdf_text_extraction: PASS
+  headings_and_contact_extractable: PASS
+  candidate_name_occurrences: 1
+  body_font_pt: 11
+  margins_in: 0.65
+  visual_review: PASS
+  page_continuity: PASS
+  repeated_page_two_header: false
+  pdf_sha256: 46E60E4ADEEE95D765DFD3633D231348C2BD3A1F0AF52D39230616685993B661
+  outreach_or_application_activity: none
+
+files_changed:
+  - resume.tex
+  - jd.md
+  - optimization_report.yml
+  - Delta_Developer_I.pdf

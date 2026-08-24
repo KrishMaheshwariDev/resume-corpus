@@ -1,0 +1,58 @@
+run_date: 2026-08-15
+mode: JD-specific tailoring
+source_resume: ../../../resume.tex
+target: Mindstix - Java Developer
+market: Pune, India / hybrid
+score_basis: explainable repository heuristics plus JD evidence mapping; not a proprietary ATS score
+truthfulness: PASS
+baseline:
+  parse_safety: 100
+  requirement_coverage: 69
+  evidence_strength: 91
+  human_review: 85
+  composite_fit: 79
+final:
+  parse_safety: 100
+  requirement_coverage: 78
+  evidence_strength: 88
+  human_review: 87
+  composite_fit: 83
+  general_market_composite_proxy_from_script: 90.2
+hard_gaps:
+  - no specific professional multithreading, concurrency, or synchronization implementation story
+  - no verified XML parser or regular-expression implementation evidence
+  - no verified MySQL, MSSQL, or NoSQL database delivery
+  - no verified Spring Cloud or Netflix OSS implementation
+  - Kubernetes is knowledge/project exposure rather than production ownership
+  - AWS is project-backed; Azure evidence is enterprise integration rather than general cloud deployment ownership
+strongest_evidence:
+  - 4.6+ years of enterprise Java development
+  - Java/Spring REST/SOAP services handling 50K+ daily requests at 99.99% SLA
+  - WebSphere and WebLogic enterprise application-server delivery
+  - Hibernate/HQL, JDBC/OJDBC, Oracle, DB2, and PostgreSQL project/training evidence
+  - API Gateway security-boundary and service-authorization experience
+  - VIN API latency reduction from 60+ seconds to 10-20 seconds
+  - Log4j2 migration ownership, CI/CD, code reviews, and mentoring
+claims_intentionally_excluded:
+  - production concurrency ownership
+  - XML parser and regular-expression implementation
+  - MySQL, MSSQL, MongoDB, Cassandra, CouchDB, or other NoSQL delivery
+  - Spring Cloud or Netflix OSS
+  - production Kubernetes deployment ownership
+validation:
+  archive_preflight: PASS_0_archived_3_existing_current_day_variants
+  structural_validator: PASS
+  pdf_build: PASS_MiKTeX_pdflatex
+  pdf_page_count: 2_PASS
+  pdf_text_extraction: PASS_5168_characters
+  pdf_visual_review: PASS_no_clipping_overlap_split_bullets_or_repeated_header
+  cross_section_alignment: PASS
+  body_font_pt: 11
+  margins_in: 0.65
+  large_avoidable_page_one_gap: false
+  pdf_sha256: 94307F16C67AAA6A4F84BABFE32C0606E650BB5FD65BBB8AB05E5EDCD9B8DD63
+  external_contact_or_application_activity: none
+files_changed:
+  - resume.tex
+  - jd.md
+  - optimization_report.yml

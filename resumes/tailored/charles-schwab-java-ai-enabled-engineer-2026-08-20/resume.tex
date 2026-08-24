@@ -1,0 +1,83 @@
+% !TeX program = pdflatex
+\documentclass[11pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.65in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+\ifdefined\pdfglyphtounicode\input{glyphtounicode}\pdfgentounicode=1\fi
+\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}\setlength{\emergencystretch}{1em}
+\setlist[itemize]{label=-,leftmargin=12pt,itemsep=1.8pt,topsep=4pt,parsep=0pt,partopsep=0pt}
+\newcommand{\ressection}[1]{\Needspace{6\baselineskip}\vspace{8pt}\par\textbf{#1}\par\vspace{2pt}\hrule\vspace{5pt}}
+\begin{document}
+\pagestyle{empty}\raggedright\fontsize{11}{12.5}\selectfont
+
+{\Large \textbf{Kunal Maheshwari}}\\
+Sahadara, New Delhi, India \textbar{} 9258446350 \textbar{} \href{mailto:work.kunal.maheshwari@gmail.com}{work.kunal.maheshwari@gmail.com}\\
+LinkedIn: \href{https://www.linkedin.com/in/kunalmaheshwari26}{linkedin.com/in/kunalmaheshwari26} \textbar{} GitHub: \href{https://github.com/preferablehuman}{github.com/preferablehuman} \textbar{} Portfolio: \href{https://preferablehuman.github.io/portfolio/}{preferablehuman.github.io/portfolio/}
+
+\ressection{Summary}
+\textbf{Java Backend / AI-Enabled Software Engineer} with 4+ years delivering high-availability healthcare and automotive systems, plus hands-on project use of Codex and GitHub Copilot to build, review, debug, test, and document software.\\[2pt]
+\textbf{Delivery scope:} Translates requirements and design constraints into structured implementation plans, Java/API and database changes, tests, review evidence, CI/CD readiness, release validation, and production support.\\[2pt]
+\textbf{Engineering approach:} Treats AI output as untrusted, reviews it for correctness and maintainability, applies relevant security constraints, and accepts changes only after builds, automated tests, execution checks, and runtime validation.\\[2pt]
+\textbf{Working style:} Takes ownership with transparent risk communication, collaborates across architecture, QA, database, deployment, and operations teams, and improves engineering consistency through reusable instructions, documentation, code reviews, and mentoring.
+
+\ressection{Technical Skills}
+\textbf{Java/Computer Science:} Java 8/11, Core Java, OOP, Collections, Streams, design patterns, data structures and algorithms, system and component design, REST/SOAP APIs, Spring Framework/MVC, Java EE/J2EE, Hibernate/HQL, JDBC/OJDBC; networking and concurrency (knowledge).\\
+\textbf{AI-Enabled Engineering (projects):} Codex, GitHub Copilot, prompt engineering, custom instruction authoring, specification-driven agent workflows, human-in-the-loop code review, AI-assisted debugging/testing/documentation, LangChain, Ollama, RAG, Qdrant.\\
+\textbf{Architecture/Cloud:} Enterprise SOA and distributed-service integration, secure coding and dependency modernization, API integration, messaging, performance tuning, observability, failure handling; Azure Service Bus/Relay/Functions (professional), AWS and Docker/Terraform (project).\\
+\textbf{Data/Delivery:} Oracle, DB2, PostgreSQL (project/training); Jenkins, Maven, IBM UrbanCode Deploy, GitLab CI/CD, Git, GitHub Actions; JUnit/JUnit4, integration testing, SoapUI, Postman, Log4j2, Agile/Scrum.
+
+\ressection{Work Experience}
+\textbf{NTT Data}, Bengaluru, India \hfill \textit{Software Developer, Aug 2022 - Aug 2024}
+\begin{itemize}
+  \item Developed and maintained \textbf{Java 8/11, Spring Framework/JAX-WS, and REST/SOAP} healthcare payer services on IBM WebSphere, supporting \textbf{50K+ daily requests at 99.99\% SLA availability}.
+  \item Integrated services across Azure Relay, Azure Service Bus, Azure Functions, and JMS, plus synchronous downstream REST dependencies with explicit timeout and partial-failure behavior.
+  \item Integrated Java services with Oracle through OJDBC, consuming established views and PL/SQL procedures while applying member/provider rules and validating downstream data propagation.
+  \item \textbf{Led a project-wide Log4j2 migration} prompted by security review, owning the PoC, dependency and configuration decisions, preservation of logging contracts, reusable guidance, code reviews, and coordinated rollout.
+  \item Integrated AOP-based service monitoring that propagated correlation IDs and captured \textbf{latency, success/failure, and request-volume telemetry} for operational diagnosis.
+  \item Supported root-cause analysis of a WebSphere memory/resource-retention incident through code-path review, mitigation strategy, and rolling-restart validation across four load-balanced production nodes.
+  \item Coordinated requirements, implementation, JUnit/SoapUI testing, reviews, Jenkins/Maven/UrbanCode workflows, release checks, documentation, and go/no-go or rollback recommendations.
+\end{itemize}
+\Needspace{4\baselineskip}
+\textbf{Capgemini}, Mumbai, India \hfill \textit{Senior Analyst, Jul 2020 - Aug 2022}
+\begin{itemize}
+  \item Developed and supported a Java EE/J2EE, JSF, Hibernate/HQL application on Oracle WebLogic with DB2 for Mercedes/Daimler Vans configuration, recommendation, and ordering workflows.
+  \item Integrated a Python prediction service through asynchronous Java REST requests and callbacks, retaining deterministic option/package validation in Java before recommendations reached dealer users.
+  \item \textbf{Reduced VIN repeat-configuration API latency from ~60+ seconds to ~10--20 seconds} through set-based HQL/DB2 mapping while retaining authoritative business rules in Java.
+  \item Diagnosed defects across Python output, Java validation logs, API behavior, and DB2 reference data; used Postman and production logs to isolate failures and verify performance.
+  \item Supported Jenkins/GitLab CI/CD, Git code reviews, JUnit4 testing, Agile delivery, and documentation; mentored junior developers through walkthroughs, debugging, and reviews.
+\end{itemize}
+\textbf{Capgemini}, Mumbai, India \hfill \textit{Analyst Trainee, Jan 2020 - Jun 2020}
+\begin{itemize}
+  \item Built Java Spring/Spring MVC, Angular, and PostgreSQL training applications with authentication, email/OTP login, CRUD, balances, transactions, and profile workflows.
+\end{itemize}
+
+\ressection{Selected Projects}
+\textbf{Resume Corpus - Specification-Driven AI Engineering Workflow}
+\begin{itemize}
+  \item Directed AI-assisted implementation with \textbf{Codex and GitHub Copilot}, authoring evidence constraints, structured agent instructions, reusable workflows, and acceptance criteria for an isolated resume optimization system.
+  \item Built deterministic validators, explainable scorecards, regression cases, build/parse checks, and human acceptance gates; reviewed generated changes and rejected outputs that violated evidence or formatting rules.
+\end{itemize}
+\par\vspace{2pt}
+\textbf{CodingHelper - Agentic Java/Python Learning Platform}
+\begin{itemize}
+  \item Built a React/TypeScript and FastAPI platform using \textbf{LangChain, Ollama/Qwen 2.5 Coder, RAG, Qdrant, and PostgreSQL} to generate and retrieve structured Java/Python DSA solution ladders.
+  \item Implemented isolated code execution and repair, rejection, and promotion gates; AI-generated implementations must pass bounded asserting tests before display or reuse.
+\end{itemize}
+\par\vspace{2pt}
+\textbf{AWS Automated Spark Pipeline} \hfill \href{https://github.com/preferablehuman/AWS-automated-spark-pipeline}{GitHub}
+\begin{itemize}
+  \item Provisioned an event-driven S3, Lambda, EFS, ECS, RDS PostgreSQL, VPC/IAM, Docker, Terraform, and CloudWatch pipeline that processed an 8GB+ dataset with persisted checkpoints for restart recovery.
+\end{itemize}
+
+\ressection{Education}
+\textbf{Central Michigan University}, Mount Pleasant, MI, USA \hfill \textit{Aug 2024 - Dec 2025}\\
+Master of Science in Computer Science, GPA: 3.87/4.0\\
+\textbf{Lovely Professional University}, Punjab, India \hfill \textit{Aug 2016 - May 2020}\\
+Bachelor of Technology in Computer Science and Engineering, CGPA: 8.02/10
+
+\ressection{Certifications}
+Microsoft Certified: Azure Fundamentals \textbar{} Azure Developer Associate \textbar{} Azure Data Engineer Associate
+\end{document}

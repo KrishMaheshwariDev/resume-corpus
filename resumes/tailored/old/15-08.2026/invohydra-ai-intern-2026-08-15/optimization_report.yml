@@ -1,0 +1,56 @@
+run_date: 2026-08-15
+mode: JD-specific tailoring plus explicitly requested email draft
+source_resume: ../../../resume.tex
+target: InvoHydra - AI Intern
+market: Remote / India
+truthfulness: PASS
+scores:
+  parse_safety: 100
+  requirement_coverage: 76
+  evidence_strength: 82
+  human_review: 84
+  composite_fit: 76
+  deterministic_general_market_proxy: 84.9
+output:
+  pdf: InvoHydra_AI_Intern.pdf
+  pages: 2
+  sha256: 246B15D9A1E85C7131FCB93DA1A46D0FE4C7BB08D584F036A4E2721E941EDBF7
+validation:
+  archive_preflight: PASS_archived_7_variants_to_old_14-08.2026
+  structural_validator: PASS
+  visual_qa: PASS_two_pages_readable_no_overlap_or_clipping
+  pdf_text_extraction: PASS_pypdf_4559_characters
+  cross_section_alignment: PASS
+  body_font_pt: 11
+  margins_in: 0.65
+  repeated_page_two_header: false
+  large_avoidable_page_one_gap: false
+  email_sent: false
+release_notes:
+  - The resume is intentionally AI-project-first because production employment is backend/API focused rather than AI-agent delivery.
+  - Two pages preserve readable 11 pt text and relevant professional evidence; page one has no avoidable blank region.
+  - The score is capped by missing preferred frameworks and by the seniority mismatch with an unpaid student/fresher-oriented internship.
+fit_assessment:
+  exact_or_strong:
+    - Python and FastAPI AI application development
+    - AI/ML fundamentals through PyTorch, Hugging Face Transformers, T5, and PEFT/LoRA
+    - REST APIs, JavaScript or TypeScript, React, Git, GitHub, Docker, model evaluation, and diagnostics
+    - summarization, classification, adapter lifecycle, and local or privacy-oriented AI workflows
+    - professional API engineering, problem solving, documentation, and cross-functional delivery
+  semantic_or_partial:
+    - RAG appears only in an explicitly in-progress local assistant
+    - finance relevance is limited to a digital-wallet training application and transferable backend experience
+    - interest in AI agents and workflow automation is credible, but delivery evidence is not established
+  hard_gaps:
+    - no verified LangChain or LangGraph implementation
+    - no verified OpenAI, Gemini, or Claude API integration
+    - no verified vector database implementation with Chroma, Pinecone, or FAISS
+    - no verified production prompt-engineering or AI-agent delivery
+    - candidate seniority materially exceeds a typical student or fresher internship profile
+claims_intentionally_excluded:
+  - production AI agent ownership
+  - LangChain or LangGraph
+  - Chroma, Pinecone, or FAISS
+  - commercial LLM API delivery
+  - production RAG ownership
+  - finance or invoicing domain expertise

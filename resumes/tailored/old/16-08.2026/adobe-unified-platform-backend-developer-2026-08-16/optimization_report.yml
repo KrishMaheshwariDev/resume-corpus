@@ -1,0 +1,102 @@
+run:
+  mode: jd_specific_tailoring
+  date: 2026-08-16
+  source_resume: resume.tex
+  target: "Adobe Unified Platform Backend Developer"
+  output_pdf: Adobe_Unified_Platform_Backend_Developer.pdf
+  page_count: 2
+
+scores:
+  baseline_general_resume:
+    parse_safety: 100
+    requirement_coverage: 65
+    evidence_strength: 91
+    human_review: 83
+    composite_fit: 71
+  tailored_resume:
+    truthfulness: PASS
+    parse_safety: 100
+    requirement_coverage: 77
+    evidence_strength: 92
+    human_review: 90
+    composite_fit: 80
+  note: "The repository general-market scorer returned 94.9. The Adobe-specific score is credibility-capped by unresolved production Spring Boot and cloud-service ownership plus missing MySQL, Redis, and DynamoDB."
+
+requirement_map:
+  exact_or_strong:
+    - "4+ years of enterprise Java backend development"
+    - "full lifecycle participation across requirements, design, implementation, testing, review, documentation, release validation, and maintenance"
+    - "high-availability services, performance tuning, service monitoring, production troubleshooting, and reusable engineering documentation"
+    - "professional Azure Service Bus, Azure Relay, Azure Functions, and JMS integration"
+    - "data structures and algorithms through the CodingHelper implementation"
+    - "Codex/GitHub Copilot use with prompt engineering, code review, debugging, tests, documentation, and human validation"
+    - "LangChain/Ollama/RAG agent workflow and AWS infrastructure project"
+  qualified:
+    - "Spring Boot and microservices: knowledge; no mapped professional production implementation"
+    - "AWS scalable cloud services: project evidence"
+    - "Azure: professional hybrid integration, not broad cloud-platform ownership"
+    - "AI-assisted development and LLM workflows: personal/project evidence, not employer production use"
+    - "Kafka: project exposure"
+  missing_or_weak:
+    - "production Spring Boot service ownership"
+    - "professional AWS/Azure cloud-service architecture ownership"
+    - "MySQL, Redis, and DynamoDB delivery evidence"
+    - "enterprise content-storage, governance, or compliance-platform domain experience"
+    - "experience range is slightly above the stated 2-4 years"
+
+cross_section_alignment:
+  - "Java/service lifecycle/reliability -> NTT and Capgemini work bullets -> P1"
+  - "Azure integration -> NTT hybrid-cloud workflow bullet -> P1"
+  - "performance/observability -> VIN latency and AOP telemetry bullets -> P1"
+  - "AI-assisted engineering/responsible review -> Resume Corpus and Portfolio project bullets -> P2"
+  - "agentic workflow/data structures/algorithms -> CodingHelper project bullets -> P2"
+  - "AWS/cloud infrastructure -> AWS Spark project bullets -> P2/P3"
+  - "Spring Boot/microservices -> explicitly qualified knowledge -> P4"
+  - "Kafka -> explicitly qualified project exposure -> limited P2/P4"
+
+strongest_retained_evidence:
+  - "50K+ daily requests at 99.99% SLA availability"
+  - "project-wide Log4j2 migration with PoC, review, and reusable documentation"
+  - "VIN API latency reduced from approximately 60+ seconds to 10-20 seconds"
+  - "Codex/GitHub Copilot workflow with human ownership and build/test/runtime gates"
+  - "CodingHelper agent workflow and AWS event-driven infrastructure project"
+
+edits_made:
+  - "Reframed the summary around platform-quality Java delivery, cloud integration, and AI-assisted engineering."
+  - "Expanded lifecycle and maintainability evidence across NTT and Capgemini bullets."
+  - "Led Projects with responsible Codex/GitHub Copilot delivery, followed by CodingHelper and AWS infrastructure."
+  - "Made data structures and algorithms retrievable through visible project evidence."
+  - "Preserved 11 pt body text, readable spacing, restrained bolding, and a clean two-page transition without a repeated header."
+
+claims_intentionally_not_used:
+  - "No professional Spring Boot or microservices ownership claim."
+  - "No employer-authorized AI-tool use or autonomous acceptance/deployment claim."
+  - "No broad professional AWS/Azure cloud-platform ownership claim."
+  - "No MySQL, Redis, or DynamoDB claim."
+  - "No production Kafka ownership claim."
+  - "No Adobe content-platform, storage-governance, or compliance-domain claim."
+  - "No multi-node Spark, exactly-once database-write, or unverified AWS performance claim."
+
+unresolved_source_conflicts:
+  - "Older sources broadly list Spring Boot and Redis, while detailed overlays do not map them to a specific implemented professional context; Redis is omitted and Spring Boot is qualified as knowledge."
+
+validation:
+  latex_build: PASS
+  structural_validator: PASS
+  page_count: 2
+  pdf_text_extraction: PASS
+  headings_and_contact_extractable: PASS
+  candidate_name_occurrences: 1
+  body_font_pt: 11
+  margins_in: 0.65
+  visual_review: PASS
+  page_continuity: PASS
+  repeated_page_two_header: false
+  pdf_sha256: E059401DF34C1504DBD4A9135647230E3CE4FA3FE3D0A159B726CD15891FDF8C
+  outreach_or_application_activity: none
+
+files_changed:
+  - resume.tex
+  - jd.md
+  - optimization_report.yml
+  - Adobe_Unified_Platform_Backend_Developer.pdf

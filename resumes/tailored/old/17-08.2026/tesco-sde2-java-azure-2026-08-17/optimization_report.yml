@@ -1,0 +1,103 @@
+run:
+  mode: jd_specific_tailoring
+  date: 2026-08-17
+  source_resume: resume.tex
+  target: "Tesco Bengaluru SDE2 - Java/Azure"
+  output_pdf: Tesco_SDE2_Java_Azure.pdf
+  page_count: 2
+
+scores:
+  baseline_general_resume:
+    parse_safety: 100
+    requirement_coverage: 72
+    evidence_strength: 91
+    human_review: 84
+    composite_fit: 77
+  tailored_resume:
+    truthfulness: PASS
+    parse_safety: 100
+    requirement_coverage: 82
+    evidence_strength: 92
+    human_review: 90
+    composite_fit: 84
+  note: "The repository general-market scorer returned 94.9. Tesco-specific fit is lower because Micronaut, production Kafka/Kubernetes, JUnit 5/Mockito, contract testing, and MySQL/NoSQL delivery are not established."
+
+requirement_map:
+  exact_or_strong:
+    - "4+ years of Java backend and end-to-end SDLC delivery"
+    - "Spring Framework, REST APIs, Hibernate/HQL, and SQL"
+    - "professional Azure Service Bus, Azure Relay, Azure Functions, JMS, and pub/sub or queue integration"
+    - "PostgreSQL and SQLite through project/training implementations"
+    - "Jenkins/GitLab CI/CD, Git, Docker project delivery, testing, observability, and production support"
+    - "high availability, performance optimization, and cross-functional delivery"
+    - "AI/ML tooling and agent-style workflows through CodingHelper and Article Voice Desk"
+  qualified:
+    - "Spring Boot: knowledge; professional production implementation not mapped"
+    - "concurrency and multithreading: knowledge; Article Voice Desk provides a prioritized-worker project discussion hook"
+    - "Kafka: project exposure"
+    - "Kubernetes: knowledge"
+    - "Docker: project-backed"
+    - "AI and agent workflows: personal/project evidence, not employer production use"
+  missing_or_weak:
+    - "Micronaut"
+    - "production Kafka and Kubernetes ownership"
+    - "MySQL, MongoDB, or Couchbase"
+    - "JUnit 5, Mockito, and dedicated contract-testing tooling"
+    - "MCP implementation"
+    - "retail pricing, label-printing, multi-currency, or multi-language domain experience"
+
+cross_section_alignment:
+  - "Java/Spring/REST/Azure messaging/high availability -> NTT work bullets -> P1"
+  - "performance and efficient data access -> VIN latency and Oracle/DB2 bullets -> P1"
+  - "PostgreSQL/Docker -> training and AWS project bullets -> P2/P3"
+  - "SQLite/prioritized worker -> Article Voice Desk bullet -> P2"
+  - "Agentic AI/LangChain/Ollama/RAG -> CodingHelper bullets -> P2"
+  - "Spring Boot/concurrency/Kubernetes -> explicitly qualified knowledge -> P4"
+  - "Kafka -> explicitly qualified project exposure -> limited P2/P4"
+
+strongest_retained_evidence:
+  - "50K+ daily requests at 99.99% SLA availability"
+  - "Azure Relay/Service Bus/Functions/JMS hybrid pub/sub and queue integration"
+  - "VIN API latency reduced from approximately 60+ seconds to 10-20 seconds"
+  - "CodingHelper agent workflow with isolated Java/Python execution and test gates"
+  - "Article Voice Desk prioritized inference worker and SQLite persistence"
+
+edits_made:
+  - "Repositioned the summary for SDE2, Azure messaging, high availability, and end-to-end delivery."
+  - "Promoted pub/sub, queues, PostgreSQL, SQLite, Docker, testing, and performance evidence."
+  - "Added conservative Core Java retrieval for OOP, collections, streams, concurrency, and multithreading."
+  - "Selected CodingHelper and Article Voice Desk to support the AI/agentic advantage and concurrency discussion."
+  - "Corrected project-title paragraph continuity after visual inspection."
+  - "Preserved 11 pt text, readable spacing, restrained bolding, two pages, and no repeated page-two header."
+
+claims_intentionally_not_used:
+  - "No Micronaut claim."
+  - "No professional Spring Boot, Kafka, Kubernetes, or Docker ownership claim."
+  - "No MySQL, MongoDB, Couchbase, JUnit 5, Mockito, contract-testing, or MCP claim."
+  - "No retail pricing or label-platform domain claim."
+  - "No sole production-deployment ownership claim."
+  - "No formal correctness or unrestricted sandbox-security claim for AI-generated code."
+
+unresolved_source_conflicts:
+  - "Older sources broadly list Spring Boot, Kafka, and Kubernetes; detailed overlays require Spring Boot to be mapped carefully and restrict Kafka/Kubernetes to project or knowledge depth."
+
+validation:
+  latex_build: PASS
+  structural_validator: PASS
+  page_count: 2
+  pdf_text_extraction: PASS
+  headings_and_contact_extractable: PASS
+  candidate_name_occurrences: 1
+  body_font_pt: 11
+  margins_in: 0.65
+  visual_review: PASS
+  page_continuity: PASS
+  repeated_page_two_header: false
+  pdf_sha256: 5FFAE76E31C7D5FFE33485E5F932BF7763CB156072B2F9CBB5C316659D45BC0B
+  outreach_or_application_activity: none
+
+files_changed:
+  - resume.tex
+  - jd.md
+  - optimization_report.yml
+  - Tesco_SDE2_Java_Azure.pdf
