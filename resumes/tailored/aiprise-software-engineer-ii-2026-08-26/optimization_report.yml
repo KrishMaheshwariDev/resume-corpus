@@ -1,0 +1,166 @@
+run:
+  date: 2026-08-26
+  mode: jd_specific_tailoring
+  company: AiPrise
+  target_role: Software Engineer II
+  source_resume: resume.tex
+  output_pdf: AiPrise_Software_Engineer_II.pdf
+  page_count: 2
+  pdf_sha256: 4366315171a5e6033e08a59b9923a77a4b1d6233cb0d261276f720b432239bce
+
+scores:
+  baseline_canonical_estimate:
+    parse_safety: 100
+    requirement_coverage: 83
+    evidence_strength: 90
+    human_review: 86
+    composite_fit: 82
+  final:
+    truthfulness: PASS
+    parse_safety: 100
+    requirement_coverage: 89
+    evidence_strength: 92
+    human_review: 91
+    composite_fit: 89
+  deterministic_general_backend_proxy:
+    baseline_composite: 94.9
+    final_composite: 97.2
+    note: >-
+      score_resume.py is a general Java/backend proxy, not an AiPrise or proprietary ATS score.
+      JD-specific scores above are explainable estimates based on the repository weighting model
+      and requirement-to-evidence mapping.
+
+hard_gaps:
+  - No direct FinTech, RegTech, payments, fraud, or risk-detection production-domain experience is established.
+  - No direct KYC/KYB, AML, sanctions-screening, or adverse-media workflow delivery is established.
+  - Production Kafka, RabbitMQ, or AWS SQS ownership is not established; professional messaging evidence is Azure Service Bus and JMS, with event-driven AWS pipeline evidence at project level.
+  - Conventional MongoDB, DynamoDB, or Elasticsearch delivery is not established; Qdrant appears only in an AI project.
+  - AWS, Terraform, and Docker are project-backed; professional cloud-integration evidence is Azure.
+  - Kubernetes production ownership is not established and was not promoted.
+  - The role is in-person in San Jose; current resume contact is New Delhi, India, and current U.S. work authorization / preferred U.S. contact positioning remains unresolved in the corpus.
+
+strongest_retained_evidence:
+  - Java REST/SOAP healthcare integration services supporting 50K+ daily requests at 99.99% SLA availability.
+  - Explicit timeout and partial-failure handling across downstream REST, Azure messaging, JMS, and Oracle integration paths.
+  - Project-wide Log4j2 migration ownership from PoC through decisions, tests, documentation, reviews, and rollout coordination.
+  - Correlation-ID-based monitoring with latency, success/failure, and request-volume telemetry.
+  - Edifecs third-party vendor-library upgrade analysis in an unfamiliar codebase.
+  - Python prediction-service integration with deterministic Java business-rule validation and cross-system debugging.
+  - VIN API latency reduction from approximately 60+ seconds to 10-20 seconds.
+  - Junior-developer mentoring, code reviews, CI/CD, and release-validation experience.
+  - Event-driven AWS data pipeline using S3, Lambda, EFS, ECS, RDS PostgreSQL, Terraform, Docker, and CloudWatch.
+  - AI/backend project evidence through CodingHelper and the FastAPI-based AI Email Client.
+
+edits_made:
+  - Repositioned the first quarter around Software Engineer II, backend API/integration ownership, operational reliability, and end-to-end delivery.
+  - Reordered and qualified skills to foreground Java, REST APIs, relational databases, messaging, CI/CD, AWS/Azure, Docker/Terraform, React/TypeScript, and AI/backend project evidence.
+  - Promoted downstream REST failure-handling and Azure/JMS integration evidence for orchestration-system relevance.
+  - Promoted Log4j2 migration as the clearest end-to-end ownership story.
+  - Added Edifecs vendor-library upgrade evidence to demonstrate third-party integration analysis and unfamiliar-codebase debugging.
+  - Preserved observability, incident-response, release-validation, and mentoring evidence required by the JD.
+  - Selected AWS Spark, CodingHelper, and AI Email Client projects to cover event-driven data pipelines, AWS/IaC, React/TypeScript, FastAPI, AI systems, PostgreSQL, and retrieval workflows without implying professional production depth.
+  - Removed the lower-relevance portfolio project from this variant to make room for stronger AiPrise-specific evidence.
+
+claims_intentionally_not_used:
+  - claim: Direct KYC/KYB, AML, sanctions-screening, adverse-media, or compliance-case-management experience
+    reason: Not supported by current professional or project evidence.
+  - claim: Production Kafka, RabbitMQ, AWS SQS, Kubernetes, MongoDB, DynamoDB, or Elasticsearch ownership
+    reason: Current evidence does not support production ownership at the required depth.
+  - claim: Professional AWS/Terraform/Docker production ownership
+    reason: Current AWS/Terraform/Docker evidence is project-backed.
+  - claim: API Gateway authentication ownership
+    reason: Authentication at the NTT gateway boundary was owned by another team.
+  - claim: Sole production deployment ownership
+    reason: NTT production deployment execution was handled by a deployment team; developer scope was readiness, validation, and go/no-go/rollback recommendation.
+  - claim: Multi-node Spark execution or exactly-once PostgreSQL delivery
+    reason: The AWS project runs local-mode Spark inside ECS and checkpointing does not establish end-to-end exactly-once JDBC writes.
+  - claim: Formal correctness or security guarantees for AI-generated code
+    reason: CodingHelper uses bounded tests and validation gates, which do not constitute formal guarantees.
+  - claim: NTT 20% issue-resolution, AWS 40% runtime, or broad Capgemini 90% performance metrics
+    reason: Direct, higher-confidence evidence was preferred over source-dependent percentages.
+
+cross_section_alignment:
+  software_engineer_ii_backend_api_identity:
+    proof: NTT Java REST/SOAP services plus Capgemini Java enterprise application delivery
+    evidence_class: P1
+  end_to_end_feature_ownership:
+    proof: NTT Log4j2 PoC, implementation decisions, testing, documentation, code review, and coordinated rollout
+    evidence_class: P1
+  rest_and_third_party_integrations:
+    proof: NTT downstream REST integration and Edifecs vendor-library analysis; Capgemini Python service integration
+    evidence_class: P1
+  relational_databases:
+    proof: Oracle/OJDBC and DB2/Hibernate professional evidence plus PostgreSQL project/training evidence
+    evidence_class: P1/P2/P3
+  messaging_and_event_driven:
+    proof: Azure Service Bus/JMS professional integration plus AWS S3-triggered project pipeline
+    evidence_class: P1/P2
+  observability_and_incident_response:
+    proof: NTT AOP monitoring/correlation IDs and WebSphere memory-incident investigation support
+    evidence_class: P1
+  cloud_and_iac:
+    proof: Azure integration professionally; AWS/Terraform/Docker project pipeline
+    evidence_class: P1/P2
+  frontend_and_ai_systems:
+    proof: CodingHelper and AI Email Client React/TypeScript/FastAPI project bullets
+    evidence_class: P2/P3
+  mentoring:
+    proof: Capgemini junior-developer onboarding, debugging, contained features, and code review
+    evidence_class: P1
+
+unresolved_source_conflicts:
+  - Current India contact/location block was retained; preferred U.S. contact/location and current U.S. work authorization remain unresolved.
+  - NTT exact HR title/date variants remain unresolved; the current canonical title and dates were retained.
+  - CMU historical GPA/date variants exist; the current canonical education block was retained.
+
+validation:
+  latex_compile: PASS
+  structural_validator: PASS
+  visual_review_all_pages: PASS
+  extracted_pdf_page_count: 2
+  extracted_pdf_text_chars: 6699
+  body_font_pt: 11
+  margins_inches: 0.65
+  single_column: true
+  standard_headings_present: PASS
+  no_table_layout: PASS
+  no_clipping_or_overlap: PASS
+  no_repeated_page_two_identity_header: PASS
+  no_material_orphaned_summary_or_skill_claims: PASS
+  external_contact_or_outreach_created: false
+
+files_loaded:
+  - AGENTS.md
+  - .agents/skills/resume-optimizer/SKILL.md
+  - kb/optimization_run_protocol.md
+  - kb/optimization_run_checklist.yml
+  - profiles/MASTER_PROFILE_V2.md
+  - profiles/PROFILE_FACT_MATRIX_V2.yml
+  - profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md
+  - profiles/WORK_EXPERIENCE_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-11.md
+  - profiles/AI_ASSISTED_ENGINEERING_EVIDENCE_OVERLAY_2026-08-15.md
+  - profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml
+  - profiles/UNRESOLVED_SOURCES.md
+  - profiles/RESUME_POSITIONING_V1.yml
+  - kb/resume_optimization_knowledge_base.md
+  - kb/human_review/resume_perception_knowledge_base.md
+  - kb/scoring/weights.yml
+  - kb/scoring/human_review_weights.yml
+  - kb/skills/java_backend_taxonomy.yml
+  - kb/skills/ai_assisted_engineering.yml
+  - kb/roles/java_backend_engineer.yml
+  - kb/writing/bullet_semantics.yml
+  - kb/writing/action_verbs_java_backend.yml
+  - kb/resume_output_requirements.yml
+
+repository_files_changed:
+  - resumes/tailored/aiprise-software-engineer-ii-2026-08-26/resume.tex
+  - resumes/tailored/aiprise-software-engineer-ii-2026-08-26/jd.txt
+  - resumes/tailored/aiprise-software-engineer-ii-2026-08-26/optimization_report.yml
+local_generated_artifact:
+  path: AiPrise_Software_Engineer_II.pdf
+  note: >-
+    The PDF was compiled and validated in the active runtime. The connected GitHub action set
+    exposes text/Git-data writes but no direct binary-file upload action, so the PDF is delivered
+    from the active runtime rather than committed in this run.
