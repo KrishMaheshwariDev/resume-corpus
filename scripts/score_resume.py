@@ -20,32 +20,23 @@ from pathlib import Path
 
 
 CRITICAL = {
-    "Java": [r"\bJava\b"],
-    "Spring": [r"\bSpring Boot\b", r"\bSpring Framework\b"],
-    "API": [r"\bREST", r"\bSOAP", r"\bJAX-WS\b"],
-    "SQL": [r"\bSQL\b", r"\bOracle\b", r"\bDB2\b", r"\bPostgreSQL\b"],
-    "Backend": [r"\bBackend\b", r"\bmicroservices?\b", r"\bSOA\b"],
+    "C++": [r"\bC\+\+"],
+    "Core CS": [r"Data Structures", r"Object-Oriented", r"\bOOP\b"],
+    "Build Tooling": [r"\bCMake\b", r"\bClang\b", r"\bLLVM\b"],
+    "Project Evidence": [r"\bProjects\b", r"\bOpenChess\b", r"\bSimulation\b"],
+    "Problem Solving": [r"debugging", r"performance", r"bitboard", r"fixed.*timestep"],
 }
 
 COMMON = {
-    "Persistence": [r"\bJPA\b", r"\bHibernate\b", r"\bJDBC\b", r"\bHQL\b"],
-    "Testing": [r"\bJUnit\b", r"\bUnit Testing\b", r"\bIntegration Testing\b"],
-    "CI/CD": [r"\bCI/CD\b", r"\bJenkins\b", r"\bAzure DevOps\b", r"\bGitLab CI/CD\b"],
-    "Cloud": [r"\bAWS\b", r"\bAzure\b"],
-    "Build": [r"\bMaven\b", r"\bGradle\b", r"\bGit\b"],
-    "Production": [r"\bProduction Support\b", r"\bproduction\b", r"\bSLA\b"],
+    "Version Control": [r"\bGit\b", r"\bGitHub\b"],
+    "Graphics/Systems": [r"\bOpenGL\b", r"\bGLFW\b", r"\braylib\b"],
+    "Backend/Data": [r"\bFastAPI\b", r"\bSQL\b", r"\bSQLite\b", r"\bPostgreSQL\b"],
+    "Web": [r"\bReact\b", r"\bJavaScript\b", r"\bTypeScript\b"],
+    "Databases": [r"\bMySQL\b", r"\bSQLite\b", r"\bMongoDB\b", r"\bPostgreSQL\b"],
+    "Activities": [r"LeetCode", r"HackerRank", r"HackIndia"],
 }
 
-HIGH_VALUE_PROOFS = [
-    r"50K\+",
-    r"99\.99",
-    r"60\+\s*sec",
-    r"10.?20\s*sec",
-    r"Log4j2",
-    r"correlation",
-    r"WebSphere",
-    r"WebLogic",
-]
+HIGH_VALUE_PROOFS = [r"12-piece", r"4,500\s*FPS", r"1,500\s*FPS", r"20\s*TPS", r"4,000\s*FPS", r"150\+", r"Top 125"]
 
 
 def load_text(path: Path) -> str:
@@ -77,8 +68,7 @@ def main() -> int:
         return 2
 
     text = load_text(path)
-    experience = section(text, r"\ressection{Work Experience}", [r"\ressection{Projects}", r"\ressection{Education}"])
-    summary = section(text, r"\ressection{Summary}", [r"\ressection{Technical Skills}", r"\ressection{Work Experience}"])
+    projects = section(text, r"\sectionline{Projects}", [r"\sectionline{Activities}", r"\sectionline{Education}"])
 
     critical_hits = {k: present(text, v) for k, v in CRITICAL.items()}
     common_hits = {k: present(text, v) for k, v in COMMON.items()}
@@ -91,7 +81,7 @@ def main() -> int:
     evidence_total = 0
     for _, patterns in {**CRITICAL, **COMMON}.items():
         evidence_total += 1
-        if present(experience, patterns):
+        if present(projects, patterns):
             evidence_hits += 1
     evidence_strength = round(100 * evidence_hits / evidence_total, 1)
 
@@ -109,7 +99,7 @@ def main() -> int:
     parse_safety = max(parse_safety, 0)
 
     human = 50.0
-    if re.search(r"Java\s+(?:Backend|/Spring)", summary, re.IGNORECASE):
+    if re.search(r"C\+\+|Software.*(?:Intern|Fresher)|Intern.*C\+\+", text, re.IGNORECASE):
         human += 12
     proof_count = sum(1 for p in HIGH_VALUE_PROOFS if re.search(p, text, re.IGNORECASE))
     human += min(proof_count * 4, 24)
@@ -128,9 +118,9 @@ def main() -> int:
     )
 
     stuffing = {}
-    for term in ["Java", "Spring Boot", "AWS", "Azure", "SQL", "Kafka", "Kubernetes"]:
+    for term in ["C++", "OpenGL", "CMake", "Python", "SQL", "React", "FastAPI"]:
         count = len(re.findall(re.escape(term), text, re.IGNORECASE))
-        if count >= 5:
+        if count >= 10:
             stuffing[term] = count
 
     report = {

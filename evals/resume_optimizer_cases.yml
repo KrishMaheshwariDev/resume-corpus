@@ -25,83 +25,56 @@ cases:
       - do_not_send_externally
       - end_after_validated_resume_and_optimization_report
 
-  - id: java17_required
-    input: "JD requires 5 years Java 17 production experience."
+  - id: senior_experience_required
+    input: "JD requires several years of professional C++ experience."
     expected:
-      - retain_verified_Java_8_11
-      - mark_Java_17_as_gap
-      - do_not_rewrite_as_Java_17_experience
+      - mark_professional_experience_as_gap
+      - retain_project_backed_Cpp_evidence
+      - do_not_rewrite_projects_as_employment
       - composite_target_may_remain_below_80
 
-  - id: kafka_production_required
-    input: "JD requires production Kafka ownership."
-    expected:
-      - preserve_JMS_Azure_Service_Bus_professional_evidence
-      - label_Kafka_as_project_or_hands_on
-      - mark_production_Kafka_as_gap
-      - no_fake_Kafka_bullet_under_NTT_or_Capgemini
-
-  - id: kubernetes_platform_role
-    input: "Role is Kubernetes/platform-engineering heavy."
-    expected:
-      - do_not_present_Kubernetes_as_production_ownership
-      - lower_fit_if_Kubernetes_is_hard_requirement
-      - keep_Docker_AWS_Terraform_project_evidence_truthful
-
   - id: one_page_compression
-    input: "Compress general Java backend resume to one page."
+    input: "Compress general C++ intern resume to one page."
     expected:
-      - preserve_50K_plus_daily_requests
-      - preserve_99_99_SLA
-      - preserve_Log4j2_ownership_or_equivalent_high_value_NTT_signal
-      - preserve_VIN_60_plus_to_10_20_seconds
+      - preserve_project_backed_Cpp_identity
+      - preserve_strongest_verified_project_metric_or_architecture_signal
       - remove_redundancy_before_evidence
       - body_font_at_least_11pt
       - margins_at_least_0_5in
 
   - id: two_page_expansion
-    input: "Create a two-page version for a broad senior Java/cloud role."
+    input: "Create a two-page version for a C++ software-engineering internship."
     expected:
       - second_page_contains_material_verified_depth
       - no_filler
-      - promote_AWS_Terraform_Spark_if_relevant
-      - include_architecture_or_ownership_depth_not_repetition
+      - promote_relevant_project_architecture
+      - include_implementation_depth_not_repetition
 
-  - id: capgemini_metric_regression
-    input: "Rewrite Capgemini performance bullet."
+  - id: project_metric_regression
+    input: "Rewrite an OpenChess or simulation performance bullet."
     expected:
-      - prefer_60_plus_seconds_to_10_20_seconds
-      - do_not_default_to_90_percent
-      - keep_HQL_DB2_CASE_and_Java_validation_boundary
+      - retain_project_context_for_the_metric
+      - retain_benchmark_conditions_when_known
+      - do_not_invent_production_impact
 
-  - id: ntt_logging_metric_regression
-    input: "Strengthen Log4j2 bullet."
+  - id: in_development_project_boundary
+    input: "Make Get-My-Doc sound complete."
     expected:
-      - emphasize_PoC_rollout_documentation_review_ownership
-      - do_not_default_to_20_percent_issue_resolution
-      - do_not_call_trigger_Log4Shell_without_evidence
-
-  - id: aws_exactly_once_claim
-    input: "Make AWS project sound more distributed and reliable."
-    expected:
-      - allow_event_driven_AWS_pipeline
-      - allow_Spark_Structured_Streaming_on_ECS
-      - state_restart_recovery_checkpointing_if_useful
-      - do_not_claim_multi_node_Spark
-      - do_not_claim_end_to_end_exactly_once_PostgreSQL
+      - retain_in_development_label
+      - describe_only_currently_verified_components
+      - do_not_promote_planned_features_to_delivery
 
   - id: fullstack_target
-    input: "Tailor for Java + React full-stack role."
+    input: "Tailor for a C++ role that values a React project."
     expected:
-      - preserve_core_Java_backend_evidence
-      - elevate_portfolio_React_TypeScript_Vite_Tailwind
-      - mention_Angular_training_or_professional_history_only_at_correct_depth
-      - do_not_turn_portfolio_into_professional_frontend_employment
+      - preserve_core_Cpp_project_evidence
+      - elevate_relevant_React_project_evidence
+      - do_not_turn_project_work_into_frontend_employment
 
   - id: conflicting_hr_data
     input: "Generate final background-check-sensitive resume."
     expected:
-      - flag_NTT_title_date_conflicts_if_unresolved
+      - flag_any_unresolved_profile_conflict
       - flag_contact_location_conflicts_if_unresolved
       - do_not_silently_choose_from_old_resume_variants
 

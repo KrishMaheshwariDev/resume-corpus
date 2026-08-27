@@ -1,7 +1,7 @@
 # Resume Optimization Run Protocol
 
 Last updated: 2026-08-12  
-Repository: `preferablehuman/resume-corpus`
+Repository: `resume-corpus`
 
 ## Purpose
 
@@ -35,14 +35,14 @@ For current-market benchmark research only, use:
 1. `profiles/MASTER_PROFILE_V2.md`
 2. `profiles/PROFILE_FACT_MATRIX_V2.yml`
 3. `profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md`
-4. `profiles/WORK_EXPERIENCE_EVIDENCE_OVERLAY_2026-08-11.md`
-5. `profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-11.md`
-6. `profiles/AI_ASSISTED_ENGINEERING_EVIDENCE_OVERLAY_2026-08-15.md`
-7. `profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml`
+4. `profiles/WORK_EXPERIENCE_EVIDENCE_OVERLAY_2026-08-27.md`
+5. `profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-27.md`
+6. `profiles/AI_ASSISTED_ENGINEERING_EVIDENCE_OVERLAY_2026-08-27.md`
+7. `profiles/EVIDENCE_FACT_OVERLAY_2026-08-27.yml`
 8. `profiles/UNRESOLVED_SOURCES.md`
 9. `profiles/RESUME_POSITIONING_V1.yml`
 
-Apply the 2026-08-11 overlays and the 2026-08-15 AI-assisted engineering overlay after the V2 baseline. On conflicts involving implementation detail, architecture, ownership, skill depth, or metric confidence, prefer the overlays.
+Apply the active dated overlays after the V2 baseline. On conflicts involving implementation detail, architecture, ownership, skill depth, or metric confidence, prefer the overlays.
 
 Do not silently resolve HR title/date/contact/final-GPA/work-authorization conflicts unless explicitly marked resolved.
 
@@ -165,15 +165,10 @@ Build a cross-section evidence map for the actual resume content:
 Every material Summary claim and prominent technology/skill family must have visible contextual proof in Work Experience or Projects. Clear semantic aliases are acceptable; loose thematic similarity is not. Professional claims should map to professional bullets, while project-backed claims must remain mapped to and qualified by Projects. A relevant P4 item may remain only when explicitly labeled as knowledge, exposure, training, or certification. The fact being present elsewhere in the corpus does not satisfy this resume-level alignment check.
 
 Current examples:
-- NTT Log4j2: strong PoC/rollout ownership; do not call the trigger Log4Shell without proof.
-- NTT 20% issue-resolution metric: source-dependent; qualitative improvement is the default.
-- NTT memory incident: supporting investigator, not sole fixer.
-- Capgemini VIN: prefer ~60+ sec to ~10–20 sec over older ~90% wording.
-- Kafka/Kubernetes: no production ownership unless separately evidenced.
-- AWS Spark: local-mode Spark inside ECS container; no multi-node claim.
-- AWS JDBC: checkpointing does not establish end-to-end exactly-once persistence.
-- AWS 40% runtime metric: source-dependent until baseline is reconstructed.
-- FHIR: PoC/exposure unless stronger delivery evidence is added.
+- Project metrics require a direct implementation source or explicit user confirmation.
+- In-development projects must distinguish current code from planned scope.
+- Project evidence must not be upgraded to employment, internship, or production ownership.
+- Foundational skills must remain qualified when the evidence depth is limited.
 
 ## Phase 4: Requirement / market analysis
 
@@ -187,7 +182,7 @@ JD-specific:
 - architecture/operational expectations.
 
 General:
-- durable Java/backend clusters;
+- durable C++/software-engineering intern and fresher capability clusters;
 - current India-market benchmark;
 - candidate differentiators and gaps.
 

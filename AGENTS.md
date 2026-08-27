@@ -1,8 +1,8 @@
-# Resume Corpus Agent Contract
+# Resume Corpus Agent Contract — Krish Maheshwari
 
 ## Mission
 
-This repository is Kunal Maheshwari's evidence-driven resume optimization system.
+This repository is Krish Maheshwari's evidence-driven resume optimization system for C++ and software-engineering intern/fresher applications.
 
 Optimize resumes for:
 1. truthful role fit,
@@ -51,45 +51,38 @@ For any resume edit, optimization, score, or tailored variant, load:
 3. `profiles/MASTER_PROFILE_V2.md`
 4. `profiles/PROFILE_FACT_MATRIX_V2.yml`
 5. `profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md`
-6. `profiles/WORK_EXPERIENCE_EVIDENCE_OVERLAY_2026-08-11.md`
-7. `profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-11.md`
-8. `profiles/AI_ASSISTED_ENGINEERING_EVIDENCE_OVERLAY_2026-08-15.md`
-9. `profiles/EVIDENCE_FACT_OVERLAY_2026-08-11.yml`
+6. `profiles/WORK_EXPERIENCE_EVIDENCE_OVERLAY_2026-08-27.md`
+7. `profiles/PROJECT_EVIDENCE_OVERLAY_2026-08-27.md`
+8. `profiles/AI_ASSISTED_ENGINEERING_EVIDENCE_OVERLAY_2026-08-27.md`
+9. `profiles/EVIDENCE_FACT_OVERLAY_2026-08-27.yml`
 10. `profiles/UNRESOLVED_SOURCES.md`
 11. `profiles/RESUME_POSITIONING_V1.yml`
 12. `kb/resume_optimization_knowledge_base.md`
 13. `kb/human_review/resume_perception_knowledge_base.md`
 14. `kb/scoring/weights.yml`
 15. `kb/scoring/human_review_weights.yml`
-16. `kb/skills/java_backend_taxonomy.yml`
-17. `kb/skills/ai_assisted_engineering.yml`
-18. `kb/roles/java_backend_engineer.yml`
-19. `kb/market/india_java_backend.yml` for general India Java/backend work
-20. `kb/writing/bullet_semantics.yml`
-21. `kb/writing/action_verbs_java_backend.yml`
-22. `kb/resume_output_requirements.yml`
+16. `kb/writing/bullet_semantics.yml`
+17. `kb/writing/action_verbs_java_backend.yml`
+18. `kb/resume_output_requirements.yml`
 
 Do not edit from model memory alone.
 
 ## Default positioning
 
 Primary role family:
-- Java Backend Engineer
-- Backend Software Engineer
-- Java/Spring Backend Engineer
-- Software Engineer II / SDE II
-- Senior Java Developer where seniority requirements are credible
+- C++ Developer Intern
+- Software Developer Intern
+- Software Engineer Intern
+- Backend Developer Intern
+- Entry-level software-engineering roles consistent with a 2027 graduation.
 
 Primary differentiators:
-- enterprise Java/Spring/SOAP/REST integration experience;
-- healthcare and automotive domain systems;
-- 50K+ daily-request production scale and 99.99% SLA context;
-- hybrid integration/messaging and enterprise middleware;
-- production troubleshooting, observability, release validation, and modernization;
-- direct Capgemini VIN API latency reduction from ~60+ seconds to ~10–20 seconds;
-- project-backed AWS/Terraform/Spark/React breadth.
+- modern C++20, CMake, graphics, and performance-oriented projects;
+- bitboard data representation and rendering architecture;
+- project-backed file tooling, document retrieval, SQL, Python, and React breadth;
+- demonstrated debugging, DSA, OOP, and systems fundamentals.
 
-Do not over-position Kunal as a production Kafka specialist, Kubernetes/platform engineer, Java 17 production engineer, pure frontend engineer, pure data engineer, or senior AI engineer unless new verified evidence supports it.
+Do not present project work as professional employment, internship, production ownership, or team leadership. Keep OpenChess and Get-My-Doc visibly marked in development.
 
 ## Optimization modes
 
@@ -168,17 +161,12 @@ P4 can appear in skills/certifications with appropriate restraint.
 P5 must not be promoted without user confirmation.
 
 Special current boundaries:
-- `50K+ daily requests` and `99.99% SLA` are safe conservative NTT signals.
-- Log4j2 migration has strong ownership; the older `20% issue-resolution` number is source-dependent and should not be the default.
-- Capgemini VIN latency has direct evidence: ~60+ sec to ~10–20 sec. Prefer this over the older broad `~90%` claim.
-- AWS Spark project's `40% runtime improvement` is source-dependent until its comparison baseline is reconstructed.
-- Codex, GitHub Copilot, and local Ollama/LLM-server use are verified as hands-on project evidence; do not present them as employer production usage without separate evidence.
-- AWS Spark currently uses local-mode Spark inside the ECS container. Do not claim multi-node Spark execution.
-- Checkpointing does not prove end-to-end exactly-once JDBC/PostgreSQL writes.
-- Kafka and Kubernetes must not be represented as production ownership without separate evidence.
-- FHIR is PoC/exposure unless stronger evidence is added.
-- API Gateway authentication was owned by another team; describe the security boundary accurately.
-- Production deployment execution at NTT was handled by a deployment team; Kunal supported artifacts, validation, go/no-go/rollback recommendations, and smoke/business checks.
+- Krish has no verified employment or internship experience.
+- All project claims are P2 and must remain visibly project-backed.
+- OpenChess and Get-My-Doc are in development; do not describe planned features as delivered.
+- C and Java are foundational/basic.
+- Use supplied benchmark figures only with project context and only while the implementation supports them.
+- LogWhisperer may be described as project-based LLM-assisted incident reporting, not professional AI delivery.
 
 ## Bullet-writing policy
 
@@ -201,24 +189,18 @@ Avoid promotional adjectives when evidence can do the work.
 
 ## Section and scan policy
 
-For general Java/backend resumes, default order:
+For general intern/fresher resumes, default order:
 1. Name/contact
-2. Summary
-3. Technical Skills
-4. Work Experience
-5. Projects
-6. Education
-7. Certifications
+2. Technical Skills
+3. Projects
+4. Education
+5. Activities
 
 For a JD-specific resume, reorder lower sections only when it materially improves relevance.
 
-The first screen/top quarter should establish:
-- Java/backend identity;
-- experience level;
-- Spring/API/database/cloud/integration fit;
-- one or more memorable proof points.
+The first screen/top quarter should establish C++/software-engineering identity, intern/fresher career stage, and one or more concrete project proof points.
 
-The first bullet under each employer must be the strongest role-relevant evidence.
+The first bullet under each project must be the strongest role-relevant evidence.
 
 Use restrained bold emphasis to improve scanning. Bold section labels and a small number of high-value technologies, verified metrics, ownership signals, or outcomes. Do not bold entire bullets, create dense patches of bold text, or use bolding as keyword stuffing.
 
@@ -253,11 +235,9 @@ If a target role cannot credibly reach 80 because of a real skill/seniority gap,
 ## General-market optimization
 
 When there is no JD:
-- use `kb/roles/java_backend_engineer.yml`;
-- use `kb/market/india_java_backend.yml`;
 - use `profiles/RESUME_POSITIONING_V1.yml`;
-- optimize for broad 3–7 year Java/backend hiring;
-- favor durable evidence over trendy unsupported tools.
+- optimize for C++/software-engineering internships and fresher roles in India;
+- favor durable project evidence over broad unsupported tool lists.
 
 ## JD-specific variants
 

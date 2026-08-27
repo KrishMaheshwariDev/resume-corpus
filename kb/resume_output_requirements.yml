@@ -98,7 +98,7 @@ content_rules:
   - Keep professional evidence mapped to Work Experience and project-backed evidence mapped to Projects.
   - Use standard section names and a single-column parse-safe layout.
   - For targeted resumes, low-relevance skills may be omitted from the resume without deleting them from the factual corpus.
-  - Do not remove critical Java backend, Spring, REST/SOAP, SQL, integration, CI/CD, testing, or production evidence unless the target genuinely makes it irrelevant.
+  - Do not remove critical C++, CMake, core CS, project architecture, or verified project-evidence signals unless the target genuinely makes them irrelevant.
 
 information_density_rule: >
   Every resume line should contribute target-role relevance, technical capability,
@@ -106,20 +106,17 @@ information_density_rule: >
 
 preserve_first:
   - name_and_contact
-  - Java_backend_identity
-  - 50K_plus_daily_requests
-  - 99_99_percent_SLA
-  - strongest_NTT_integration_or_Log4j2_evidence
-  - Capgemini_VIN_60_plus_to_10_20_seconds
-  - core_Java_Spring_API_SQL_terms
+  - Cpp_intern_fresher_identity
+  - strongest_verified_project_architecture_or_metric
+  - core_Cpp_CMake_and_data_structures_terms
   - education
-  - relevant_certifications_when_space_allows
+  - relevant_activities_when_space_allows
 
 preserve_when_relevant:
-  - AWS_Terraform_Spark_project
-  - monitoring_correlation_ID_story
-  - Python_prediction_plus_Java_validation
-  - mentoring
+  - graphics_and_simulation_project_work
+  - local_document_retrieval_foundations
+  - Python_data_and_web_projects
+  - competitive_programming
   - React_TypeScript_portfolio
 
 compress_first:

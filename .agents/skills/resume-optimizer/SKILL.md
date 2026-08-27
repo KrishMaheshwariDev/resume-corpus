@@ -1,6 +1,6 @@
 ---
 name: resume-optimizer
-description: Evidence-driven resume optimization for Kunal Maheshwari. Use when asked to optimize, tailor, audit, score, compress, expand, build, or generate a resume from this repository.
+description: Evidence-driven resume optimization for Krish Maheshwari's C++ and software-engineering intern/fresher applications.
 ---
 
 # Resume Optimizer
@@ -24,7 +24,7 @@ Resolve from the request or repository:
 - requested output path;
 - requested page preference, if any.
 
-If the user does not provide a JD, use the general Java/backend market baseline.
+If the user does not provide a JD, use the general C++/software-engineering intern and fresher baseline.
 
 ## Required preflight
 
@@ -37,12 +37,9 @@ Treat Codex, GitHub Copilot, and local Ollama/LLM-server experience as hands-on 
 ## Run-mode selection
 
 ### General optimization
-Use:
-- `profiles/RESUME_POSITIONING_V1.yml`
-- `kb/roles/java_backend_engineer.yml`
-- `kb/market/india_java_backend.yml`
+Use `profiles/RESUME_POSITIONING_V1.yml` and the reusable scoring/writing policy.
 
-Goal: a durable Java/backend resume suitable for broad India-market applications.
+Goal: a durable C++/software-engineering resume suitable for broad India-market internship and fresher applications.
 
 ### JD-specific tailoring
 Parse:
@@ -111,27 +108,22 @@ Prefer edits with strong evidence and high first-pass value.
 
 ### Top-of-resume
 The first quarter should answer:
-1. What role is Kunal?
-2. What scale/complexity has he handled?
-3. What makes him different from a generic Java developer?
+1. Which internship/fresher role is Krish targeting?
+2. Which C++ or software projects prove the relevant capability?
+3. Which systems, debugging, or performance evidence is most memorable?
 4. Is there enough credible evidence to continue reading?
 
 ### Summary
-Use the canonical skimmable capability-summary pattern for all general and tailored resumes unless the user explicitly requests another format:
-1. identity, experience depth, and product/domain context;
-2. **Delivery scope:** what Kunal can carry from requirements through implementation, testing, release validation, and production support;
-3. **Engineering approach:** how he handles performance, reliability, observability, integrations, data, and business-rule boundaries;
-4. **Working style:** how he collaborates, communicates, documents, reviews, and mentors.
+Use a concise, project-backed summary when it improves scanning:
+1. internship/fresher identity and technical focus;
+2. strongest C++/software project proof;
+3. systems, debugging, performance, or application-development approach;
+4. relevant collaboration or competitive-programming evidence.
 
 Write for a recruiter's first-pass scan. Keep these labels visually distinct, use short evidence-backed phrases, and make the bold anchors sufficient to reconstruct the intended value proposition. Retain searchable technologies and discussion hooks, but keep detailed metrics and proof in the experience section. Adapt technologies and emphasis to the target JD without changing the four-part structure or fabricating capability.
 
-### Experience bullets
-For each employer:
-- strongest target-role evidence first;
-- one dominant idea per bullet;
-- technology in context, not only in Skills;
-- use direct, measured language;
-- favor direct timings/scale over reconstructed marketing percentages.
+### Project bullets
+Krish has no employment evidence. For each project, lead with the strongest relevant implementation, keep technology in context, use direct measured language only when verified, and label in-development work accurately.
 
 ### Skills
 Preserve truthful parser/search coverage.
@@ -144,7 +136,7 @@ Projects exist to:
 - close truthful role gaps;
 - show architecture depth.
 
-Do not let projects displace stronger production evidence for ordinary Java/backend roles.
+For Krish's intern/fresher resumes, projects are the primary engineering evidence.
 
 ### Cross-section alignment gate
 
@@ -166,21 +158,16 @@ Treat unresolved material orphans as a failed release gate, not a cosmetic warni
 ## Current candidate-specific safeguards
 
 Prefer:
-- NTT: 50K+ daily requests, 99.99% SLA, Java/JAX-WS/Spring, WebSphere, healthcare payer integration, hybrid/service integration, Log4j2 migration ownership, monitoring/correlation IDs, release validation.
-- Capgemini: Java EE/JSF/Hibernate/WebLogic/DB2, Python prediction integration with deterministic Java validation, VIN latency ~60+ sec to ~10–20 sec, cross-system debugging, mentoring.
-- AWS project: S3 -> Lambda -> EFS -> Spark Structured Streaming -> PostgreSQL/RDS, Terraform, Docker, checkpoints, 8GB+ dataset.
-- Portfolio: React/TypeScript/Vite/Tailwind, skill-evidence search, case studies, GitHub Pages.
+- OpenChess for C++20, bitboards, Raylib, CMake, and performance-oriented representation.
+- Black Hole Simulation and SOGL for graphics architecture, fixed-timestep simulation, OpenGL, and modular C++.
+- Get-My-Doc for early local-first document retrieval, file scanning, SQLite, and FastAPI foundations.
+- LogWhisperer, EDA Dashboarding, and FolderSort when the JD benefits from Python, web, data, or file-tooling breadth.
 
 Avoid as default:
-- NTT 20% issue-resolution metric unless intentionally sourced;
-- Capgemini broad ~90% metric when VIN timing is the actual evidence;
-- AWS 40% metric without baseline;
-- production Kafka/Kubernetes;
-- multi-node Spark;
-- exactly-once PostgreSQL;
-- production FHIR ownership;
-- API Gateway authentication ownership;
-- sole production deployment ownership.
+- any employment, internship, production, customer, or leadership claim;
+- planned OpenChess or Get-My-Doc functionality portrayed as complete;
+- unqualified C or Java expertise;
+- professional AI delivery, autonomous-agent, or model-operations claims.
 
 ## Scoring loop
 

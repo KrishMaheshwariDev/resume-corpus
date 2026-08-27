@@ -1,7 +1,7 @@
 # Resume Optimization Knowledge Base
 
 Last updated: 2026-07-05
-Repository: `preferablehuman/resume-corpus`
+Repository: `resume-corpus`
 
 ## Purpose
 

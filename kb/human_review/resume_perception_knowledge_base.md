@@ -1,7 +1,7 @@
 # Resume Human Review and Perception Knowledge Base
 
 Last updated: 2026-07-05
-Repository: `preferablehuman/resume-corpus`
+Repository: `resume-corpus`
 
 ## Purpose
 
@@ -388,35 +388,26 @@ Use evidence instead.
 
 Prefer `50K`, `99.99%`, `20%`, `8 GB`, `4.6 years` over spelling numbers out when scan visibility matters.
 
-## Java backend resume perception rules
+## Intern/fresher resume perception rules
 
-For Kunal's target Java/backend roles, human readers should immediately see:
+For Krish's target C++ and software-engineering roles, human readers should immediately see:
 
-1. Java/Spring Boot production backend identity.
-2. REST/SOAP/microservices/API integration evidence.
-3. Enterprise scale and reliability: 50K daily requests, 99.99% SLA.
-4. Cloud/hybrid integration: Azure Relay, Azure Service Bus, JMS, Azure Functions.
-5. Database competence: Oracle, SQL, PL/SQL coordination, PostgreSQL, query optimization.
-6. CI/CD and release maturity: Jenkins, Azure DevOps, Maven, UrbanCode Deploy.
-7. Testing and maintainability: JUnit, refactoring, logging, error handling.
-8. Measured impact: 20%, 40%, 50%, 90%, SLA, delivery cycle, response time.
+1. C++/software-engineering intern or fresher identity.
+2. Concrete project evidence, not implied employment.
+3. CMake, systems/graphics, debugging, performance, and data-structure capability where relevant.
+4. A small number of project metrics tied to a clear benchmark context.
+5. DSA, OOP/OOD, and technical learning evidence.
 
 ## Strong top-half design
 
 The top half of the resume should carry the highest-conversion evidence.
 
-Recommended top-half content for Java backend roles:
+Recommended top-half content for Krish:
 
-- concise backend summary,
-- skills section with Java/Spring/API/cloud/database/DevOps clusters,
-- NTT DATA role first with high-scale healthcare backend bullet,
-- most relevant production metric visible before lower-signal details.
-
-Example summary direction:
-
-`Java Backend Developer with 4+ years of enterprise experience building Spring Boot, REST/SOAP, SQL, and cloud-integrated healthcare and automotive systems. Delivered production APIs supporting 50K daily requests, 99.99% SLA availability, hybrid Azure Service Bus/JMS integrations, CI/CD releases, and backend performance improvements.`
-
-Use only if it fits page constraints and remains truthful.
+- concise C++/software-engineering intern positioning,
+- skills section with C++, CMake, core CS, and relevant application/data clusters,
+- OpenChess or Black Hole Simulation project first when C++ or systems relevance is highest,
+- an explicit in-development label where applicable.
 
 ## Human-reader anti-patterns
 

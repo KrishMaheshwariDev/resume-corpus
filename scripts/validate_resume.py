@@ -16,12 +16,10 @@ from pathlib import Path
 
 
 STANDARD_HEADINGS = [
-    "Summary",
     "Technical Skills",
-    "Work Experience",
     "Projects",
     "Education",
-    "Certifications",
+    "Activities",
 ]
 
 
@@ -49,6 +47,10 @@ def parse_tex_layout(tex: str) -> dict:
     if font:
         result["body_font_pt"] = float(font.group(1))
         result["line_height_pt"] = float(font.group(2))
+    else:
+        class_font = re.search(r"\\documentclass\[([0-9.]+)pt", tex)
+        if class_font:
+            result["body_font_pt"] = float(class_font.group(1))
 
     if re.search(r"\\begin\{(?:multicols|paracol)\}|\\twocolumn", tex):
         result["single_column_proxy"] = False

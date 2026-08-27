@@ -185,18 +185,11 @@ cross_section_alignment_gate:
     - project_skill_presented_as_professional_proof
 
   high_value_current_rules:
-    - ntt_50K_plus_daily_requests_safe
-    - ntt_99_99_SLA_safe
-    - ntt_log4j2_strong_ownership
-    - ntt_20_percent_issue_resolution_source_dependent
-    - capgemini_VIN_60_plus_to_10_20_seconds_preferred
-    - capgemini_90_percent_not_default
-    - aws_spark_local_mode_boundary
-    - aws_jdbc_exactly_once_not_established
-    - aws_40_percent_metric_source_dependent
-    - kafka_not_production_ownership
-    - kubernetes_not_production_ownership
-    - fhir_PoC_exposure
+    - no_employment_or_internship_claim_without_evidence
+    - all_project_evidence_stays_project_backed
+    - openchess_and_get_my_doc_remain_in_development
+    - basic_skills_remain_qualified
+    - metrics_require_project_context
 
 truthfulness_gate:
   reject_if_introduces:

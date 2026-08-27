@@ -1,6 +1,6 @@
 # Resume Corpus
 
-Evidence-driven resume optimization repository for Kunal Maheshwari.
+Evidence-driven resume optimization repository for Krish Maheshwari.
 
 The repository separates:
 - candidate facts/evidence;
@@ -180,12 +180,10 @@ Do not invent:
 - distributed-system guarantees.
 
 Current important boundaries include:
-- prefer Capgemini VIN timing (~60+ sec -> ~10–20 sec) over the older ~90% claim;
-- do not default to the older NTT 20% issue-resolution number;
-- AWS 40% runtime metric is source-dependent;
-- AWS Spark is local mode inside the ECS container in current code;
-- checkpointing does not prove exactly-once JDBC persistence;
-- Kafka/Kubernetes are not production ownership;
-- FHIR is PoC/exposure unless newer evidence changes that.
+- Krish has no professional employment or internship experience;
+- all project evidence remains project-backed;
+- OpenChess and Get-My-Doc are in development;
+- C and Java are foundational/basic;
+- project metrics must be tied to their repository-backed implementation.
 
-See the August 11 overlays for the authoritative detail.
+See the active 2026-08-27 profile overlays for authoritative detail.

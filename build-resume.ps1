@@ -63,7 +63,7 @@ $TempPreviewPrefix = Join-Path $TempDirectory "resume-page-1"
 $TempPreview = "$TempPreviewPrefix.png"
 
 $PortfolioPublic = Join-Path $PortfolioPath "public"
-$PortfolioPdf = Join-Path $PortfolioPublic "Kunal_Maheshwari_Resume.pdf"
+$PortfolioPdf = Join-Path $PortfolioPublic "Krish_Maheshwari_Resume.pdf"
 $PortfolioPreviewDirectory = Join-Path $PortfolioPublic "resume-pages"
 $PortfolioPreview = Join-Path $PortfolioPreviewDirectory "resume-page-1.png"
 
@@ -159,7 +159,7 @@ Write-Host "[4/4] Committing portfolio resume assets..."
 Push-Location -LiteralPath $PortfolioPath
 try {
     $ResumeAssetPaths = @(
-        "public/Kunal_Maheshwari_Resume.pdf",
+        "public/Krish_Maheshwari_Resume.pdf",
         "public/resume-pages/resume-page-1.png"
     )
 

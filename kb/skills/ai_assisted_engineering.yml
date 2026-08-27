@@ -1,9 +1,9 @@
 version: 2
 last_updated: 2026-08-15
-purpose: Resume retrieval and evidence rules for Kunal Maheshwari's AI product and AI-assisted engineering practice.
+purpose: Reusable rules for AI-related resume evidence without promoting project work to professional delivery.
 
 evidence_source:
-  primary: profiles/AI_ASSISTED_ENGINEERING_EVIDENCE_OVERLAY_2026-08-15.md
+  primary: profiles/AI_ASSISTED_ENGINEERING_EVIDENCE_OVERLAY_2026-08-27.md
   professional_production: false
   ownership_language: directed_reviewed_tested_and_validated
 

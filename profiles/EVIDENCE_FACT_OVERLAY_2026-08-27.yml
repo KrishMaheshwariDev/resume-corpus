@@ -1,0 +1,20 @@
+version: 1
+candidate: Krish Maheshwari
+effective_date: 2026-08-27
+hard_boundaries:
+  - No professional employment or internship experience.
+  - All software evidence is project-backed.
+  - OpenChess and Get-My-Doc remain in development.
+  - C and Java remain foundational/basic unless stronger evidence is added.
+  - Do not promote planned Get-My-Doc retrieval features as delivered functionality.
+metrics:
+  openchess:
+    board_rendering_fps: 4500
+    textured_piece_rendering_fps: 1500
+    board_memory_bytes: 96
+    comparison_array_memory_bytes: 256
+  black_hole_simulation:
+    fixed_timestep_tps: 20
+    gpu_rendering_fps: 4000
+  foldersort:
+    classified_files_and_directories: 4000

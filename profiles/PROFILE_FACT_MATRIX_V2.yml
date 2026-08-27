@@ -1,425 +1,108 @@
-version: 2.1
-last_updated: 2026-07-06
-purpose: Archive-refreshed and user-confirmed machine-readable profile facts for resume generation and optimization.
-privacy_note: Contact identifiers are intentionally not duplicated here. Use the latest resume contact block by default, or ask the user if the latest block is unavailable.
+version: 1
+last_updated: 2026-08-27
+purpose: Machine-readable factual source for Krish Maheshwari's resume generation.
 source_priority:
   - user_confirmed_current_conversation
-  - current_repo_resume_tex
-  - uploaded_archive_temp_zip
-  - linkedin_pdf_export_from_archive
-  - academic_history_and_degree_plan
-  - portfolio_repo
-  - project_repositories
-  - older_resume_variants
-
-source_corpus:
-  uploaded_archive:
-    parsed: true
-    total_files: 55
-    profile_resume_relevant_files: 42
-    job_tailored_resume_pdfs: 30
-    general_resume_source_files: 9
-    special_sources:
-      - Profile_linkedin.pdf
-      - AcademicHistory.pdf
-      - DegreePlanmahes1k_21001160.pdf
-    audit_file: profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md
-  current_repo_resume:
-    file: resume.tex
-    confidence: high
-  profile_sources:
-    - profiles/MASTER_PROFILE_V2.md
-    - profiles/ARCHIVE_RESUME_CORPUS_AUDIT.md
-    - profiles/UNRESOLVED_SOURCES.md
-
-current_user_confirmations:
-  target_market: India
-  leetcode_stats_required: false
-  contact_rule: Use the most recent resume contact set by default; ask user only if needed.
-  work_authorization_for_current_resume: not_required
-  central_michigan_university:
-    gpa: 3.87 / 4.0
-    period: Aug 2024 - Dec 2025
-  ntt_data:
-    title: Software Developer
-    period: Aug 2022 - Aug 2024
-  capgemini:
-    display_role: Senior Analyst
-    grouped_period: Jul 2020 - Aug 2022
-    grouping_rule: Use Senior Analyst as simplified role for resume clarity.
-  skill_depth:
-    kafka: hands-on
-    kubernetes: hands-on
-    spring_boot: professional experience at Capgemini and NTT DATA
+  - attached_krish_cpp_resume_tex
+  - audited_public_github_repositories
 
 identity:
-  name: Kunal Maheshwari
-  primary_roles:
-    - Java Backend Developer
-    - Backend Software Engineer
-    - Java Developer
-    - Software Developer
-    - Java/Spring Backend Engineer
-  linkedin_headline_from_archive: Java Developer | Spring Boot | REST APIs | SQL | Backend Engineering
-  github_handle: preferablehuman
-  leetcode_handle: preferablehuman
-  leetcode_status: intentionally_not_required_for_current_resume_work
+  name: Krish Maheshwari
+  location: Delhi, India
+  phone: +91-7303804880
+  email: krishmaheshwari.work@gmail.com
+  linkedin: https://www.linkedin.com/in/krish-maheshwari/
+  github: https://github.com/KrishMaheshwariDev/
 
-location_strategy:
-  current_target_market: India
-  india_market_locations_observed:
-    - Haldwani, Uttarakhand, India
-    - Bengaluru/Bangalore, India
-    - Mumbai, India
-    - Jalandhar/Punjab, India
-    - New Delhi, India
-  us_market_locations_observed:
-    - Mount Pleasant, MI, USA
-    - Mount Pleasant, Michigan, United States
-  resume_rule: Use the latest resume contact/location block by default for India-focused resumes.
+positioning:
+  career_stage: fresher
+  employment_history: none
+  target_roles:
+    - C++ Developer Intern
+    - Software Developer Intern
+    - Software Engineer Intern
+    - Backend Developer Intern
 
 education:
-  central_michigan_university:
-    degree: Master of Science in Computer Science
-    period_for_resume: Aug 2024 - Dec 2025
-    gpa_for_resume: 3.87 / 4.0
-    historical_gpa_variants:
-      - 3.76
-      - 3.85
-      - 3.87
-    academic_history_gpa_at_print_time: 3.76
-    degree_plan_minimum_credits: 30
-    degree_plan_completed_credits_at_print_time: 9
-    coursework_completed_with_grades:
-      - CPS 541 Modern Databases: A
-      - CPS 685 Pattern Recognition and Data Mining: A
-      - ITC 510 Software and Data Modeling: B+
-    coursework_planned_or_registered:
-      - BIS 582 Data Visualization: Theory and Practice
-      - CPS 585 Applied Data Engineering
-      - CPS 691 Research Design and Professional Practice
-      - ITC 686 Big Data Analytics
-      - CPS 542 Analysis & Design of Algorithms
-      - CPS 698 Capstone Project
-      - ITC 630 Cloud Computing
-  lovely_professional_university:
-    degree: Bachelor of Technology in Computer Science and Engineering
-    specialization_prior_context: Data Science
-    cgpa: 8.02 / 10
-    period: 2016 - 2020
-  school:
-    name: St. Paul's Senior Secondary School
-    program: 10+2 science with maths
-    score_prior_context: 77%
-
-certifications:
-  high_confidence:
-    - Microsoft Certified: Azure Fundamentals
-    - Microsoft Certified: Azure Developer Associate
-    - Microsoft Certified: Azure Data Engineer Associate
-  additional_linkedin_or_portfolio:
-    - Workshop on Ethical Hacking
-    - Introduction to Linux
-    - Agile Software Development
-
-languages:
-  from_linkedin_pdf:
-    Hindi: Native or Bilingual
-    English: Limited Working
-
-experience:
-  ntt_data:
-    domain: Healthcare insurance
-    title_for_resume: Software Developer
-    period_for_resume: Aug 2022 - Aug 2024
-    older_archive_title_variant: Software Development Analyst
-    older_archive_period_variant: Aug 2022 - Jul 2024
-    location_variants:
-      - Bengaluru/Bangalore Urban, India
-      - Remote variant in archive
-    technologies:
-      - Java 8/11
-      - Spring Boot
-      - Spring Framework
-      - REST APIs
-      - SOAP APIs
-      - SOA
-      - Azure Functions
-      - Azure Relay
-      - Azure Service Bus
-      - Azure DevOps
-      - JMS
-      - IBM WebSphere
-      - Oracle WebLogic
-      - API Gateway
-      - certificate-based authentication
-      - CAQH v2/v4
-      - FHIR
-      - Maven
-      - Jenkins
-      - IBM UrbanCode Deploy
-      - Git
-      - SVN
-      - JUnit
-      - Log4j 2.x
-    high_confidence_metrics:
-      - 50,000+ daily API requests
-      - 99.99% SLA uptime/availability
-      - 20% issue-resolution time reduction
-      - 50% faster delivery cycles / EDX delivery improvement
-    evidence:
-      - high-performance SOAP and REST microservices
-      - professional Spring Boot / Spring Framework backend development
-      - hybrid Azure Relay / Service Bus / JMS integration
-      - CI/CD pipelines and release delivery
-      - Log4j 2.x migration
-      - production support and debugging
-      - FHIR/regulatory healthcare context
-  capgemini:
-    domain: Automotive
-    title_for_resume: Senior Analyst
-    grouped_period_for_resume: Jul 2020 - Aug 2022
-    display_rule: Use Senior Analyst as simplified display role unless background-check precision is required.
-    historical_title_variants:
-      - Senior Analyst / Analyst
-      - Senior Analyst
-      - Analyst
-      - Trainee / Analyst Trainee
-    historical_date_variants:
-      - Jul 2020 - Aug 2022 grouped
-      - Oct 2021 - Jul/Aug 2022 Senior Analyst
-      - Jul 2020 - Oct 2021 Analyst
-      - Jan 2020 - May/Jun 2020 Trainee
-    technologies:
-      - Java 8
-      - Spring Boot
-      - Spring MVC
-      - Spring Framework
-      - J2EE
-      - EJB
-      - JSF
-      - RESTful APIs
-      - JDBC
-      - Oracle SQL
-      - Python decision-tree service integration
-      - Jenkins
-      - GitLab CI/CD
-      - Maven
-      - Git
-      - SVN
-      - JUnit4
-      - JIRA
-    metrics:
-      high_confidence:
-        - 90% performance improvement
-        - 99%+ uptime
-      medium_confidence:
-        - 10% query performance improvement
-        - 99% code coverage
-    evidence:
-      - automotive enterprise applications
-      - vehicle configuration module
-      - Python decision-tree REST integration
-      - professional Spring Boot / Spring MVC / Spring Framework backend development
-      - SQL optimization and database tuning
-      - legacy Java modernization
-      - junior developer mentoring
-  trainee_projects:
-    technologies:
-      - Java
-      - Spring Framework
-      - Spring MVC
-      - Angular
-      - PostgreSQL
-      - MVC
-    evidence:
-      - fitness-club application
-      - digital-wallet / OnlineWallet application
-      - authentication
-      - email/OTP login
-      - CRUD
-      - account balances
-      - transactions
-      - profile-image upload
-
-projects:
-  ai_email_client:
-    type: Graduate capstone / NLP / model serving
-    positioning: project-based; privacy-oriented; not formal-compliance or production-user claim
-    technologies:
-      - Python
-      - FastAPI
-      - PyTorch
-      - Hugging Face Transformers
-      - T5
-      - PEFT
-      - LoRA
-      - ROUGE
-      - Docker
-      - MinIO
-      - Prometheus
-      - React
-      - TypeScript
-    metrics:
-      - ROUGE-1 F 53.04
-      - ROUGE-2 F 44.90
-      - ROUGE-L F 45.90
-  nyu_taxi_aws_spark_pipeline:
-    type: master's coursework project / AWS / Spark / data engineering
-    ai_assisted_delivery: false
-    technologies:
-      - Apache Spark
-      - PySpark
-      - Spark Structured Streaming
-      - AWS S3
-      - AWS Lambda
-      - AWS EFS
-      - AWS ECS/Fargate
-      - AWS RDS PostgreSQL
-      - CloudWatch
-      - Terraform
-      - Docker
-      - Flask
-      - Plotly
-      - PostgreSQL
-    metrics:
-      - 8GB+ dataset
-      - 40% runtime/processing improvement
-  portfolio:
-    type: React / TypeScript recruiter-facing portfolio
-    technologies:
-      - React
-      - Vite
-      - TypeScript
-      - Tailwind CSS
-      - GitHub Pages
-      - GitHub Actions
-    metrics:
-      - 7 pages
-      - 7 case studies
-      - build + lint checks
-  lamprey_pipeline:
-    type: academic/cloud data/computer vision project
-    technologies:
-      - Python
-      - Flask
-      - OpenCV
-      - Pandas
-      - Google Cloud Storage
-      - Cloud SQL
-      - PostgreSQL
-      - SQLAlchemy
-      - Docker
-    caution_metrics_low_confidence:
-      - 99.9% uptime
-      - 10GB video data daily
-  election_eda:
-    type: academic exploratory data analysis
-    technologies:
-      - Python
-      - Pandas
-      - NumPy
-      - Jupyter
-      - Matplotlib
-      - Seaborn
-  online_wallet:
-    type: Java + Angular training project
-    technologies:
-      - Java
-      - Spring MVC
-      - Angular
-      - PostgreSQL
-      - MVC
-      - CRUD
-  bookstore:
-    type: Java + Angular practice project
-    technologies:
-      - Java
-      - Angular
-      - REST-style APIs
-      - OOP
+  degree: B.Tech, Computer Science & Engineering (Data Science)
+  institution: Dr. A.P.J. Abdul Kalam Technical University
+  period: 2023-2027
 
 skills:
-  ai_product_and_assisted_engineering:
-    evidence_scope: personal_project_only_not_employer_production
-    runtime_ai_projects:
-      AI_Email_Client:
-        evidence_class: P2_P3
-        technologies: [PyTorch, Hugging_Face_Transformers, T5, PEFT, LoRA, ROUGE, FastAPI, MinIO, Prometheus, React, TypeScript]
-      CodingHelper:
-        evidence_class: P2
-        technologies: [LangChain, Ollama, Qwen_2_5_Coder_7B, RAG, Qdrant, PostgreSQL, FastAPI, isolated_Java_Python_execution]
-      Article_Voice_Desk:
-        evidence_class: P2
-        technologies: [SmolVLM_256M_Instruct, Supertonic_3, ONNX_Runtime, Electron, SQLite, local_model_packaging]
-    local_model_r_and_d:
-      evidence_class: P3
-      runtimes: [Ollama, llama.cpp, LM_Studio]
-      verified_scope: [installation, configuration, execution, comparison, integration_evaluation]
-      direct_application_integration: [Ollama_via_CodingHelper]
-      not_verified: [direct_llama.cpp_integration, direct_LM_Studio_integration, benchmark_metrics, production_serving]
-    ai_assisted_delivery:
-      evidence_class: P2_workflow
-      tools: [Codex, GitHub_Copilot]
-      ownership: directed_reviewed_tested_and_validated
-      projects: [Resume_Corpus, Portfolio]
-      acceptance_signals: [code_review, builds, automated_tests, execution_checks, runtime_validation]
-      explicitly_excluded: [GitHub_Models, Cursor, Claude_Code, Microsoft_Copilot, autonomous_deployment, measured_productivity_gain, employer_production_use]
-  high_confidence:
-    - Java 8/11
-    - Core Java
+  project_strong:
+    - C++
+    - STL
+    - CMake
+    - OpenGL
+    - GLFW
+    - GLAD
+    - GLM
+    - raylib
+    - nlohmann/json
     - Python
     - SQL
-    - Spring Boot
-    - Spring Framework
-    - Spring MVC
-    - REST APIs
-    - SOAP APIs
-    - SOA
-    - Microservices
-    - JDBC
-    - Oracle SQL
-    - PostgreSQL
-    - IBM DB2
-    - Azure Functions
-    - Azure Service Bus
-    - Azure Relay
-    - Azure DevOps
-    - Jenkins
-    - GitLab CI/CD
-    - Maven
-    - Git
-    - SVN
-    - JUnit
-    - JUnit4
-    - Log4j 2.x
-    - Docker
-    - Kubernetes
-    - Kafka
-    - Terraform
-    - Apache Spark
-    - PySpark
-    - FastAPI
+    - HTML
+    - CSS
+    - JavaScript
+    - TypeScript
     - React
-    - Angular
-    - PyTorch
-    - Hugging Face Transformers
-    - T5
-    - PEFT
-    - LoRA
-    - ROUGE
-  confirmed_depth:
-    Spring Boot: professional experience at Capgemini and NTT DATA
-    Kafka: hands-on
-    Kubernetes: hands-on
-  verify_depth:
-    - Scala
-    - GCP Pub/Sub
-    - OpenAPI/Swagger
-    - Redis
-    - Celery
+    - Tailwind CSS
+    - MySQL
+    - PostgreSQL
+    - SQLite
+    - MongoDB
+    - Git
+    - GitHub
+    - Clang
+    - LLVM
+    - MinGW
+    - MSYS
+    - Docker
+    - WSL
+  foundational:
+    - C
+    - Java
+  core_knowledge:
+    - Data Structures and Algorithms
+    - Object-Oriented Programming
+    - Object-Oriented Design
+    - Debugging
+    - Performance Optimization
+    - Operating Systems
+    - Computer Architecture
 
-verification_needed:
-  - current_contact_set_only_if_latest_resume_contact_block_is_unavailable
-  - 99_percent_code_coverage_claim
-  - lamprey_99_9_uptime_and_10gb_claim
+projects:
+  - name: OpenChess
+    status: in_development
+    evidence_level: P2
+    repository: https://github.com/KrishMaheshwariDev/OpenChess
+    technologies: [C++20, raylib, CMake, Clang, LLVM]
+    verified_facts: [12 piece-type bitboards, separate Board and UI modules]
+  - name: Get-My-Doc
+    status: in_development
+    evidence_level: P2
+    repository: https://github.com/KrishMaheshwariDev/Get-My-Doc
+    technologies: [Python, FastAPI, SQLite]
+    verified_facts: [schema management, connection management, file scanning, local-first retrieval architecture]
+  - name: Black Hole Simulation
+    status: complete
+    evidence_level: P2
+    repository: https://github.com/KrishMaheshwariDev/Black-Hole-Simulation
+    technologies: [C++20, OpenGL, GLFW, GLAD, GLM, GLSL, CMake]
+  - name: SOGL
+    status: complete
+    evidence_level: P2
+    repository: https://github.com/KrishMaheshwariDev/Simple-OpenGL
+    technologies: [C++, OpenGL, GLFW, GLAD, CMake]
+  - name: LogWhisperer
+    evidence_level: P2
+    repository: https://github.com/KrishMaheshwariDev/Devai-log-whisperer
+    technologies: [Python, FastAPI, React, Vite]
+  - name: EDA Dashboarding
+    evidence_level: P2
+    repository: https://github.com/KrishMaheshwariDev/EDA-DashingBoard
+    technologies: [Python, Streamlit, Pandas, Plotly]
+  - name: FolderSort
+    evidence_level: P2
+    repository: https://github.com/KrishMaheshwariDev/FileOrganiser
+    technologies: [C++17, CMake, ImGui, GLFW, Win32]
