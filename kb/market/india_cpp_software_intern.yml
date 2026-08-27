@@ -1,0 +1,26 @@
+version: 1
+last_updated: 2026-08-27
+purpose: Profile-specific general-market baseline for Krish Maheshwari's India C++ and software-engineering internships/fresher roles.
+candidate_stage: intern_or_fresher
+target_role_families: [C++ Developer, Software Developer, Software Engineer, Backend Developer]
+general_resume_focus: [modern C++ and CMake, DSA and OOP/OOD fundamentals, project implementation detail, debugging and performance reasoning, Git, relevant SQL/Python/web breadth]
+candidate_strengths:
+  - C++20 bitboard chess project with Raylib and CMake
+  - OpenGL graphics and fixed-timestep simulation work
+  - modular rendering framework design
+  - file-scanning and SQLite document-retrieval foundations
+  - DSA activity and HackIndia result
+candidate_limits:
+  - no professional employment or internship experience
+  - no verified production operations, customer scale, or commercial delivery
+  - C and Java are foundational/basic
+  - in-development projects must retain that label
+tailoring_rules:
+  systems_or_graphics:
+    emphasize: [C++, CMake, OpenGL, Raylib, bitboards, fixed timestep, debugging, performance]
+  general_software:
+    emphasize: [C++, OOP, DSA, Git, CMake, project architecture]
+  backend_or_data:
+    emphasize: [Get-My-Doc, SQLite, SQL, Python, FastAPI, LogWhisperer, EDA Dashboarding]
+    caution: Do not claim backend production experience.
+

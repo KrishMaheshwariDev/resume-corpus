@@ -1,0 +1,26 @@
+version: 1
+last_updated: 2026-08-27
+role_family: C++ and Software Engineering Intern/Fresher
+identity:
+  preferred_labels: [C++ Developer Intern, Software Developer Intern, Software Engineer Intern, Backend Developer Intern]
+  career_stage: intern_or_fresher
+requirements_map:
+  core: [C++, data structures and algorithms, OOP/OOD, debugging, Git]
+  implementation: [CMake, STL, project architecture, performance reasoning]
+  role_dependent:
+    systems_graphics: [OpenGL, GLFW, GLAD, GLM, raylib, C++20]
+    backend_data: [Python, FastAPI, SQL, SQLite, PostgreSQL, MongoDB]
+    web: [JavaScript, TypeScript, React, Tailwind CSS]
+evidence_rules:
+  professional_experience: absent
+  primary_evidence_source: projects
+  project_evidence_must_remain_project_backed: true
+  in_development_projects: [OpenChess, Get-My-Doc]
+  foundational_skills: [C, Java]
+high_value_visible_proof:
+  - bitboard representation and benchmark context in OpenChess
+  - fixed-timestep simulation and OpenGL architecture
+  - modular SOGL graphics abstractions
+  - local file-scanning and SQLite foundations in Get-My-Doc
+  - DSA activity and HackIndia result
+

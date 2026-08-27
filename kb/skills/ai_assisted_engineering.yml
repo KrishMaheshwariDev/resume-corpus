@@ -1,76 +1,22 @@
-version: 2
-last_updated: 2026-08-15
-purpose: Reusable rules for AI-related resume evidence without promoting project work to professional delivery.
-
-evidence_source:
-  primary: profiles/AI_ASSISTED_ENGINEERING_EVIDENCE_OVERLAY_2026-08-27.md
-  professional_production: false
-  ownership_language: directed_reviewed_tested_and_validated
-
-evidence_categories:
-  ai_product_engineering: P2_or_P3_project
-  ai_assisted_delivery: P2_project_workflow
-  local_model_r_and_d: P3_hands_on_learning
-  tool_exposure: P4_qualified_only
-
-verified_tools:
-  ai_assisted: [Codex, GitHub_Copilot]
-  local_runtimes: [Ollama, llama.cpp, LM_Studio]
-  explicitly_not_verified: [GitHub_Models, Cursor, Claude_Code, Microsoft_Copilot]
-
-runtime_ai_projects:
-  AI_Email_Client:
-    technologies: [PyTorch, Hugging_Face_Transformers, T5, PEFT, LoRA, ROUGE, FastAPI, MinIO, Prometheus, React, TypeScript]
-    depth: P2_P3_implemented_capstone
-  CodingHelper:
-    technologies: [LangChain, Ollama, Qwen_2_5_Coder_7B, RAG, Qdrant, PostgreSQL, FastAPI, React, TypeScript, isolated_Java_Python_execution]
-    depth: P2_implemented_project
-  Article_Voice_Desk:
-    technologies: [SmolVLM_256M_Instruct, Supertonic_3, ONNX_Runtime, Electron, SQLite, local_inference, model_packaging]
-    depth: P2_implemented_project
-
-ai_assisted_project_set: [Resume_Corpus, Portfolio]
-
-verified_workflow_signals:
-  - architecture_and_constraint_direction
-  - AI_assisted_implementation
-  - human_review_of_generated_changes
-  - debugging_and_repair
-  - build_verification
-  - automated_test_validation
-  - runtime_verification
-  - human_acceptance_gate
-  - documentation_and_evidence_capture
-
-retrieval_aliases:
-  ai_product_engineering: [applied_AI, GenAI, LLM_integration, local_AI, model_serving, inference]
-  ai_assisted_development: [AI_coding_assistant, agent_assisted_engineering, code_generation, AI_assisted_debugging, human_in_the_loop]
-  local_model_serving: [local_LLM, local_inference, Ollama, llama.cpp, LM_Studio, model_gateway]
-  retrieval: [RAG, vector_retrieval, semantic_search, Qdrant]
-  fine_tuning_and_evaluation: [PEFT, LoRA, adapter_lifecycle, ROUGE, transformer_evaluation]
-  output_validation: [verification_gated_generation, bounded_tests, deterministic_fallback, human_acceptance]
-
+version: 1
+last_updated: 2026-08-27
+purpose: Krish Maheshwari's AI-related project evidence boundaries.
+evidence_source: profiles/AI_ASSISTED_ENGINEERING_EVIDENCE_OVERLAY_2026-08-27.md
+professional_production: false
+verified_project_context:
+  LogWhisperer:
+    evidence_level: P2
+    current_scope: LLM-assisted incident-reporting component within a log-analysis project.
+  Get_My_Doc:
+    evidence_level: P2
+    current_scope: local-first document-retrieval foundations; future text and voice retrieval remain planned unless separately verified.
 safe_claims:
-  - Hands-on AI product engineering across local LLM, RAG, transformer, local vision, and ONNX TTS projects.
-  - Directs and validates AI-assisted development with Codex and GitHub Copilot across recent software projects.
-  - Reviews generated changes and requires appropriate builds, tests, execution checks, and runtime validation before acceptance.
-  - Compared Ollama, llama.cpp, and LM Studio for local-model execution and integration; integrated Ollama into CodingHelper.
+  - Built project-based foundations for local document retrieval and log analysis.
+  - Used an LLM-assisted incident-reporting component in LogWhisperer project context.
+prohibited_claims:
+  - professional_AI_or_ML_experience
+  - production_model_operations
+  - autonomous_agent_delivery
+  - AI_accuracy_or_productivity_metrics_without_evidence
+  - completed_Get_My_Doc_features_that_are_only_planned
 
-prohibited_inferences:
-  - employer_authorized_production_AI_tool_use
-  - GitHub_Models_experience
-  - Cursor_experience
-  - Claude_Code_experience
-  - Microsoft_Copilot_experience
-  - autonomous_acceptance_or_deployment
-  - measured_AI_productivity_gain
-  - personal_project_production_scale
-  - formal_correctness_or_security_guarantee
-  - direct_llama_cpp_or_LM_Studio_application_integration
-  - senior_AI_ML_engineer_positioning
-
-resume_gate:
-  project_qualification_required: true
-  visible_project_proof_required: true
-  do_not_place_under_professional_production_skills: true
-  general_resume_selection_is_role_dependent: true

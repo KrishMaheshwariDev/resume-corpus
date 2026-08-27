@@ -1,0 +1,24 @@
+version: 1
+last_updated: 2026-08-27
+scope: Krish Maheshwari's C++/software-engineering intern and fresher resume benchmark.
+candidate_stage: intern_or_fresher
+target_roles: [C++ Developer Intern, Software Developer Intern, Software Engineer Intern, Backend Developer Intern]
+required_profile_boundaries:
+  - no_professional_employment_or_internship_claims
+  - all_delivery_evidence_is_project_backed
+  - openchess_and_get_my_doc_are_in_development
+  - C_and_Java_are_foundational
+priority_signals:
+  tier_1: [C++, Data Structures and Algorithms, Object-Oriented Programming, CMake, Git, project implementation evidence]
+  tier_2: [STL, debugging, performance optimization, OpenGL or systems programming, SQL, Python]
+  tier_3: [React, TypeScript, Docker, FastAPI, MongoDB]
+proof_priorities:
+  - OpenChess bitboard representation and rendering benchmark
+  - Black Hole Simulation fixed-timestep and GPU-rendering benchmark
+  - SOGL modular rendering abstractions
+  - Get-My-Doc file-scanning and SQLite foundations
+  - DSA and HackIndia activity evidence
+gap_policy:
+  - Report missing internship, production, cloud, or testing requirements plainly.
+  - Do not use project breadth to imply years of professional experience.
+

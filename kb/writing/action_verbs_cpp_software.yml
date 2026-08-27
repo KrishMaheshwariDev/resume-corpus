@@ -1,0 +1,13 @@
+version: 1
+last_updated: 2026-08-27
+purpose: Action verbs for Krish Maheshwari's project-backed C++/software-engineering resume.
+preferred_by_signal:
+  implementation: [built, implemented, developed, engineered, created]
+  architecture: [designed, structured, separated, modularized, integrated]
+  performance: [benchmarked, optimized, reduced, accelerated, profiled]
+  systems_graphics: [rendered, simulated, represented, managed, decoupled]
+  data_application: [parsed, scanned, indexed, analyzed, visualized]
+  activities: [solved, ranked, supported, contributed]
+avoid: [led, owned, deployed_to_production, delivered_for_customers, responsible_for, worked_on]
+rule: Describe Krish's direct project contribution without implying employment, internship, or production ownership.
+

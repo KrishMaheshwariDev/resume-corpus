@@ -1,0 +1,27 @@
+version: 1
+last_updated: 2026-08-27
+purpose: Krish Maheshwari's verified C++ and software-engineering skill taxonomy.
+skill_depth:
+  project_strong:
+    languages: [C++, Python, SQL, JavaScript, TypeScript]
+    cpp_systems: [STL, CMake, OpenGL, GLFW, GLAD, GLM, raylib, nlohmann/json, Clang, LLVM, MinGW, MSYS, WSL]
+    application_data: [React, Tailwind CSS, FastAPI, MySQL, PostgreSQL, SQLite, MongoDB, Docker, Git, GitHub]
+  foundational: [C, Java]
+  core_knowledge: [Data Structures and Algorithms, Object-Oriented Programming, Object-Oriented Design, Debugging, Performance Optimization, Operating Systems, Computer Architecture]
+aliases:
+  C++: [C++20, modern C++]
+  CMake: [CMake build system]
+  OpenGL: [OpenGL 4.6, graphics pipeline]
+  OOP: [Object-Oriented Programming, Object Oriented Design, OOD]
+  DSA: [Data Structures and Algorithms, competitive programming]
+  SQLite: [sqlite3]
+  React: [ReactJS]
+evidence_mapping:
+  OpenChess: [C++20, raylib, CMake, bitboards, Clang, LLVM]
+  Black_Hole_Simulation: [C++20, OpenGL, GLFW, GLAD, GLM, GLSL, CMake, fixed timestep]
+  SOGL: [C++, OpenGL, GLFW, GLAD, CMake, graphics architecture]
+  Get_My_Doc: [Python, FastAPI, SQLite, file scanning]
+  LogWhisperer: [Python, FastAPI, React, log parsing, anomaly analysis]
+  EDA_Dashboarding: [Python, Streamlit, Pandas, Plotly]
+  FolderSort: [C++17, CMake, ImGui, GLFW, Win32]
+
